@@ -15,6 +15,7 @@
     <string name="cancel">Cancel</string>
     <string name="username"><i>Username</i></string>
     <string name="password">Password</string>
+    <string name="vegtable_title">vegtabel</string>
     <string name="login">LogIn</string>
     <string name="sign_up">Sign Up</string>
     <string name="forgotten_password">Forgotten Password?</string>
@@ -98,6 +99,7 @@
     </string-array>
 
     <string-array name="type_of_veg">
+
         <item>Onion</item>
         <item>Garlic</item>
         <item>Tomato</item>
