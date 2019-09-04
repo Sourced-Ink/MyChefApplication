@@ -20,7 +20,7 @@
         android:fontFamily="@font/calligraffitti"
         android:text="@string/welcome"
         android:textAllCaps="false"
-        android:textColor="#FF6E40"
+        android:textColor="#AF6E40"
         android:textSize="100sp"
         android:textStyle="bold|italic"
         app:fontFamily="@font/cookie"
