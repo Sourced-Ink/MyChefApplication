@@ -8,12 +8,12 @@
     <string name="change_your_password">Change your password</string>
     <string name="old_password">Old Password</string>
     <string name="new_password">New Password</string>
-    <string name="confrim_new_password">Confrim New Password</string>
+    <string name="confrim_new_password">Confirm New Password</string>
     <string name="change_password">Change Password</string>
     <string name="enter_your_username_or_email_address">Enter your username or email address</string>
     <string name="username_or_email_address">Username or email address</string>
     <string name="cancel">Cancel</string>
-    <string name="username">Username</string>
+    <string name="username"><i>Username</i></string>
     <string name="password">Password</string>
     <string name="login">LogIn</string>
     <string name="sign_up">Sign Up</string>
@@ -52,8 +52,12 @@
     <string name="sauce_title">Sauce</string>
     <string name="spice_title">Spice</string>
     <string name="seafood_title">Seafood</string>
-    <string name="vegtable_title">Veg</string>
+    <string name="vegetable_title">Veg</string>
     <string name="search_title">search_title</string>
+    <string name="ForgotPassword">forgot password?</string>
+    <string name="Password">Password</string>
+    <string name="signIn">log in</string>
+    <string name="SignUp">sign up</string>
 
     <string-array name="type_of_meats">
         <item>Chicken</item>

@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         user_name = findViewById(R.id.userName);
-        user_password =  findViewById(R.id.userPassword);
-        forgottenpassword = findViewById(R.id.tvForgotPass);
-        signup = findViewById(R.id.tvSignUp);
-        login = findViewById(R.id.userLogInbtn);
+        user_password =  findViewById(R.id.Password);
+        forgottenpassword = findViewById(R.id.ForgotPassword);
+        signup = findViewById(R.id.SignUp);
+        login = findViewById(R.id.signIn);
 
         //instance of the firebase authentication
         firebaseAuth = FirebaseAuth.getInstance();
