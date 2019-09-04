@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">MyChefLogIn</string>
     <string name="welcome">Welcome</string>
     <string name="choose_category">Choose Category</string>
@@ -59,6 +59,30 @@
     <string name="Password">Password</string>
     <string name="signIn">log in</string>
     <string name="SignUp">sign up</string>
+    <!-- forgot password page -->
+    <string name="FPtital">Forgot your password?</string>
+    <string name="FPtital2">Don\'t worry, we got you sorted!</string>
+    <string name="NameTXT">Username</string>
+    <string name="FPUsernameInput">eg.mikek234</string>
+    <string name="FPEmailTXT">Email</string>
+    <string name="FPEmailInput">chefJ@cooking.com</string>
+    <string name="FPcnacel" tools:ignore="ButtonCase">cancel</string>
+    <string name="FPgetPassword">send</string>
+    <string name="the_cheese_burger">The Cheese Burger</string>
+    <!-- sign up page -->
+    <string name="SignUpTitle">Enter your details</string>
+    <string name="SignUpNameInput">Ndai</string>
+    <string name="SignUpName">Name</string>
+    <string name="SignUpUserName">Username</string>
+    <string name="SignUpUserNameInput">Chef_cool123</string>
+    <string name="SignUpPassword">Password</string>
+    <string name="SignUpPaswordInput">P@ssword1</string>
+    <string name="SingUpEmail">Email</string>
+    <string name="SingUpEmailInput">Chef9@cooking.com</string>
+    <string name="SignUpCancelButton">Cancel</string>
+    <string name="SignUpButton">Sign up</string>
+    <string name="SingUpLName">Surname</string>
+    <string name="SignUpLNameinput">Mpaso</string>
 
     <string-array name="type_of_meats">
         <item>Chicken</item>
