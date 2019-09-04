@@ -51,6 +51,7 @@ public class PersonalActivity extends AppCompatActivity {
             }
         });
 
+        //user logout
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
