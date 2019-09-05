@@ -2,93 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tvWellcome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
-
-    <!-- background Image set up -->
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="674dp"
-        android:layout_height="953dp"
-
-
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent"
-
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/tropical_fruit_home"
-        tools:ignore="ContentDescription"
-        tools:layout_editor_absoluteX="-70dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="334dp"
-        android:layout_height="97dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/calligraffitti"
-        android:text="@string/welcome"
-        android:textAllCaps="false"
-        android:textColor="#AF6E40"
-        android:textSize="100sp"
-        android:textStyle="bold|italic"
-        app:fontFamily="@font/cookie"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.559"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
-
-    <Button
-        android:id="@+id/categoryBTN"
-        android:layout_width="277dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#FF6E40"
-        android:text="@string/choose_category"
-        android:textColor="#070707"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.584"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.693" />
-
-    <Button
-        android:id="@+id/searchBTN"
-        android:layout_width="288dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/search"
-        android:textColor="#070707"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.644"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.44" />
+    tools:context=".ProfilePage">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -101,11 +17,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
+
             <!-- home button-->
 
             <!-- fave button-->
             <ImageButton
-                android:id="@+id/fave_homeBTN"
+                android:id="@+id/fave_ProfileBTN"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
@@ -114,8 +31,9 @@
                 app:srcCompat="@drawable/ic_favorite_white_heart_24dp"
                 tools:ignore="ContentDescription,VectorDrawableCompat" />
 
+            <!-- home button -->
             <ImageButton
-                android:id="@+id/home_homeBTN"
+                android:id="@+id/home_ProfileBTN"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="0dp"
@@ -128,7 +46,7 @@
 
             <!-- profile button-->
             <ImageButton
-                android:id="@+id/profile_homeBTN"
+                android:id="@+id/profile_ProfileBTN"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
@@ -151,8 +69,9 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
+            <!-- menu profile button-->
             <ImageButton
-                android:id="@+id/menuHomePage"
+                android:id="@+id/menuProfileBTN"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -160,9 +79,9 @@
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/ic_menu_weight_24dp"
                 tools:ignore="ContentDescription,VectorDrawableCompat" />
-
+            <!-- menu profile button-->
             <ImageButton
-                android:id="@+id/logoHomePage"
+                android:id="@+id/logoProfileBTN"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
@@ -172,7 +91,7 @@
                 tools:ignore="ContentDescription,VectorDrawableCompat" />
 
             <ImageButton
-                android:id="@+id/searchHomePage"
+                android:id="@+id/searchProfileBTN"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -183,6 +102,5 @@
 
         </LinearLayout>
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
