@@ -71,11 +71,11 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void setupUIViews(){
-        username = (EditText) findViewById(R.id.etUserName);
-        userpassword = (EditText) findViewById(R.id.etUserPassword);
-        useremail = (EditText) findViewById(R.id.etUserEmail);
-        signupBTN = (Button) findViewById(R.id.btnSignup);
-        userlogin = (TextView) findViewById(R.id.tvUserLogin);
+        username = findViewById(R.id.SignUpUserNameInput);
+        userpassword = findViewById(R.id.SignUpPasswordInput);
+        useremail = findViewById(R.id.SingUpEmailInput);
+        signupBTN = findViewById(R.id.SignUpButton);
+        userlogin = (Button) findViewById(R.id.SignUpCancelButton);
     }
 
     //function for checking if the user has filled in all the fields
