@@ -46,14 +46,14 @@ public class HomeActivity extends AppCompatActivity {
                startActivity(intentFave);
            }
        });
-//       profile.setOnClickListener(new View.OnClickListener() {
-//           @Override
-//           public void onClick(View view) {
-//               Intent intentProfile = new Intent(HomeActivity.this, FavouritesActivity.class);
-//               startActivity(intentFave);
-//
-//           }
-//       });
+       profile.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent intentProfile = new Intent(HomeActivity.this, ProfilePage.class);
+               startActivity(intentProfile);
+
+           }
+      });
        home.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
