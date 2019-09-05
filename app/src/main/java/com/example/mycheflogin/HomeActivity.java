@@ -8,30 +8,60 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Button search, category;
-    private BottomNavigationView menuhome;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+    private ImageButton  fave, profile, home ;
+    private Button search, category ;
+  private BottomNavigationView menuhome;
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_home);
 
         //refferencing the .java variables to the .XML variables
-        search = (Button) findViewById(R.id.searchBTN);
-        category = (Button) findViewById(R.id.categoryBTN);
-        menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
-
-        search.setOnClickListener(new View.OnClickListener() {
+       // bottom navigation bar
+       fave = findViewById(R.id.fave_homeBTN);
+       profile = findViewById(R.id.profile_homeBTN);
+       home = findViewById(R.id.home_homeBTN);
+       search = findViewById(R.id.searchBTN);
+        category = findViewById(R.id.categoryBTN);
+        menuhome = findViewById(R.id.menu_Pers);
+       search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, SearchActivity.class);
                 startActivity(intent);
             }
         });
+
+       // settingup the intents for the bottom navigation bar
+       fave.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent intentFave = new Intent(HomeActivity.this, FavouritesActivity.class);
+               startActivity(intentFave);
+           }
+       });
+//       profile.setOnClickListener(new View.OnClickListener() {
+//           @Override
+//           public void onClick(View view) {
+//               Intent intentProfile = new Intent(HomeActivity.this, FavouritesActivity.class);
+//               startActivity(intentFave);
+//
+//           }
+//       });
+       home.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent intentHome = new Intent(HomeActivity.this, FavouritesActivity.class);
+               startActivity(intentHome);
+
+           }
+       });
 
         menuhome.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {

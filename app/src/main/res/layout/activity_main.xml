@@ -61,24 +61,21 @@
         android:id="@+id/signIn"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="100dp"
         android:layout_marginTop="40dp"
-        android:layout_marginRight="104dp"
+
         android:background="#FF3232"
         android:text="@string/signIn"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
+
+
         android:textSize="25sp"
-
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
 
-        android:layout_marginEnd="104dp"
-        android:layout_marginStart="100dp" />
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
     <!--sign up button-->
     <Button

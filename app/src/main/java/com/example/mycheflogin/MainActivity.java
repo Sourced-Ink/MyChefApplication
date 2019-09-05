@@ -22,8 +22,8 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     private EditText user_name, user_password;
-    private TextView forgottenpassword, signup;
-    private Button login;
+    private TextView forgottenpassword;
+    private Button login, signup;
     private int wrongDetails = 10;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
@@ -60,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 checkPassword(user_name.getText().toString(), user_password.getText().toString());
+                Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
+
             }
         });
 

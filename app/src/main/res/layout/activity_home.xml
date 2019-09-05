@@ -5,8 +5,26 @@
     android:id="@+id/tvWellcome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/starter"
     tools:context=".HomeActivity">
+
+    <!-- background Image set up -->
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="674dp"
+        android:layout_height="953dp"
+
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tropical_fruit_home"
+        tools:ignore="ContentDescription"
+        tools:layout_editor_absoluteX="-70dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -26,10 +44,10 @@
         app:fontFamily="@font/cookie"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.559"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.195" />
 
     <Button
         android:id="@+id/categoryBTN"
@@ -72,37 +90,99 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.44" />
 
-    <TextView
-        android:id="@+id/tvWords"
-        android:layout_width="414dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/how_would_you_like_to_enter_your_ingredients"
-        android:textColor="#FF000000"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.21" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#FF0000"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- layout within the bottom nav-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <!-- home button-->
+
+            <!-- fave button-->
+            <ImageButton
+                android:id="@+id/fave_homeBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"
+                android:background="#00008577"
+                app:srcCompat="@drawable/ic_favorite_white_heart_24dp"
+                tools:ignore="ContentDescription,VectorDrawableCompat" />
+
+            <ImageButton
+                android:id="@+id/home_homeBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"
+                android:background="#00008577"
+
+                app:srcCompat="@drawable/ic_home_white_24dp"
+                tools:ignore="ContentDescription,VectorDrawableCompat" />
+
+            <!-- profile button-->
+            <ImageButton
+                android:id="@+id/profile_homeBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"
+                android:background="#00008577"
+                app:srcCompat="@drawable/ic_person_white_24dp"
+                tools:ignore="ContentDescription,VectorDrawableCompat" />
+        </LinearLayout>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/menu_Pers"
-        android:layout_width="0dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#FF0000"
+        app:layout_constraintTop_toTopOf="parent" >
 
-        app:layout_constraintTop_toBottomOf="@+id/categoryBTN"
-        app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/bottommenu" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/menuHomePage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00008577"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_menu_weight_24dp"
+                tools:ignore="ContentDescription,VectorDrawableCompat" />
+
+            <ImageButton
+                android:id="@+id/logoHomePage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="#00008577"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_logo"
+                tools:ignore="ContentDescription,VectorDrawableCompat" />
+
+            <ImageButton
+                android:id="@+id/searchHomePage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00008577"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_search_white_24dp"
+                tools:ignore="ContentDescription,VectorDrawableCompat" />
+
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
