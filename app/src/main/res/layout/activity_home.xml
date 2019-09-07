@@ -5,10 +5,11 @@
     android:id="@+id/tvWellcome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/tropical_fruit_home"
     tools:context=".HomeActivity">
 
     <!-- background Image set up -->
-
+<!--
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="674dp"
@@ -25,7 +26,7 @@
         app:srcCompat="@drawable/tropical_fruit_home"
         tools:ignore="ContentDescription"
         tools:layout_editor_absoluteX="-70dp" />
-
+-->
     <TextView
         android:id="@+id/textView"
         android:layout_width="334dp"

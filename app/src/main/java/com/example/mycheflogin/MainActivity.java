@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 checkPassword(user_name.getText().toString(), user_password.getText().toString());
                 Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
-
             }
         });
 

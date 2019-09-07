@@ -20,7 +20,8 @@ import com.google.firebase.auth.FirebaseUser;
 public class SignUpActivity extends AppCompatActivity {
 
     private EditText username, userpassword, useremail;
-    private Button signupBTN;   private TextView userlogin;
+    private Button signupBTN;
+    private TextView userlogin;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -46,10 +47,10 @@ public class SignUpActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-//                                firebaseAuth.getCurrentUser().sendEmailVerification();
-//                                Toast.makeText(SignUpActivity.this, "Sign up was successful", Toast.LENGTH_SHORT).show();
-//                                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
-//                                startActivity(intent);
+                                firebaseAuth.getCurrentUser().sendEmailVerification();
+                                Toast.makeText(SignUpActivity.this, "Sign up was successful", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                                startActivity(intent);
                                 sendEmailVerificationk();
                             }
                             else{
