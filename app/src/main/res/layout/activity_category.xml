@@ -5,8 +5,34 @@
     android:id="@+id/categoryPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backk"
+    android:background="@drawable/steel_spice"
     tools:context=".CategoryActivity">
+
+    <LinearLayout
+        android:id="@+id/leftLayout"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rightLayout"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintRight_toLeftOf="@+id/leftLayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnChooseSauces3"
@@ -155,17 +181,19 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menuCate"
-        android:layout_width="0dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="8dp"
-        app:itemTextColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        android:scaleType="fitCenter"
+
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@color/colorPrimaryDark"
+
+
+        app:itemIconSize="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottommenu" />
 
     <Button

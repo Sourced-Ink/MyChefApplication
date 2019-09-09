@@ -62,7 +62,7 @@ public class HomeActivity extends AppCompatActivity {
 
            }
        });
-
+/*
         menuhome.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -116,7 +116,7 @@ public class HomeActivity extends AppCompatActivity {
                     }
                 }
         );
-
+*/
         category.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
