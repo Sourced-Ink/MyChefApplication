@@ -22,8 +22,8 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     private EditText user_name, user_password;
-    private TextView forgottenpassword, signup;
-    private Button login;
+    private TextView forgottenpassword;
+    private Button login, signup;
     private int wrongDetails = 10;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        user_name = (EditText) findViewById(R.id.userName);
-        user_password = (EditText) findViewById(R.id.userPassword);
-        forgottenpassword = (TextView) findViewById(R.id.tvForgotPass);
-        signup = (TextView) findViewById(R.id.tvSignUp);
-        login = (Button) findViewById(R.id.userLogInbtn);
+        user_name = findViewById(R.id.userName);
+        user_password =  findViewById(R.id.Password);
+        forgottenpassword = findViewById(R.id.ForgotPassword);
+        signup = findViewById(R.id.SignUp);
+        login = findViewById(R.id.signIn);
 
         //instance of the firebase authentication
         firebaseAuth = FirebaseAuth.getInstance();
@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 checkPassword(user_name.getText().toString(), user_password.getText().toString());
+                Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
             }
         });
 
@@ -84,17 +85,6 @@ public class MainActivity extends AppCompatActivity {
     //Checking if the user has already an account and if the details match to the ones in the database
     private void checkPassword(String uName, String uPassword){
 
-//        //don't forget to make change
-//        if((uName.equals("Chiko")) && (uPassword.equals("0000"))){
-//            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-//            startActivity(intent);
-//        }else{
-//            Toast.makeText(this, "Wrong username and Password", Toast.LENGTH_SHORT).show();
-//            wrongDetails--;
-//            if (wrongDetails == 0){
-//                login.setEnabled(false);
-//            }
-//        }
 
         //these are called clues to let the user know whats going on
         progressDialog.setMessage("Verifying Account");

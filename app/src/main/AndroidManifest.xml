@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".ProfilePage"></activity>
+        <activity android:name=".SearchActivity" />
         <activity android:name=".ShowRecipesActivity" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".FavouritesActivity" />

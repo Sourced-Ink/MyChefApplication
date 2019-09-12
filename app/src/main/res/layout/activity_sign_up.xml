@@ -4,98 +4,211 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sign"
+    android:background="@drawable/ndscreen"
     tools:context=".SignUpActivity">
 
-    <EditText
-        android:id="@+id/etUserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="@string/name"
-        android:inputType="textPersonName"
+    <!-- setting the back ground image -->
+    <!--
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="450dp"
+        android:layout_height="800dp"
+        android:layout_marginStart="-40dp"
+        android:layout_marginLeft="-40dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.20999998" />
+        app:srcCompat="@drawable/ndscreen"
+        tools:ignore="ContentDescription" />
+        -->
 
-    <EditText
-        android:id="@+id/etUserEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="@string/email_address"
-        android:inputType="textEmailAddress"
+    <!-- setingup the logo element-->
+
+    <!--setting up the sing up page-->
+    <ScrollView
+        android:id="@+id/Scrolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUserName"
-        app:layout_constraintVertical_bias="0.103" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-    <EditText
-        android:id="@+id/etUserPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUserEmail"
-        app:layout_constraintVertical_bias="0.106" />
 
-    <Button
-        android:id="@+id/btnSignup"
-        android:layout_width="210dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#FF6E40"
-        android:text="@string/sign_up"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUserPassword"
-        app:layout_constraintVertical_bias="0.41000003" />
+        <!--layout used-->
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
 
-    <TextView
-        android:id="@+id/tvUserLogin"
-        android:layout_width="176dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/already_signed_in_login"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignup"
-        app:layout_constraintVertical_bias="0.41000003" />
+
+
+            android:background="#A4FFFFFF"
+            android:orientation="vertical">
+
+
+            <!--sign up name-->
+
+            <ImageView
+                android:id="@+id/Logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="110dp"
+                app:srcCompat="@drawable/mc_logo"
+                tools:ignore="ContentDescription"
+                android:layout_marginStart="105dp" />
+
+            <TextView
+                android:id="@+id/SingUpName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/SignUpName"
+                android:textSize="20sp" />
+            <!-- input name-->
+            <EditText
+                android:id="@+id/SignUpNameInput"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/SignUpNameInput"
+                android:inputType="textPersonName"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                tools:ignore="Autofill" />
+            <!-- last name-->
+            <TextView
+                android:id="@+id/SingUpLName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SingUpLName"
+                android:textSize="20sp" />
+            <!-- input name-->
+            <EditText
+                android:id="@+id/SignUpLNameinput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/SignUpLNameinput"
+                android:inputType="textPersonName"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                tools:ignore="Autofill" />
+
+            <!-- username text-->
+            <TextView
+                android:id="@+id/SingUpUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SignUpUserName"
+                android:textSize="20sp" />
+
+            <!-- username input-->
+            <EditText
+                android:id="@+id/SignUpUserNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/SignUpUserNameInput"
+                android:inputType="textPersonName"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                tools:ignore="Autofill" />
+
+            <!-- password txt -->
+            <TextView
+                android:id="@+id/SignUpPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SignUpPassword"
+                android:textSize="20sp" />
+
+            <!-- password input-->
+            <EditText
+                android:id="@+id/SignUpPasswordInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/SignUpPaswordInput"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                tools:ignore="Autofill" />
+
+            <!-- Emial text-->
+            <TextView
+                android:id="@+id/SingUpEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SingUpEmail"
+                android:textSize="20sp" />
+            <!--Emial input -->
+            <EditText
+                android:id="@+id/SingUpEmailInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/SingUpEmailInput"
+                android:inputType="textEmailAddress"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Almost time to cook!"
+                android:textAlignment="center"
+                android:textColor="#FF001F"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <!--sing up button-->
+            <Button
+                android:id="@+id/SignUpButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#DDFF0909"
+
+                android:text="@string/SignUpButton"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <!--cancel button-->
+            <Button
+                android:id="@+id/SignUpCancelButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="#A9E6E6E6"
+                android:text="@string/SignUpCancelButton"
+                android:textAllCaps="false"
+                android:textColor="#D010B104"
+                android:textSize="20sp"
+
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

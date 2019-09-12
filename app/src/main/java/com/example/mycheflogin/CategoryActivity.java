@@ -17,7 +17,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.ArrayList;
 
 public class CategoryActivity extends AppCompatActivity {
-    private BottomNavigationView menuC;
+    private BottomNavigationView menuC, menuTop;
+
     private Button choose_meat, choose_diary, choose_veg, choose_seafood, choose_fruits, choose_spice, choose_sauce, choose_desert, choose_baking, choose_fish,show_recipe;
     private TextView items_in_meat;
 
@@ -861,13 +862,56 @@ public class CategoryActivity extends AppCompatActivity {
             }
         });
 
+// top navigation review
+        /*
+        menuTop.setOnNavigationItemSelectedListener(){
+            new BottomNavigationView.OnNavigationItemSelectedListener(){
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                    switch (item.getItemId()){
+                        case R.id.options:
+                            .setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                                @Override
+                                public boolean onMenuItemClick(MenuItem menuItem) {
 
+                                }
+                            });
+                            break;
+
+                        case R.id.logoHomePage:
+                            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                                @Override
+                                public boolean onMenuItemClick(MenuItem menuItem) {
+
+                                }
+                            });
+                            break;
+
+                        case R.id.searchHomePage:
+                            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                                @Override
+                                public boolean onMenuItemClick(MenuItem menuItem) {
+                                  ;
+                                }
+                            });
+                            break;
+
+                        return false;
+                }
+
+
+
+            }
+        }
+        */
+
+        //
         menuC.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()){
-                            case R.id.homeItem:
+                            case R.id.home_homeBTN:
                                 item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                                     @Override
                                     public boolean onMenuItemClick(MenuItem menuItem) {
@@ -878,7 +922,7 @@ public class CategoryActivity extends AppCompatActivity {
                                 });
                                 break;
 
-                            case R.id.accountItem:
+                            case R.id.profile_homeBTN:
                                 item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                                     @Override
                                     public boolean onMenuItemClick(MenuItem menuItem) {
@@ -889,7 +933,7 @@ public class CategoryActivity extends AppCompatActivity {
                                 });
                                 break;
 
-                            case R.id.recipeItem:
+                            case R.id.fave_homeBTN:
                                 item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                                     @Override
                                     public boolean onMenuItemClick(MenuItem menuItem) {
@@ -900,16 +944,8 @@ public class CategoryActivity extends AppCompatActivity {
                                 });
                                 break;
 
-                            case R.id.helpItem:
-                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                                    @Override
-                                    public boolean onMenuItemClick(MenuItem menuItem) {
-                                        Intent intent = new Intent(CategoryActivity.this, HelpActivity.class);
-                                        startActivity(intent);
-                                        return true;
-                                    }
-                                });
-                                break;
+
+
                         }
                         return true;
                     }
