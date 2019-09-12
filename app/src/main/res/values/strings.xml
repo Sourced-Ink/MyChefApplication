@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyChefLogIn</string>
+    <string name="app_name">MyChefLog</string>
     <string name="welcome">Welcome</string>
     <string name="choose_category">Choose Category</string>
     <string name="search">Search</string>
