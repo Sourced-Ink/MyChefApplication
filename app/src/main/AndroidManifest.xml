@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SearchActivity"></activity>
+
         <activity android:name=".ShowRecipesActivity" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".FavouritesActivity" />
@@ -22,7 +22,8 @@
         <activity android:name=".ForgetPasswordActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SearchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
