@@ -15,8 +15,8 @@
     <string name="cancel">Cancel</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="login">LogIn</string>
-    <string name="sign_up">Sign Up</string>
+    <string name="login">log in</string>
+    <string name="sign_up">sign up</string>
     <string name="forgotten_password">Forgotten Password?</string>
     <string name="diet_preference">Diet Preference</string>
     <string name="log_out">Log out</string>
