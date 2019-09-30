@@ -2,7 +2,7 @@
     <string name="app_name">MyChefLog</string>
     <string name="welcome">Welcome</string>
     <string name="choose_category">Choose Category</string>
-    <string name="search">Search</string>
+    <string name="search">send</string>
     <string name="how_would_you_like_to_enter_your_ingredients">How would you like to enter your ingredients ?</string>
     <string name="choose_meat">MEAT</string>
     <string name="change_your_password">Change your password</string>
@@ -12,7 +12,7 @@
     <string name="change_password">Change Password</string>
     <string name="enter_your_username_or_email_address">Enter your username or email address</string>
     <string name="username_or_email_address">Username or email address</string>
-    <string name="cancel">Cancel</string>
+    <string name="cancel">cancel</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">log in</string>
