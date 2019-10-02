@@ -73,7 +73,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#FF6E40"
+        android:background="#FF0000"
         android:text="@string/sign_up"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
