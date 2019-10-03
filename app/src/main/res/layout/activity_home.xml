@@ -9,68 +9,50 @@
     tools:context=".HomeActivity">
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="540dp"
-        app:layout_constraintBottom_toTopOf="@id/menu_Pers"
-        app:layout_constraintTop_toBottomOf="@+id/topNav"
-       >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="334dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/calligraffitti"
+        android:text="@string/welcome"
+        android:textAllCaps="false"
+        android:textColor="#FF0000"
+        android:textSize="100sp"
+        android:textStyle="bold|italic"
+        app:fontFamily="@font/cookie"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.129" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/calligraffitti"
-                android:layout_marginBottom="-20dp"
-                android:gravity="center"
-                android:text="@string/welcome"
-                android:textAllCaps="false"
-                android:textColor="#FF0000"
-                android:textSize="100sp"
-                android:textStyle="italic"
-                app:fontFamily="@font/cookie"
-                />
-            <!-- input a person s name -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Name"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="#FF0000"
-                android:textSize="40sp"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="lets get cooking! "
-                android:textAlignment="center"
-                android:textColor="#44BE2E"
-                android:layout_marginBottom="20dp"
-                android:textSize="25sp" />
-
-            <Button
-                android:id="@+id/categoryBTN"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#DDFFFFFF"
-                android:text="@string/choose_category"
-                android:textSize="20sp"
-                android:textAllCaps="false"
-                android:textColor="#F80000"
-                 />
-
-
-        </LinearLayout>
-    </ScrollView>
-
-
+    <Button
+        android:id="@+id/categoryBTN"
+        android:layout_width="277dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FF6E40"
+        android:text="@string/choose_category"
+        android:textColor="#070707"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.381"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.303" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/topNav"
@@ -82,22 +64,6 @@
         app:menu="@menu/top_nav"
         tools:ignore="MissingConstraints" >
 
-        <Button
-            android:id="@+id/searchBTN"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="right"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="@drawable/ic_search_black_24dp"
-            android:background="#00D81B60"
-
-
-            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -123,7 +89,7 @@
         app:layout_constraintHorizontal_bias="1.0"
 
         app:layout_constraintStart_toStartOf="parent"
-
+        app:layout_constraintTop_toBottomOf="@+id/categoryBTN"
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/bottommenu" />
 

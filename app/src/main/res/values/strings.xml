@@ -55,6 +55,9 @@
     <string name="vegtable_title">Veg</string>
     <string name="search_title">search_title</string>
 
+    <string name="search_hint">Search Fruit</string>
+    <string name="search_view">Enter search</string>
+
     <string-array name="type_of_meats">
         <item>Chicken</item>
         <item>Beef</item>
