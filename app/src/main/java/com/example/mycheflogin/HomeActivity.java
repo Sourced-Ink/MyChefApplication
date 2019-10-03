@@ -14,22 +14,53 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class HomeActivity extends AppCompatActivity {
 
     private Button search, category;
-    private BottomNavigationView menuhome;
+    private BottomNavigationView menuhome, menutophome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
         //refferencing the .java variables to the .XML variables
-        search = (Button) findViewById(R.id.searchBTN);
+       // search = (Button) findViewById(R.id.searchBTN);
         category = (Button) findViewById(R.id.categoryBTN);
         menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
+        menutophome = (BottomNavigationView) findViewById(R.id.topNav);
 
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, SearchActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.helpItem:
+                        menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(MenuItem menuItem) {
+                                Intent intent = new Intent(HomeActivity.this, HelpActivity.class);
+                                startActivity(intent);
+                                return true;
+                            }
+                        });
+                        break;
+                    case R.id.searchtop:
+                        menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(MenuItem menuItem) {
+                                Intent intent = new Intent(HomeActivity.this, SearchActivity.class);
+                                startActivity(intent);
+                                return true;
+                            }
+                        });
+                        break;
+                }
+
+               return true;
             }
         });
 
@@ -71,16 +102,16 @@ public class HomeActivity extends AppCompatActivity {
                                 });
                                 break;
 
-                            case R.id.helpItem:
-                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                                    @Override
-                                    public boolean onMenuItemClick(MenuItem menuItem) {
-                                        Intent intent = new Intent(HomeActivity.this, HelpActivity.class);
-                                        startActivity(intent);
-                                        return true;
-                                    }
-                                });
-                                break;
+//                            case R.id.helpItem:
+//                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//                                    @Override
+//                                    public boolean onMenuItemClick(MenuItem menuItem) {
+//                                        Intent intent = new Intent(HomeActivity.this, HelpActivity.class);
+//                                        startActivity(intent);
+//                                        return true;
+//                                    }
+//                                });
+//                                break;
                         }
                         return true;
                     }

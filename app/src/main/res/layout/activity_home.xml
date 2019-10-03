@@ -64,21 +64,21 @@
         app:menu="@menu/top_nav"
         tools:ignore="MissingConstraints" >
 
-        <Button
-            android:id="@+id/searchBTN"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:layout_gravity="right"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginBottom="8dp"
-            android:background="#00D81B60"
+<!--        <Button-->
+<!--            android:id="@+id/searchBTN"-->
+<!--            android:layout_width="52dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="right"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginLeft="8dp"-->
+<!--            android:layout_marginTop="0dp"-->
+<!--            android:layout_marginEnd="0dp"-->
+<!--            android:layout_marginRight="0dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:background="@drawable/ic_search_black_24dp"-->
 
 
-            android:textStyle="bold" />
+<!--            android:textStyle="bold" />-->
 
         <ImageView
             android:id="@+id/imageView4"
