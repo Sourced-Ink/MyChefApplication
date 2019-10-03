@@ -5,7 +5,7 @@
     android:id="@+id/tvWellcome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tropicalfruit_trimming"
+
     tools:context=".HomeActivity">
 
 
@@ -70,72 +70,153 @@
 
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="match_parent"
-                android:scaleType="centerCrop"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
-                android:cropToPadding="false"
-
-                app:srcCompat="@drawable/a" />
-
 
             <ImageView
                 android:id="@+id/imageView6"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="170dp"
                 android:layout_margin="10dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/c" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-60dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="#D3FFFFFF"
+                android:text="  Carribean"
+
+
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
 
             <ImageView
                 android:id="@+id/imageView7"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="170dp"
                 android:layout_margin="10dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/ch" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-60dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="#D3FFFFFF"
+                android:text="  Chinese"
+
+
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
 
             <ImageView
                 android:id="@+id/imageView8"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="170dp"
                 android:scaleType="centerCrop"
                 android:layout_margin="10dp"
                 app:srcCompat="@drawable/f" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-60dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="#D3FFFFFF"
+                android:text="  French"
+
+
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
 
             <ImageView
                 android:id="@+id/imageView9"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="170dp"
                 android:scaleType="centerCrop"
                 android:layout_margin="10dp"
                 app:srcCompat="@drawable/g" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-60dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="#D3FFFFFF"
+                android:text="  German"
+
+
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
 
             <ImageView
                 android:id="@+id/imageView10"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="170dp"
                 android:scaleType="centerCrop"
                 android:layout_margin="10dp"
                 app:srcCompat="@drawable/i" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-60dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="#D3FFFFFF"
+                android:text="  Indian"
+
+
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
 
             <ImageView
                 android:id="@+id/imageView11"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="170dp"
                 android:scaleType="centerCrop"
                 android:layout_margin="10dp"
                 app:srcCompat="@drawable/it" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-60dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="#D3FFFFFF"
+                android:text="  Italy"
+
+
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
 
             <ImageView
                 android:id="@+id/imageView12"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="170dp"
                 android:scaleType="centerCrop"
                 android:layout_margin="10dp"
                 app:srcCompat="@drawable/m" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-60dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="#D3FFFFFF"
+                android:text="  Mediterranean"
+
+
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
         </LinearLayout>
     </ScrollView>
 
