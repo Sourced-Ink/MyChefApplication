@@ -13,7 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Button  category;
+    private Button  category, cuisine;
     private BottomNavigationView menuhome, menutophome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
         //refferencing the .java variables to the .XML variables
        // search = (Button) findViewById(R.id.searchBTN);
         category = (Button) findViewById(R.id.categoryBTN);
+        cuisine =(Button) findViewById(R.id.CuisineBTN);
         menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
         menutophome = (BottomNavigationView) findViewById(R.id.topNav);
 
@@ -123,6 +124,13 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, CategoryActivity.class);
                 startActivity(intent);
+            }
+        });
+        cuisine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentC = new Intent(HomeActivity.this, CuisineActivity.class );
+                startActivity(intentC);
             }
         });
 

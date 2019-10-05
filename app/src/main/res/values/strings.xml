@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MyChefLog</string>
     <string name="welcome">Hello</string>
-    <string name="choose_category">choose a category</string>
+    <string name="choose_category">Choose a Category</string>
     <string name="search">send</string>
     <string name="how_would_you_like_to_enter_your_ingredients">How would you like to enter your ingredients ?</string>
     <string name="choose_meat">MEAT</string>
