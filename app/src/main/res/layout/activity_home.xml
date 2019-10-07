@@ -30,7 +30,7 @@
             android:textAllCaps="false"
             android:textColor="#FF0000"
             android:textSize="100sp"
-            android:textStyle="|italic"
+            android:textStyle="italic"
 
             app:fontFamily="@font/cookie" />
 
