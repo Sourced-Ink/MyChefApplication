@@ -88,7 +88,7 @@ public class CategoryActivity extends AppCompatActivity {
         choose_baking = (Button) findViewById(R.id.btnChooseBaking);
         choose_fish = (Button) findViewById(R.id.btnChooseFish);
         show_recipe = (Button) findViewById(R.id.btnShowRecipeCat);
-        menuC = (BottomNavigationView) findViewById(R.id.menuCate);
+        menuC = (BottomNavigationView) findViewById(R.id.menu_Pers);
 
 
         //Passing the values of the array and checking how many checkboxes needed thus passing the listMeatItems.length
