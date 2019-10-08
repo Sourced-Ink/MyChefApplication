@@ -17,7 +17,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.ArrayList;
 
 public class CategoryActivity extends AppCompatActivity {
-    private BottomNavigationView menuC;
+    private BottomNavigationView menuhome, menutophome;
     private Button choose_meat, choose_diary, choose_veg, choose_seafood, choose_fruits, choose_spice, choose_sauce, choose_desert, choose_baking, choose_fish,show_recipe;
     private TextView items_in_meat;
 
@@ -88,7 +88,7 @@ public class CategoryActivity extends AppCompatActivity {
         choose_baking = (Button) findViewById(R.id.btnChooseBaking);
         choose_fish = (Button) findViewById(R.id.btnChooseFish);
         show_recipe = (Button) findViewById(R.id.btnShowRecipeCat);
-        menuC = (BottomNavigationView) findViewById(R.id.menu_Pers);
+
 
 
         //Passing the values of the array and checking how many checkboxes needed thus passing the listMeatItems.length
@@ -862,7 +862,37 @@ public class CategoryActivity extends AppCompatActivity {
         });
 
 
-        menuC.setOnNavigationItemSelectedListener(
+        menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.helpItem:
+                        menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(MenuItem menuItem) {
+                                Intent intent = new Intent(CategoryActivity.this, HelpActivity.class);
+                                startActivity(intent);
+                                return true;
+                            }
+                        });
+                        break;
+                    case R.id.searchtop:
+                        menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(MenuItem menuItem) {
+                                Intent intent = new Intent(CategoryActivity.this, SearchActivity.class);
+                                startActivity(intent);
+                                return true;
+                            }
+                        });
+                        break;
+                }
+
+                return true;
+            }
+        });
+
+        menuhome.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -872,8 +902,8 @@ public class CategoryActivity extends AppCompatActivity {
                                     @Override
                                     public boolean onMenuItemClick(MenuItem menuItem) {
                                         Intent intent = new Intent(CategoryActivity.this, HomeActivity.class);
-                                        startActivity(intent);
-                                        return true;
+
+                                        return false;
                                     }
                                 });
                                 break;
@@ -900,16 +930,16 @@ public class CategoryActivity extends AppCompatActivity {
                                 });
                                 break;
 
-                            case R.id.helpItem:
-                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                                    @Override
-                                    public boolean onMenuItemClick(MenuItem menuItem) {
-                                        Intent intent = new Intent(CategoryActivity.this, HelpActivity.class);
-                                        startActivity(intent);
-                                        return true;
-                                    }
-                                });
-                                break;
+//                            case R.id.helpItem:
+//                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//                                    @Override
+//                                    public boolean onMenuItemClick(MenuItem menuItem) {
+//                                        Intent intent = new Intent(HomeActivity.this, HelpActivity.class);
+//                                        startActivity(intent);
+//                                        return true;
+//                                    }
+//                                });
+//                                break;
                         }
                         return true;
                     }
