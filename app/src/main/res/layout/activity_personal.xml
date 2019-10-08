@@ -60,7 +60,8 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:text="@string/diet_preference"
-            android:textColor="#FF000000"
+            android:textColor="#FD0000"
+            android:textAlignment="center"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -75,13 +76,14 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:text="@string/change_password"
-            android:textColor="#FF000000"
+            android:textColor="#FF0000"
             android:textSize="25sp"
+            android:textAlignment="center"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvLogOut"
-            android:layout_width="316dp"
+            android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
@@ -90,7 +92,8 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:text="@string/log_out"
-            android:textColor="#FF000000"
+            android:textColor="#FF0000"
+            android:textAlignment="center"
             android:textSize="25sp"
             android:textStyle="bold" />
     </LinearLayout>
