@@ -88,6 +88,8 @@ public class CategoryActivity extends AppCompatActivity {
         choose_baking = (Button) findViewById(R.id.btnChooseBaking);
         choose_fish = (Button) findViewById(R.id.btnChooseFish);
         show_recipe = (Button) findViewById(R.id.btnShowRecipeCat);
+        menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
+        menutophome = (BottomNavigationView) findViewById(R.id.topNav);
 
 
 
