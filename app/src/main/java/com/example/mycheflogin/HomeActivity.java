@@ -8,61 +8,65 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private ImageButton  fave, profile, home ;
-    private Button search, category ;
-  private BottomNavigationView menuhome;
-   @Override
-   protected void onCreate(Bundle savedInstanceState) {
-       super.onCreate(savedInstanceState);
-       setContentView(R.layout.activity_home);
+    private Button  category, cuisine;
+    private BottomNavigationView menuhome, menutophome;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
 
         //refferencing the .java variables to the .XML variables
-       // bottom navigation bar
-       fave = findViewById(R.id.fave_homeBTN);
-       profile = findViewById(R.id.profile_homeBTN);
-       home = findViewById(R.id.home_homeBTN);
-       search = findViewById(R.id.searchBTN);
-        category = findViewById(R.id.categoryBTN);
-        menuhome = findViewById(R.id.menu_Pers);
-       search.setOnClickListener(new View.OnClickListener() {
+       // search = (Button) findViewById(R.id.searchBTN);
+        category = (Button) findViewById(R.id.categoryBTN);
+        cuisine =(Button) findViewById(R.id.CuisineBTN);
+        menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
+        menutophome = (BottomNavigationView) findViewById(R.id.topNav);
+
+
+
+   //     search.setOnClickListener(new View.OnClickListener() {
+   //         @Override
+    //        public void onClick(View view) {
+   //             Intent intent = new Intent(HomeActivity.this, SearchActivity.class);
+    //            startActivity(intent);
+    //        }
+    //    });
+
+        menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, SearchActivity.class);
-                startActivity(intent);
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.helpItem:
+                        menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(MenuItem menuItem) {
+                                Intent intent = new Intent(HomeActivity.this, HelpActivity.class);
+                                startActivity(intent);
+                                return true;
+                            }
+                        });
+                        break;
+                    case R.id.searchtop:
+                        menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(MenuItem menuItem) {
+                                Intent intent = new Intent(HomeActivity.this, SearchActivity.class);
+                                startActivity(intent);
+                                return true;
+                            }
+                        });
+                        break;
+                }
+
+               return true;
             }
         });
 
-       // settingup the intents for the bottom navigation bar
-       fave.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent intentFave = new Intent(HomeActivity.this, FavouritesActivity.class);
-               startActivity(intentFave);
-           }
-       });
-       profile.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent intentProfile = new Intent(HomeActivity.this, ProfilePage.class);
-               startActivity(intentProfile);
-
-           }
-      });
-       home.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent intentHome = new Intent(HomeActivity.this, FavouritesActivity.class);
-               startActivity(intentHome);
-
-           }
-       });
-/*
         menuhome.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -101,27 +105,34 @@ public class HomeActivity extends AppCompatActivity {
                                 });
                                 break;
 
-                            case R.id.helpItem:
-                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                                    @Override
-                                    public boolean onMenuItemClick(MenuItem menuItem) {
-                                        Intent intent = new Intent(HomeActivity.this, HelpActivity.class);
-                                        startActivity(intent);
-                                        return true;
-                                    }
-                                });
-                                break;
+//                            case R.id.helpItem:
+//                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//                                    @Override
+//                                    public boolean onMenuItemClick(MenuItem menuItem) {
+//                                        Intent intent = new Intent(HomeActivity.this, HelpActivity.class);
+//                                        startActivity(intent);
+//                                        return true;
+//                                    }
+//                                });
+//                                break;
                         }
                         return true;
                     }
                 }
         );
-*/
+
         category.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, CategoryActivity.class);
                 startActivity(intent);
+            }
+        });
+        cuisine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentC = new Intent(HomeActivity.this, CuisineActivity.class );
+                startActivity(intentC);
             }
         });
 

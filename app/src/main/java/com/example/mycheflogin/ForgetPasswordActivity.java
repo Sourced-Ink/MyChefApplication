@@ -26,10 +26,10 @@ public class ForgetPasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_password);
 
-        etuseremail = findViewById(R.id.FPEmailInput);
-        username = findViewById(R.id.FPUsernameInput);
-        cancelF = findViewById(R.id.FPcnacel);
-        searchF = findViewById(R.id.FPgetPassword);
+        etuseremail = findViewById(R.id.etusernameemailF);
+        username = findViewById(R.id.etusernameemailF);
+        cancelF = findViewById(R.id.cancelBTNF);
+        searchF = findViewById(R.id.searchBTNF);
         firebaseAuth = FirebaseAuth.getInstance();
 
         searchF.setOnClickListener(new View.OnClickListener() {

@@ -1,23 +1,22 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">MyChefLogIn</string>
-    <string name="welcome">Welcome</string>
-    <string name="choose_category">Choose Category</string>
-    <string name="search">Search</string>
+<resources>
+    <string name="app_name">MyChefLog</string>
+    <string name="welcome">Hello</string>
+    <string name="choose_category">Choose a Category</string>
+    <string name="search">send</string>
     <string name="how_would_you_like_to_enter_your_ingredients">How would you like to enter your ingredients ?</string>
     <string name="choose_meat">MEAT</string>
     <string name="change_your_password">Change your password</string>
     <string name="old_password">Old Password</string>
     <string name="new_password">New Password</string>
-    <string name="confrim_new_password">Confirm New Password</string>
+    <string name="confrim_new_password">Confrim New Password</string>
     <string name="change_password">Change Password</string>
     <string name="enter_your_username_or_email_address">Enter your username or email address</string>
     <string name="username_or_email_address">Username or email address</string>
-    <string name="cancel">Cancel</string>
-    <string name="username"><i>Username</i></string>
+    <string name="cancel">cancel</string>
+    <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="vegtable_title">vegtabel</string>
-    <string name="login">LogIn</string>
-    <string name="sign_up">Sign Up</string>
+    <string name="login">log in</string>
+    <string name="sign_up">sign up</string>
     <string name="forgotten_password">Forgotten Password?</string>
     <string name="diet_preference">Diet Preference</string>
     <string name="log_out">Log out</string>
@@ -53,36 +52,11 @@
     <string name="sauce_title">Sauce</string>
     <string name="spice_title">Spice</string>
     <string name="seafood_title">Seafood</string>
-    <string name="vegetable_title">Veg</string>
+    <string name="vegtable_title">Veg</string>
     <string name="search_title">search_title</string>
-    <string name="ForgotPassword">forgot password?</string>
-    <string name="Password">Password</string>
-    <string name="signIn">log in</string>
-    <string name="SignUp">sign up</string>
-    <!-- forgot password page -->
-    <string name="FPtital">Forgot your password?</string>
-    <string name="FPtital2">Don\'t worry, we got you sorted!</string>
-    <string name="NameTXT">Username</string>
-    <string name="FPUsernameInput">eg.mikek234</string>
-    <string name="FPEmailTXT">Email</string>
-    <string name="FPEmailInput">chefJ@cooking.com</string>
-    <string name="FPcnacel" tools:ignore="ButtonCase">cancel</string>
-    <string name="FPgetPassword">send</string>
-    <string name="the_cheese_burger">The Cheese Burger</string>
-    <!-- sign up page -->
-    <string name="SignUpTitle">Enter your details</string>
-    <string name="SignUpNameInput">Ndai</string>
-    <string name="SignUpName">Name</string>
-    <string name="SignUpUserName">Username</string>
-    <string name="SignUpUserNameInput">Chef_cool123</string>
-    <string name="SignUpPassword">Password</string>
-    <string name="SignUpPaswordInput">P@ssword1</string>
-    <string name="SingUpEmail">Email</string>
-    <string name="SingUpEmailInput">Chef9@cooking.com</string>
-    <string name="SignUpCancelButton">Cancel</string>
-    <string name="SignUpButton">Sign up</string>
-    <string name="SingUpLName">Surname</string>
-    <string name="SignUpLNameinput">Mpaso</string>
+
+    <string name="search_hint">Search Fruit</string>
+    <string name="search_view">Enter search</string>
 
     <string-array name="type_of_meats">
         <item>Chicken</item>
@@ -123,7 +97,6 @@
     </string-array>
 
     <string-array name="type_of_veg">
-
         <item>Onion</item>
         <item>Garlic</item>
         <item>Tomato</item>
@@ -400,6 +373,343 @@
         <item>Vegetarian</item>
         <item>Gluten free</item>
         <item>Lactose free</item>
+    </string-array>
+
+    <string-array name="ingredients_array">
+
+        //meats
+        <item>Chicken</item>
+        <item>Beef</item>
+        <item>Pork</item>
+        <item>Bacon</item>
+        <item>Sausage</item>
+        <item>Turkey</item>
+        <item>Ribs</item>
+        <item>Duck</item>
+        <item>Oxtail</item>
+        <item>Goose</item>
+        <item>Rabbit</item>
+        <item>Ostrich</item>
+        <item>MarrowBones</item>
+        <item>Salami</item>
+        <item>Sheep</item>
+        <item>Goat</item>
+
+        //dairy
+        <item>Butter</item>
+        <item>Eggs</item>
+        <item>Milk</item>
+        <item>Cream</item>
+        <item>Parmesan Cheese</item>
+        <item>Cream Cheese</item>
+        <item>Mozzarella Cheese</item>
+        <item>Feta Cheese</item>
+        <item>Powdered Milk</item>
+        <item>Butter Cheese</item>
+        <item>Ricotta Cheese</item>
+        <item>Halloumi</item>
+        <item>Goat Cheese</item>
+        <item>Condensed Milk</item>
+        <item>Yogurt</item>
+        <item>Whipped Cream</item>
+
+        //veg
+        <item>Onion</item>
+        <item>Garlic</item>
+        <item>Tomato</item>
+        <item>Potato</item>
+        <item>Carrot</item>
+        <item>Bell Pepper</item>
+        <item>Parsley</item>
+        <item>Broccoli</item>
+        <item>Corn</item>
+        <item>Spinach</item>
+        <item>Mushroom</item>
+        <item>Green beans</item>
+        <item>Ginger</item>
+        <item>Rosemary</item>
+        <item>Cucumber</item>
+        <item>Sweet potato</item>
+        <item>Pickle</item>
+        <item>Avocado</item>
+        <item>Olive</item>
+        <item>Cabbage</item>
+        <item>Cauliflower</item>
+        <item>Pumpkin</item>
+        <item>Squash</item>
+        <item>Mint</item>
+        <item>Shallot</item>
+        <item>Eggplant</item>
+        <item>Butternut</item>
+        <item>Radish</item>
+        <item>Okra</item>
+        <item>Yam</item>
+        <item>Kohlrabi</item>
+
+        //sea food
+        <item>Shrimp</item>
+        <item>Crab</item>
+        <item>Prawns</item>
+        <item>Scallop</item>
+        <item>Clam</item>
+        <item>Lobster</item>
+        <item>Mussel</item>
+        <item>Oyster</item>
+        <item>Squid</item>
+        <item>Calamari</item>
+        <item>Crawfish</item>
+        <item>Octopus</item>
+        <item>Cockle</item>
+        <item>Conch</item>
+        <item>Sea urchin</item>
+
+        //spice
+        <item>Cinnamon</item>
+        <item>Vanilla</item>
+        <item>Garlic powder</item>
+        <item>Paprika</item>
+        <item>Chili powder</item>
+        <item>Red pepper flakes</item>
+        <item>Cumin</item>
+        <item>Thyme</item>
+        <item>Nutmeg</item>
+        <item>Bay leaf</item>
+        <item>Tumeric</item>
+        <item>Sea salt</item>
+        <item>Herbs</item>
+        <item>Salt</item>
+        <item>Black pepper</item>
+        <item>Chili powder</item>
+        <item>White pepper</item>
+        <item>Garam masala</item>
+        <item>Star anise</item>
+        <item>Chinese five spice</item>
+        <item>Fennel seed</item>
+        <item>Chipotle</item>
+        <item>Beef spice</item>
+        <item>Chicken spice</item>
+        <item>Curry powder</item>
+        <item>Steak seasoning</item>
+        <item>All in one spice</item>
+        <item>BBQ rub</item>
+        <item>Ginger</item>
+        <item>Smoked Paprika</item>
+        <item>Rosemary</item>
+        <item>Vanilla extract</item>
+        <item>Aromat</item>
+        <item>Cloves</item>
+        <item>Ground Nutmeg</item>
+        <item>Onion powder</item>
+        <item>Sage</item>
+
+        //source
+        <item>Tomato paste</item>
+        <item>Mayonnaise</item>
+        <item>Barbecue sauce</item>
+        <item>Apple cider vinegar</item>
+        <item>Oyster sauce</item>
+        <item>Tomato sauce</item>
+        <item>Salsa</item>
+        <item>Pesto</item>
+        <item>Beef gravy</item>
+        <item>Curry paste</item>
+        <item>Chicken gravy</item>
+        <item>Cranberry sauce</item>
+        <item>Turkey gravy</item>
+        <item>Mushroom sauce</item>
+        <item>Sausage gravy</item>
+        <item>Onion gravy</item>
+        <item>Soy sauce</item>
+        <item>Fish sauce</item>
+        <item>Honey mustard</item>
+        <item>Sweet sour sauce</item>
+        <item>Olive oil</item>
+        <item>Cream gravy</item>
+        <item>Vinegar</item>
+        <item>Pork gravy</item>
+        <item>Tomato gravy</item>
+        <item>Chicken stock</item>
+        <item>Beef broth</item>
+        <item>Thousand island</item>
+        <item>Sriracha</item>
+        <item>French dressing</item>
+        <item>Teriyaki</item>
+        <item>Mustard</item>
+        <item>Lamb stock</item>
+        <item>Pork stock</item>
+        <item>Italian dressing</item>
+        <item>Salad dressing</item>
+        <item>Greek dressing</item>
+        <item>Sweet chili sauce</item>
+        <item>Sunflower oil</item>
+        <item>Cooking spray</item>
+        <item>Vegetable oil</item>
+        <item>Hoisin sauce</item>
+
+        //fruit
+        <item>Lemon</item>
+        <item>Apple</item>
+        <item>Banana</item>
+        <item>Lime</item>
+        <item>Strawberry</item>
+        <item>Orange</item>
+        <item>Pineapple</item>
+        <item>Blueberry</item>
+        <item>Raisin</item>
+        <item>Coconut</item>
+        <item>Grape</item>
+        <item>Peach</item>
+        <item>Raspberry</item>
+        <item>Cranberry</item>
+        <item>Mango</item>
+        <item>Pear</item>
+        <item>Blackberry</item>
+        <item>Date</item>
+        <item>Watermelon</item>
+        <item>Kiwi</item>
+        <item>Grapefruit</item>
+        <item>Mandarin</item>
+        <item>Plum</item>
+        <item>Apricot</item>
+        <item>Fig</item>
+        <item>Tangerine</item>
+        <item>Papaya</item>
+        <item>Passion fruit</item>
+        <item>Guava</item>
+        <item>Lychee</item>
+
+        //baked goods
+        <item>Rice</item>
+        <item>Pasta</item>
+        <item>Flour</item>
+        <item>Bread</item>
+        <item>Baking powder</item>
+        <item>Baking soda</item>
+        <item>Brad crumbs</item>
+        <item>Cornstarch</item>
+        <item>Oats</item>
+        <item>Noodles</item>
+        <item>Pancake mix</item>
+        <item>Yeast</item>
+        <item>Cake mix</item>
+        <item>Self rising flour</item>
+        <item>Popcorn</item>
+        <item>Macaroni cheese mix</item>
+        <item>Cereal</item>
+        <item>Pie Crust</item>
+        <item>Chips</item>
+        <item>Bread flour</item>
+        <item>Coconut oil</item>
+        <item>Chips</item>
+        <item>Pizza dough</item>
+        <item>Puff pastry</item>
+        <item>Risotto</item>
+        <item>Muffin mix</item>
+        <item>Ravioli</item>
+        <item>Wheat</item>
+        <item>Semolina</item>
+        <item>Polenta</item>
+        <item>Sponge cake</item>
+        <item>Essence</item>
+
+        //desert
+        <item>Chocolate</item>
+        <item>Apple sauce</item>
+        <item>Strawberry jam</item>
+        <item>Marshmallow</item>
+        <item>Nutella</item>
+        <item>Crisps</item>
+        <item>Chocolate syrup</item>
+        <item>Pudding mix</item>
+        <item>Raspberry jam</item>
+        <item>Dark chocolate</item>
+        <item>White cocolate</item>
+        <item>Brownie mix</item>
+        <item>Caramel</item>
+        <item>Candy</item>
+        <item>Milk powder</item>
+        <item>Chocolate powder</item>
+        <item>Strawberry powder</item>
+        <item>Cookies</item>
+        <item>Oreo</item>
+        <item>Apricot jam</item>
+        <item>Fig jam</item>
+        <item>Blueberry jam</item>
+        <item>Doritos</item>
+        <item>Cinnamon roll</item>
+        <item>Fudge</item>
+        <item>Gummy worms</item>
+        <item>Jelly</item>
+        <item>Biscuits</item>
+
+        //fish
+        <item>Canned tuna</item>
+        <item>Salmon</item>
+        <item>Tilapia</item>
+        <item>Fish fillets</item>
+        <item>Catfish</item>
+        <item>Cod</item>
+        <item>Canned salmon</item>
+        <item>Anchovy</item>
+        <item>Smoked salmon</item>
+        <item>Sardines</item>
+        <item>Tuna steak</item>
+        <item>White fish</item>
+        <item>Trout</item>
+        <item>Haddock</item>
+        <item>Capenta</item>
+        <item>Dry fish</item>
+        <item>Red snapper</item>
+        <item>MonkFish</item>
+        <item>Swordfish</item>
+        <item>Caviar</item>
+        <item>Bluefish</item>
+        <item>Barramundi</item>
+        <item>Eel</item>
+        <item>John dory</item>
+        <item>Sturgeon</item>
+        <item>Carp</item>
+        <item>Marlin</item>
+        <item>Pompano</item>
+        <item>Amberjack</item>
+        <item>Lemon sole</item>
+        <item>Rockfish</item>
+        <item>Pike</item>
+
+        //diet
+        <item>Vegan</item>
+        <item>Vegetarian</item>
+        <item>Gluten free</item>
+        <item>Lactose free</item>
+
+    </string-array>
+
+    <string-array name="cuisines_array">
+
+        <item>Mexican</item>
+        <item>Italian</item>
+        <item>Indian</item>
+        <item>Cajun</item>
+        <item>Soul Food</item>
+        <item>Thai </item>
+        <item>Greek</item>
+        <item>Chinese</item>
+        <item>Lebanese</item>
+        <item>Japanese</item>
+        <item>American</item>
+        <item>Moroccan</item>
+        <item>Mediterranean</item>
+        <item>French</item>
+        <item>Spanish</item>
+        <item>German</item>
+        <item>Korean</item>
+        <item>South African</item>
+        <item>Vietnamese</item>
+        <item>Turkish</item>
+        <item>Caribbean</item>
+        <item>British</item>
+        <item>Local</item>
+
     </string-array>
 
 </resources>

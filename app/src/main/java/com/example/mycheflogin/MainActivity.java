@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,8 +21,8 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     private EditText user_name, user_password;
-    private TextView forgottenpassword;
-    private Button login, signup;
+    private TextView forgottenpassword, signup;
+    private Button login, byPass;
     private int wrongDetails = 10;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
@@ -34,10 +33,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         user_name = findViewById(R.id.userName);
-        user_password =  findViewById(R.id.Password);
-        forgottenpassword = findViewById(R.id.ForgotPassword);
-        signup = findViewById(R.id.SignUp);
-        login = findViewById(R.id.signIn);
+        user_password =  findViewById(R.id.userPassword);
+        forgottenpassword = findViewById(R.id.tvForgotPass);
+        signup = findViewById(R.id.tvSignUp);
+        login = findViewById(R.id.userLogInbtn);
+
+        byPass=(Button) findViewById(R.id.buttonBypass);
+
+        byPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //instance of the firebase authentication
         firebaseAuth = FirebaseAuth.getInstance();
@@ -47,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         //checking if a user has already logged into the app or not and if user has logged in they
         //need to be directed to the next page.
         FirebaseUser user = firebaseAuth.getCurrentUser();
-
 
         if (user != null){
             finish();
@@ -84,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
     }
     //Checking if the user has already an account and if the details match to the ones in the database
     private void checkPassword(String uName, String uPassword){
-
 
         //these are called clues to let the user know whats going on
         progressDialog.setMessage("Verifying Account");

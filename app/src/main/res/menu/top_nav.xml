@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/helpItem"
+        android:icon="@drawable/ic_help_black_24dp"
+        tools:ignore="MenuTitle" />
+    <item
+        android:id="@+id/null2"
+        tools:ignore="MenuTitle" />
+    <item
+        android:id="@+id/null4"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/searchtop"
+        android:icon="@drawable/ic_search_black_24dp"
+
+        tools:ignore="MenuTitle" />
+</menu>

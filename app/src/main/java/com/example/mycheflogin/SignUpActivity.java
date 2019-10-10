@@ -1,21 +1,29 @@
 package com.example.mycheflogin;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -72,11 +80,11 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void setupUIViews(){
-        username = findViewById(R.id.SignUpUserNameInput);
-        userpassword = findViewById(R.id.SignUpPasswordInput);
-        useremail = findViewById(R.id.SingUpEmailInput);
-        signupBTN = findViewById(R.id.SignUpButton);
-        userlogin = (Button) findViewById(R.id.SignUpCancelButton);
+        username = findViewById(R.id.etUserName);
+        userpassword = findViewById(R.id.etUserPassword);
+        useremail = findViewById(R.id.etUserEmail);
+        signupBTN = findViewById(R.id.btnSignup);
+        userlogin = (Button) findViewById(R.id.btnSignup);
     }
 
     //function for checking if the user has filled in all the fields
@@ -96,6 +104,24 @@ public class SignUpActivity extends AppCompatActivity {
         if (userpassword.length() < 8){
             userpassword.setError("Please enter 8 characters");
         }
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        Map<String, Object> ob = new HashMap<>();
+        ob.put("name", name);
+        db.collection("Users")
+                .add(ob)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Log.d("d", "DocumentSnapshot added with ID: " + documentReference.getId());
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w("f", "Error adding document", e);
+                    }
+                });
 
         return result;
     }
