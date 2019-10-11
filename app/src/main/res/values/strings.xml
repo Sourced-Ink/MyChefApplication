@@ -20,7 +20,7 @@
     <string name="forgotten_password">Forgotten Password?</string>
     <string name="diet_preference">Diet Preference</string>
     <string name="log_out">Log out</string>
-    <string name="already_signed_in_login">Already Signed in? LogIn</string>
+    <string name="already_signed_in_login">Cancel</string>
     <string name="email_address">Email address</string>
     <string name="name">Name</string>
     <string name="chiko">Chiko</string>
