@@ -72,7 +72,7 @@
 
 
             <ImageButton
-                android:id="@+id/imageView6"
+                android:id="@+id/carribeanbutton"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:layout_margin="10dp"
@@ -93,7 +93,7 @@
                 android:textSize="25sp" />
 
             <ImageButton
-                android:id="@+id/imageView7"
+                android:id="@+id/chinesebutton1"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:layout_margin="10dp"
@@ -114,7 +114,7 @@
                 android:textSize="25sp" />
 
             <ImageButton
-                android:id="@+id/imageView8"
+                android:id="@+id/frenchbutton1"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:scaleType="centerCrop"
@@ -135,7 +135,7 @@
                 android:textSize="25sp" />
 
             <ImageButton
-                android:id="@+id/imageView9"
+                android:id="@+id/germanbutton1"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:scaleType="centerCrop"

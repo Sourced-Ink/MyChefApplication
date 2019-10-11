@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -17,6 +18,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class CuisineActivity extends AppCompatActivity {
 
     private BottomNavigationView menuhome, menutophome;
+
+    private ImageButton carribeanbuttton;
+    private ImageButton chinesebutton;
+    private ImageButton frenchbutton;
+    private ImageButton germanbutton;
+
 
 
     @Override
@@ -26,7 +33,48 @@ public class CuisineActivity extends AppCompatActivity {
 
         menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
         menutophome = (BottomNavigationView) findViewById(R.id.topNav);
+        carribeanbuttton =  findViewById(R.id.carribeanbutton);
+        chinesebutton = findViewById((R.id.chinesebutton1));
+        frenchbutton = findViewById(R.id.frenchbutton1);
+        germanbutton = findViewById(R.id.germanbutton1);
 
+
+        // adding butotn inteents for recipies
+
+        carribeanbuttton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view10)
+            {
+              //  opencarribeanbutton();
+            }
+        });
+
+        chinesebutton.setOnClickListener(new View.OnClickListener()        {
+
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        frenchbutton.setOnClickListener(new View.OnClickListener()        {
+
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        germanbutton.setOnClickListener(new View.OnClickListener()        {
+
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+
+
+        //--------------------------------------------
         menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
