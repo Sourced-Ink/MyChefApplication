@@ -71,7 +71,7 @@
             android:orientation="vertical">
 
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView6"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
@@ -92,7 +92,7 @@
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView7"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
@@ -113,7 +113,7 @@
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView8"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
@@ -134,7 +134,7 @@
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView9"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
@@ -155,7 +155,7 @@
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView10"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
@@ -176,7 +176,7 @@
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView11"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
@@ -197,7 +197,7 @@
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView12"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"

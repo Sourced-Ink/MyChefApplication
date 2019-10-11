@@ -18,6 +18,7 @@ public class CuisineActivity extends AppCompatActivity {
 
     private BottomNavigationView menuhome, menutophome;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
