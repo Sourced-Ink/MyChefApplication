@@ -135,7 +135,7 @@ public class PersonalActivity extends AppCompatActivity {
         });
 
 
-        /*menuP.setOnNavigationItemSelectedListener(
+        menuP.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -189,6 +189,6 @@ public class PersonalActivity extends AppCompatActivity {
                 }
         );
 
-        */
+
     }
 }

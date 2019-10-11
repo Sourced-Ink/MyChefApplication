@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ProfilePage"></activity>
+        <activity android:name=".roastactivity"></activity>
+        <activity android:name=".goatactivity" />
+        <activity android:name=".jerkactivity" />
+        <activity android:name=".pepperpotactivity" />
+        <activity android:name=".garlicactivity" />
+        <activity android:name=".carribeanactivity" />
+        <activity android:name=".ProfilePage" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".ShowRecipesActivity" />
         <activity android:name=".ChangePasswordActivity" />

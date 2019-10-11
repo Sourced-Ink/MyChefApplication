@@ -38,16 +38,6 @@ public class MainActivity extends AppCompatActivity {
         signup = findViewById(R.id.tvSignUp);
         login = findViewById(R.id.userLogInbtn);
 
-        byPass=(Button) findViewById(R.id.buttonBypass);
-
-        byPass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SearchActivity.class);
-                startActivity(intent);
-            }
-        });
-
         //instance of the firebase authentication
         firebaseAuth = FirebaseAuth.getInstance();
 

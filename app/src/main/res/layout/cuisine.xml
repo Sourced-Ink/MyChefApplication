@@ -71,8 +71,8 @@
             android:orientation="vertical">
 
 
-            <ImageView
-                android:id="@+id/imageView6"
+            <ImageButton
+                android:id="@+id/carribeanbutton"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:layout_margin="10dp"
@@ -92,8 +92,8 @@
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
-            <ImageView
-                android:id="@+id/imageView7"
+            <ImageButton
+                android:id="@+id/chinesebutton"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:layout_margin="10dp"
@@ -113,8 +113,8 @@
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
-            <ImageView
-                android:id="@+id/imageView8"
+            <ImageButton
+                android:id="@+id/frenchbutton"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:scaleType="centerCrop"
@@ -134,7 +134,7 @@
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView9"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
@@ -155,7 +155,7 @@
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView10"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
@@ -176,7 +176,7 @@
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView11"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
@@ -197,7 +197,7 @@
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/imageView12"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"

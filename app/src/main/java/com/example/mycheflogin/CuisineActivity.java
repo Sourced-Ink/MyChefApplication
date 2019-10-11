@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -17,6 +18,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class CuisineActivity extends AppCompatActivity {
 
     private BottomNavigationView menuhome, menutophome;
+    private ImageButton carribeanbuttton;
+    private ImageButton chinesebutton;
+    private ImageButton frenchbutton;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,19 @@ public class CuisineActivity extends AppCompatActivity {
 
         menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
         menutophome = (BottomNavigationView) findViewById(R.id.topNav);
+
+        carribeanbuttton = (ImageButton) findViewById(R.id.carribeanbutton);
+        carribeanbuttton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view10)
+            {
+                opencarribeanbutton();
+            }
+        });
+
+
+
+
 
         menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -94,16 +113,6 @@ public class CuisineActivity extends AppCompatActivity {
                                 });
                                 break;
 
-//                            case R.id.helpItem:
-//                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-//                                    @Override
-//                                    public boolean onMenuItemClick(MenuItem menuItem) {
-//                                        Intent intent = new Intent(HomeActivity.this, HelpActivity.class);
-//                                        startActivity(intent);
-//                                        return true;
-//                                    }
-//                                });
-//                                break;
                         }
                         return true;
                     }
@@ -111,4 +120,11 @@ public class CuisineActivity extends AppCompatActivity {
         );
 
     }
+
+    public void opencarribeanbutton()
+    {
+        Intent intent10 = new Intent(this,carribeanactivity.class);
+        startActivity(intent10);
+    }
+
 }
