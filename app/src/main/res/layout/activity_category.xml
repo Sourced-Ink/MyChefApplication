@@ -5,248 +5,245 @@
     android:id="@+id/categoryPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backk"
+    android:background="@drawable/steel_spice"
     tools:context=".CategoryActivity">
 
-    <Button
-        android:id="@+id/btnChooseSauces3"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_orange_light"
-        android:text="@string/sauces"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.032"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnChooseVeg"
-        app:layout_constraintVertical_bias="0.0" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="540dp"
+        android:orientation="vertical"
 
-    <Button
-        android:id="@+id/btnChooseVeg"
-        android:layout_width="144dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_orange_dark"
-        android:text="@string/vegetables"
-        android:textColor="#FF000000"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnChooseSeafood"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/btnChooseSeafood"
-        android:layout_width="185dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_orange_light"
-        android:text="@string/seafood"
-        android:textColor="#FF000000"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.038"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnChooseSpices"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/topNav"
+        app:layout_constraintBottom_toTopOf="@id/menu_Pers">
 
-    <Button
-        android:id="@+id/btnChooseDesert"
-        android:layout_width="196dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_orange_light"
-        android:text="@string/desert_snacks"
-        android:textColor="#FF000000"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.038"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnChooseFruits"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/btnChooseFish"
-        android:layout_width="151dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_orange_light"
-        android:text="@string/fish"
-        android:textColor="#FF000000"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnChooseBaking"
-        app:layout_constraintVertical_bias="0.0" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
 
-    <Button
-        android:id="@+id/btnChooseBaking"
-        android:layout_width="192dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_orange_dark"
-        android:text="@string/baking_and_grains"
-        android:textColor="#FF000000"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.901"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnChooseDairy"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/btnChooseDairy"
-        android:layout_width="155dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_orange_light"
-        android:text="@string/diary"
-        android:textColor="#000000"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/menuCate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.033"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnChooseMeat"
-        app:layout_constraintVertical_bias="0.008" />
+            tools:ignore="ScrollViewSize">
+
+            <Button
+                android:id="@+id/btnChooseVeg"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:background="#ABFFFFFF"
+                android:text="@string/vegetables"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FF0000"
+
+
+                android:textSize="25sp"
+
+                />
+
+
+            <Button
+                android:id="@+id/btnChooseSpices"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:background="#ABFFFFFF"
+                android:text="@string/spice_title"
+
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnChooseSeafood"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:background="#ABFFFFFF"
+                android:text="@string/seafood"
+
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnChooseSauces3"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:background="#ABFFFFFF"
+                android:text="@string/sauces"
+
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnChooseMeat"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:background="#ABFFFFFF"
+                android:text="@string/meat_title"
+
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnChooseFruits"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:background="#ABFFFFFF"
+                android:text="@string/fruit_title"
+
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnChooseFish"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:background="#ABFFFFFF"
+                android:text="@string/fish"
+
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnChooseDesert"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:background="#ABFFFFFF"
+                android:text="@string/desert_snacks"
+
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnChooseDairy"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:background="#ABFFFFFF"
+                android:text="@string/diary_lable"
+
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnChooseBaking"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:background="#ABFFFFFF"
+                android:text="@string/baking_and_grains"
+
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FF0000"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnShowRecipeCat"
+                android:layout_height="wrap_content"
+
+                android:layout_width="250dp"
+                android:background="#D7FFFFFF"
+                android:text="@string/search_title"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="50dp"
+                android:textSize="25sp"
+                android:layout_gravity="right"
+                android:textAllCaps="false"
+                android:textColor="#3CDB45"
+
+
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+ />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/menuCate"
-        android:layout_width="0dp"
-        android:layout_height="57dp"
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        app:itemIconSize="30dp"
+        app:itemIconTint="#5F5F5F"
+        app:menu="@menu/top_nav"
+        tools:ignore="MissingConstraints" >
+
+
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+
+            app:srcCompat="@mipmap/ic_logo"
+            tools:ignore="MissingConstraints" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_Pers"
+        android:layout_width="match_parent"
+
+        android:layout_height="60dp"
         android:layout_marginTop="8dp"
-        app:itemTextColor="@color/colorPrimaryDark"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/bottommenu" />
 
-    <Button
-        android:id="@+id/btnChooseMeat"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_orange_dark"
-        android:fadingEdge="horizontal|vertical"
-        android:text="@string/choose_meat"
-        android:textColor="#FF000000"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/menuCate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.926"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.074" />
-
-    <Button
-        android:id="@+id/btnChooseSpices"
-        android:layout_width="151dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_orange_dark"
-        android:text="@string/spices"
-        android:textColor="#FF000000"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.892"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnChooseFish"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btnChooseFruits"
-        android:layout_width="148dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_orange_dark"
-        android:text="@string/fruits"
-        android:textColor="#FF000000"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.919"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnChooseSauces3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btnShowRecipeCat"
-        android:layout_width="319dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="#07960F"
-        android:text="@string/show_recipes"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnChooseDesert"
-        app:layout_constraintVertical_bias="0.421" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
