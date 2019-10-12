@@ -22,8 +22,6 @@ public class CuisineActivity extends AppCompatActivity {
     private ImageButton chinesebutton;
     private ImageButton frenchbutton;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,10 +38,6 @@ public class CuisineActivity extends AppCompatActivity {
                 opencarribeanbutton();
             }
         });
-
-
-
-
 
         menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

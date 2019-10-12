@@ -18,7 +18,6 @@
         <activity android:name=".pepperpotactivity" />
         <activity android:name=".garlicactivity" />
         <activity android:name=".carribeanactivity" />
-        <activity android:name=".ProfilePage" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".ShowRecipesActivity" />
         <activity android:name=".ChangePasswordActivity" />
@@ -37,6 +36,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CuisineActivity" />
+        <activity android:name=".SearchResult" />
 
         <meta-data
             android:name="preloaded_fonts"

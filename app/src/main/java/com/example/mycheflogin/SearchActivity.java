@@ -22,7 +22,6 @@ private MultiAutoCompleteTextView multiAutoCompleteTextViewIngre, multiAutoCompl
 private Button showrecipesearch;
 Context context=this;
 Database database;
-DatabaseHelper databaseHelper;
 SQLiteDatabase sqLiteDatabase;
 
     @Override
@@ -51,26 +50,14 @@ SQLiteDatabase sqLiteDatabase;
         showrecipesearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                add(v);
+                Intent intentHome = new Intent(SearchActivity.this, SearchResult.class);
+                startActivity(intentHome);
+
             }
         });
 
     }
 
 
-    public void add(View view){
-        String name=multiAutoCompleteTextViewIngre.getText().toString();
-        databaseHelper =new DatabaseHelper(context);
-        sqLiteDatabase=databaseHelper.getWritableDatabase();
-        databaseHelper.addInformation(name,sqLiteDatabase);
-        Toast.makeText(getBaseContext(),"Data saved", Toast.LENGTH_LONG).show();
-        databaseHelper.close();
-    }
-
-//    public void showInput(View view){
-//        String input=editText.getText().toString();
-//        Toast.makeText(this,input, Toast.LENGTH_SHORT).show();
-//    }
-//
 
 }
