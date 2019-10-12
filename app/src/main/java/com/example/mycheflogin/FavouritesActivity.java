@@ -64,8 +64,8 @@ public class FavouritesActivity extends AppCompatActivity {
                                     @Override
                                     public boolean onMenuItemClick(MenuItem menuItem) {
                                         Intent intent = new Intent(FavouritesActivity.this, HomeActivity.class);
-
-                                        return false;
+                                        startActivity(intent);
+                                        return true;
                                     }
                                 });
                                 break;
