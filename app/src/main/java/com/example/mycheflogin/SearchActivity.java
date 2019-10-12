@@ -21,28 +21,28 @@ public class SearchActivity extends AppCompatActivity {
 private MultiAutoCompleteTextView multiAutoCompleteTextViewIngre, multiAutoCompleteTextViewCuis;
 private Button showrecipesearch;
 Context context=this;
-Database database;
-DatabaseHelper databaseHelper;
+//Database database;
+//DatabaseHelper databaseHelper;
 SQLiteDatabase sqLiteDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity);
+ //       setContentView(R.layout.activity);
 
-        showrecipesearch=findViewById(R.id.btnShowRecipeSearch);
-        multiAutoCompleteTextViewIngre=findViewById(R.id.multiAuto);
-        multiAutoCompleteTextViewCuis=findViewById(R.id.multiAuto2);
+ //       showrecipesearch=findViewById(R.id.btnShowRecipeSearch);
+ //       multiAutoCompleteTextViewIngre=findViewById(R.id.multiAuto);
+ //       multiAutoCompleteTextViewCuis=findViewById(R.id.multiAuto2);
 
         String[] ingredients=getResources().getStringArray(R.array.ingredients_array);
-        multiAutoCompleteTextViewIngre=findViewById(R.id.multiAuto);
+   //     multiAutoCompleteTextViewIngre=findViewById(R.id.multiAuto);
         ArrayAdapter<String> adapterIngre=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,ingredients);
         multiAutoCompleteTextViewIngre.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
         multiAutoCompleteTextViewIngre.setAdapter(adapterIngre);
         multiAutoCompleteTextViewIngre.setThreshold(1);
 
         String [] cuisines=getResources().getStringArray(R.array.cuisines_array);
-        multiAutoCompleteTextViewCuis=findViewById(R.id.multiAuto2);
+     //   multiAutoCompleteTextViewCuis=findViewById(R.id.multiAuto2);
         ArrayAdapter<String> adapterCuis=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,cuisines);
         multiAutoCompleteTextViewCuis.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
         multiAutoCompleteTextViewCuis.setAdapter(adapterCuis);
@@ -60,11 +60,11 @@ SQLiteDatabase sqLiteDatabase;
 
     public void add(View view){
         String name=multiAutoCompleteTextViewIngre.getText().toString();
-        databaseHelper =new DatabaseHelper(context);
-        sqLiteDatabase=databaseHelper.getWritableDatabase();
-        databaseHelper.addInformation(name,sqLiteDatabase);
-        Toast.makeText(getBaseContext(),"Data saved", Toast.LENGTH_LONG).show();
-        databaseHelper.close();
+   //     databaseHelper =new DatabaseHelper(context);
+   //     sqLiteDatabase=databaseHelper.getWritableDatabase();
+   //     databaseHelper.addInformation(name,sqLiteDatabase);
+   //     Toast.makeText(getBaseContext(),"Data saved", Toast.LENGTH_LONG).show();
+   //     databaseHelper.close();
     }
 
 //    public void showInput(View view){
