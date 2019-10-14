@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".roastactivity"></activity>
+        <activity android:name=".goatactivity" />
+        <activity android:name=".jerkactivity" />
+        <activity android:name=".pepperpotactivity" />
+        <activity android:name=".garlicactivity" />
+        <activity android:name=".carribeanactivity" />
+        <activity android:name=".SearchActivity" />
         <activity android:name=".ShowRecipesActivity" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".FavouritesActivity" />
@@ -25,11 +31,11 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".CuisineActivity" />
+        <activity android:name=".SearchResult" />
 
         <meta-data
             android:name="preloaded_fonts"

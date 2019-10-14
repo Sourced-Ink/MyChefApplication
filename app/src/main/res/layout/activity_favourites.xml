@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backing"
+    android:background="@drawable/fave"
     tools:context=".FavouritesActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -27,7 +27,7 @@
             android:layout_gravity="center"
 
             app:srcCompat="@mipmap/ic_logo"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,VectorDrawableCompat" />
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
@@ -44,19 +44,16 @@
 
         app:menu="@menu/bottommenu" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="540dp"
-        app:layout_constraintBottom_toTopOf="@id/menu_Pers"
-        app:layout_constraintTop_toBottomOf="@id/topNav">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/topNav"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-         />
-    </ScrollView>
+            />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

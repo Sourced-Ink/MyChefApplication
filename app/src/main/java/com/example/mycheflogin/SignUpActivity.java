@@ -28,7 +28,8 @@ import java.util.Map;
 public class SignUpActivity extends AppCompatActivity {
 
     private EditText username, userpassword, useremail;
-    private Button signupBTN;   private TextView userlogin;
+    private Button signupBTN;
+    private TextView userlogin;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -54,10 +55,10 @@ public class SignUpActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-//                                firebaseAuth.getCurrentUser().sendEmailVerification();
-//                                Toast.makeText(SignUpActivity.this, "Sign up was successful", Toast.LENGTH_SHORT).show();
-//                                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
-//                                startActivity(intent);
+                                firebaseAuth.getCurrentUser().sendEmailVerification();
+                                Toast.makeText(SignUpActivity.this, "Sign up was successful", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                                startActivity(intent);
                                 sendEmailVerificationk();
                             }
                             else{
@@ -79,11 +80,11 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void setupUIViews(){
-        username = (EditText) findViewById(R.id.etUserName);
-        userpassword = (EditText) findViewById(R.id.etUserPassword);
-        useremail = (EditText) findViewById(R.id.etUserEmail);
-        signupBTN = (Button) findViewById(R.id.btnSignup);
-        userlogin = (TextView) findViewById(R.id.tvUserLogin);
+        username = findViewById(R.id.etUserName);
+        userpassword = findViewById(R.id.etUserPassword);
+        useremail = findViewById(R.id.etUserEmail);
+        signupBTN = findViewById(R.id.btnSignup);
+        userlogin = (Button) findViewById(R.id.userLogInbtn);
     }
 
     //function for checking if the user has filled in all the fields

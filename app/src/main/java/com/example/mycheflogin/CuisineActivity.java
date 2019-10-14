@@ -18,13 +18,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class CuisineActivity extends AppCompatActivity {
 
     private BottomNavigationView menuhome, menutophome;
-
     private ImageButton carribeanbuttton;
     private ImageButton chinesebutton;
     private ImageButton frenchbutton;
-    private ImageButton germanbutton;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,48 +29,16 @@ public class CuisineActivity extends AppCompatActivity {
 
         menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
         menutophome = (BottomNavigationView) findViewById(R.id.topNav);
-        carribeanbuttton =  findViewById(R.id.carribeanbutton);
-        chinesebutton = findViewById((R.id.chinesebutton1));
-        frenchbutton = findViewById(R.id.frenchbutton1);
-        germanbutton = findViewById(R.id.germanbutton1);
 
-
-        // adding butotn inteents for recipies
-
+        carribeanbuttton = (ImageButton) findViewById(R.id.carribeanbutton);
         carribeanbuttton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view10)
             {
-              //  opencarribeanbutton();
+                opencarribeanbutton();
             }
         });
 
-        chinesebutton.setOnClickListener(new View.OnClickListener()        {
-
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-        frenchbutton.setOnClickListener(new View.OnClickListener()        {
-
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        germanbutton.setOnClickListener(new View.OnClickListener()        {
-
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-
-
-        //--------------------------------------------
         menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -143,16 +107,6 @@ public class CuisineActivity extends AppCompatActivity {
                                 });
                                 break;
 
-//                            case R.id.helpItem:
-//                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-//                                    @Override
-//                                    public boolean onMenuItemClick(MenuItem menuItem) {
-//                                        Intent intent = new Intent(HomeActivity.this, HelpActivity.class);
-//                                        startActivity(intent);
-//                                        return true;
-//                                    }
-//                                });
-//                                break;
                         }
                         return true;
                     }
@@ -160,4 +114,11 @@ public class CuisineActivity extends AppCompatActivity {
         );
 
     }
+
+    public void opencarribeanbutton()
+    {
+        Intent intent10 = new Intent(this,carribeanactivity.class);
+        startActivity(intent10);
+    }
+
 }

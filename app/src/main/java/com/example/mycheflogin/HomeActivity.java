@@ -27,13 +27,6 @@ public class HomeActivity extends AppCompatActivity {
         menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
         menutophome = (BottomNavigationView) findViewById(R.id.topNav);
 
-   //     search.setOnClickListener(new View.OnClickListener() {
-   //         @Override
-    //        public void onClick(View view) {
-   //             Intent intent = new Intent(HomeActivity.this, SearchActivity.class);
-    //            startActivity(intent);
-    //        }
-    //    });
 
         menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

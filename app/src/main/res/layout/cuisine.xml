@@ -5,12 +5,7 @@
     android:id="@+id/Cuisine"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".CuisineActivity">
-
-
-
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/topNav"
@@ -22,54 +17,42 @@
         app:menu="@menu/top_nav"
         tools:ignore="MissingConstraints" >
 
-
-
-
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-
             app:srcCompat="@mipmap/ic_logo"
             tools:ignore="MissingConstraints" />
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_Pers"
         android:layout_width="match_parent"
-
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
         android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/bottommenu" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="540dp"
-
         app:layout_constraintBottom_toTopOf="@id/menu_Pers"
         app:layout_constraintTop_toBottomOf="@+id/topNav"
-        app:layout_constraintVertical_bias="1.0"
-        >
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="#C4FFFFFF"
-
             android:orientation="vertical">
-
 
             <ImageButton
                 android:id="@+id/carribeanbutton"
@@ -87,13 +70,11 @@
                 android:layout_marginBottom="20dp"
                 android:background="#D3FFFFFF"
                 android:text="  Carribean"
-
-
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
             <ImageButton
-                android:id="@+id/chinesebutton1"
+                android:id="@+id/chinesebutton"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:layout_margin="10dp"
@@ -108,18 +89,17 @@
                 android:layout_marginBottom="20dp"
                 android:background="#D3FFFFFF"
                 android:text="  Chinese"
-
-
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
             <ImageButton
-                android:id="@+id/frenchbutton1"
+                android:id="@+id/frenchbutton"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:scaleType="centerCrop"
                 android:layout_margin="10dp"
                 app:srcCompat="@drawable/f" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -129,18 +109,17 @@
                 android:layout_marginBottom="20dp"
                 android:background="#D3FFFFFF"
                 android:text="  French"
-
-
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
             <ImageButton
-                android:id="@+id/germanbutton1"
+                android:id="@+id/imageView9"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:scaleType="centerCrop"
                 android:layout_margin="10dp"
                 app:srcCompat="@drawable/g" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -150,8 +129,6 @@
                 android:layout_marginBottom="20dp"
                 android:background="#D3FFFFFF"
                 android:text="  German"
-
-
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
@@ -162,6 +139,7 @@
                 android:scaleType="centerCrop"
                 android:layout_margin="10dp"
                 app:srcCompat="@drawable/i" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -171,8 +149,6 @@
                 android:layout_marginBottom="20dp"
                 android:background="#D3FFFFFF"
                 android:text="  Indian"
-
-
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
@@ -183,6 +159,7 @@
                 android:scaleType="centerCrop"
                 android:layout_margin="10dp"
                 app:srcCompat="@drawable/it" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -192,8 +169,6 @@
                 android:layout_marginBottom="20dp"
                 android:background="#D3FFFFFF"
                 android:text="  Italy"
-
-
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
@@ -204,6 +179,7 @@
                 android:scaleType="centerCrop"
                 android:layout_margin="10dp"
                 app:srcCompat="@drawable/m" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -213,8 +189,6 @@
                 android:layout_marginBottom="20dp"
                 android:background="#D3FFFFFF"
                 android:text="  Mediterranean"
-
-
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
         </LinearLayout>
