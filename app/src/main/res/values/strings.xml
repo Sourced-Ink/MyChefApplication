@@ -61,8 +61,6 @@
     <string name="textview">TextView</string>
     <string name="image_description">Image Description</string>
 
-    <string name="search_hint">Search Fruit</string>
-    <string name="search_view">Enter search</string>
 
     <string-array name="type_of_meats">
         <item>Chicken</item>

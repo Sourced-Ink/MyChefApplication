@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                checkPassword(user_name.getText().toString(), user_password.getText().toString());
+               checkPassword(user_name.getText().toString(), user_password.getText().toString());
                 Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intentHome);
             }
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     progressDialog.dismiss();
-                    //Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     checkEmailVerification();
                 }else{
                     Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
