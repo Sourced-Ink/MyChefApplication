@@ -30,7 +30,6 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_Pers"
         android:layout_width="match_parent"
-
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
         android:background="#FFFFFF"
