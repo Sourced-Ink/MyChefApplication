@@ -1,34 +1,46 @@
 package com.example.mycheflogin;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import com.example.mycheflogin.Model.DbAdapter;
+import com.example.mycheflogin.Model.DbModelClass;
+import com.example.mycheflogin.RecyclerPackage.MyDbClass;
 import java.util.ArrayList;
-import java.util.List;
 
 public class SearchResult extends AppCompatActivity {
-    List<String> searchResults=new ArrayList<>();
-    Database database;
+    MyDbClass dbClass;
+    ArrayList<DbModelClass> objDbModelClassArrayList;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+        recyclerView=findViewById(R.id.dataLV);
 
-        database=new Database(this);
-
-        recipeResults();
-
+        dbClass=new MyDbClass(this);
+        objDbModelClassArrayList=new ArrayList<>();
     }
 
-
-    public void recipeResults(){
-        searchResults=database.getRecipeName();
-
+    public void populateListView(View view){
+        try {
+            objDbModelClassArrayList=  dbClass.getAllData();
+            DbAdapter dbAdapter = new DbAdapter(objDbModelClassArrayList);
+            recyclerView.hasFixedSize();
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            recyclerView.setAdapter(dbAdapter);
+        }
+        catch (Exception e){
+        Toast.makeText(SearchResult.this, "Show data: "+e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 }

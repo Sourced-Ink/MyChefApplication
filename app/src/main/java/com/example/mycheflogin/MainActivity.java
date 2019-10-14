@@ -52,13 +52,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, HomeActivity.class));
         }
 
-
         //assigning the login button
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkPassword(user_name.getText().toString(), user_password.getText().toString());
+//                checkPassword(user_name.getText().toString(), user_password.getText().toString());
                 Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(intentHome);
             }
         });
 
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    //Checking if the user has already an account and if the details match to the ones in the database
+    //Checking if the user has already an account and if the details match to the ones in the myDbClass
     private void checkPassword(String uName, String uPassword){
 
         //these are called clues to let the user know whats going on
