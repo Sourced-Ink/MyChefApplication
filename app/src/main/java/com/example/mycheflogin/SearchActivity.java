@@ -12,7 +12,8 @@ import android.widget.*;
 import android.widget.MultiAutoCompleteTextView;
 
 public class SearchActivity extends AppCompatActivity {
-    private MultiAutoCompleteTextView multiAutoCompleteTextViewIngre, multiAutoCompleteTextViewCuis;
+    private MultiAutoCompleteTextView multiAutoCompleteTextViewIngre;
+    private AutoCompleteTextView autoCompleteTextViewCuis;
     private Button showrecipesearch;
     private String mystring;
 
@@ -28,7 +29,7 @@ public class SearchActivity extends AppCompatActivity {
 
         showrecipesearch = findViewById(R.id.btnShowRecipeSearch);
         multiAutoCompleteTextViewIngre = findViewById(R.id.multiAuto);
-        multiAutoCompleteTextViewCuis = findViewById(R.id.multiAuto2);
+        autoCompleteTextViewCuis = findViewById(R.id.multiAuto2);
 
         String[] ingredients = getResources().getStringArray(R.array.ingredients_array);
         multiAutoCompleteTextViewIngre = findViewById(R.id.multiAuto);
@@ -38,11 +39,11 @@ public class SearchActivity extends AppCompatActivity {
         multiAutoCompleteTextViewIngre.setThreshold(1);
 
         String[] cuisines = getResources().getStringArray(R.array.cuisines_array);
-        multiAutoCompleteTextViewCuis = findViewById(R.id.multiAuto2);
+        autoCompleteTextViewCuis = findViewById(R.id.multiAuto2);
         ArrayAdapter<String> adapterCuis = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, cuisines);
-        multiAutoCompleteTextViewCuis.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
-        multiAutoCompleteTextViewCuis.setAdapter(adapterCuis);
-        multiAutoCompleteTextViewCuis.setThreshold(1);
+//        AutoCompleteTextViewCuis.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
+        autoCompleteTextViewCuis.setAdapter(adapterCuis);
+//        multiAutoCompleteTextViewCuis.setThreshold(1);
 
         showrecipesearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,15 +56,13 @@ public class SearchActivity extends AppCompatActivity {
 
     }
     public String getQueryStuff (){
-        String mystring = multiAutoCompleteTextViewCuis.getText().toString();
-        String arr[] = mystring.split(",", 2);
-        String firstWord = arr[0];
-        Toast.makeText(this, firstWord, Toast.LENGTH_SHORT).show();
-        return firstWord;
+        String mystring = autoCompleteTextViewCuis.getText().toString();
+        Toast.makeText(this, mystring, Toast.LENGTH_SHORT).show();
+        return mystring;
     }
 
     public void toast(){
-        String mystring = multiAutoCompleteTextViewCuis.getText().toString();
+        String mystring = autoCompleteTextViewCuis.getText().toString();
         String arr[] = mystring.split(",", 2);
         String firstWord = arr[0];
         Toast.makeText(this, firstWord, Toast.LENGTH_SHORT).show();

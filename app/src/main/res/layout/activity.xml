@@ -7,7 +7,7 @@
     android:background="@drawable/categories"
     tools:context=".MainActivity">
 
-    <MultiAutoCompleteTextView
+    <AutoCompleteTextView
         android:id="@+id/multiAuto2"
         android:layout_width="155dp"
         android:layout_height="50dp"
