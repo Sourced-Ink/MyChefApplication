@@ -84,7 +84,7 @@ public class SignUpActivity extends AppCompatActivity {
         userpassword = findViewById(R.id.etUserPassword);
         useremail = findViewById(R.id.etUserEmail);
         signupBTN = findViewById(R.id.btnSignup);
-        userlogin = (Button) findViewById(R.id.btnSignup);
+        userlogin = (Button) findViewById(R.id.userLogInbtn);
     }
 
     //function for checking if the user has filled in all the fields
