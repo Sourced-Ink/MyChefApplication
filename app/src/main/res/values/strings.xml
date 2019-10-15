@@ -61,6 +61,7 @@
     <string name="textview">TextView</string>
     <string name="image_description">Image Description</string>
 
+
     <string-array name="type_of_meats">
         <item>Chicken</item>
         <item>Beef</item>
