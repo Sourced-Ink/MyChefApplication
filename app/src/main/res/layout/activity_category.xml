@@ -179,7 +179,7 @@
 
                 android:layout_width="250dp"
                 android:background="#D7FFFFFF"
-                android:text="@string/search_title"
+                android:text="OK!"
                 android:textAlignment="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="80dp"
