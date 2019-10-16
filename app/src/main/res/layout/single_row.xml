@@ -9,12 +9,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/sr_image"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@color/colorPrimaryDark">
-        </ImageView>
+        </ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -33,7 +34,7 @@ public class DbAdapter extends RecyclerView.Adapter<DbAdapter.DbViewHolder> {
     public void onBindViewHolder(@NonNull DbViewHolder holder, int position) {
         DbModelClass objDbModelClass=objModelClassArrayList.get(position);
         holder.imageDesTV.setText(objDbModelClass.getImageDes());
-        holder.ourImageIV.setImageBitmap(objDbModelClass.getOurImage());
+        holder.ourImagebtn.setImageBitmap(objDbModelClass.getOurImage());
     }
 
     @Override
@@ -43,12 +44,12 @@ public class DbAdapter extends RecyclerView.Adapter<DbAdapter.DbViewHolder> {
 
     public static class DbViewHolder extends RecyclerView.ViewHolder{
         TextView imageDesTV;
-        ImageView ourImageIV;
+        ImageButton ourImagebtn;
 
         public DbViewHolder(@NonNull View itemView) {
             super(itemView);
             imageDesTV=itemView.findViewById(R.id.sr_recipe_desc);
-            ourImageIV=itemView.findViewById(R.id.sr_image);
+            ourImagebtn=itemView.findViewById(R.id.sr_image);
         }
     }
 }
