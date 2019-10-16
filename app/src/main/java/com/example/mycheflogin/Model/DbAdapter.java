@@ -6,12 +6,9 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.mycheflogin.R;
 import java.util.ArrayList;
@@ -36,7 +33,7 @@ public class DbAdapter extends RecyclerView.Adapter<DbAdapter.DbViewHolder> {
     public void onBindViewHolder(@NonNull DbViewHolder holder, int position) {
         DbModelClass objDbModelClass=objModelClassArrayList.get(position);
         holder.imageDesTV.setText(objDbModelClass.getImageDes());
-//        holder.ourImage.setImageBitmap(objDbModelClass.getOurImage());
+        holder.ourImageIV.setImageBitmap(objDbModelClass.getOurImage());
     }
 
     @Override
@@ -46,12 +43,12 @@ public class DbAdapter extends RecyclerView.Adapter<DbAdapter.DbViewHolder> {
 
     public static class DbViewHolder extends RecyclerView.ViewHolder{
         TextView imageDesTV;
-//        ImageView ourImage;
+        ImageView ourImageIV;
 
         public DbViewHolder(@NonNull View itemView) {
             super(itemView);
             imageDesTV=itemView.findViewById(R.id.sr_recipe_desc);
-//            ourImage=itemView.findViewById(R.id.sr_image);
+            ourImageIV=itemView.findViewById(R.id.sr_image);
         }
     }
 }

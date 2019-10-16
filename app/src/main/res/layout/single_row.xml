@@ -6,11 +6,12 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:id="@+id/sr_image"
-        android:background="@color/colorPrimaryDark"/>
+        android:background="@color/common_google_signin_btn_text_dark_focused"
+        android:layout_marginBottom="2dp"/>
 
     <TextView
         android:layout_width="wrap_content"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:layout_height="30dp"
         android:id="@+id/sr_recipe_desc"
         android:layout_alignParentRight="true"
@@ -20,6 +21,7 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="160dp"/>
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="8dp" />
 
 </RelativeLayout>

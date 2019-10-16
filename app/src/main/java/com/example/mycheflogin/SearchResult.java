@@ -1,5 +1,6 @@
 package com.example.mycheflogin;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ public class SearchResult extends AppCompatActivity {
     MyDbClass dbClass;
     ArrayList<DbModelClass> objDbModelClassArrayList;
     RecyclerView recyclerView;
+    View view;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,9 +31,11 @@ public class SearchResult extends AppCompatActivity {
 
         dbClass=new MyDbClass(this);
         objDbModelClassArrayList=new ArrayList<>();
+
+        populateRecyclerView(view);
     }
 
-    public void populateListView(View view){
+    public void populateRecyclerView(View view){
         try {
             objDbModelClassArrayList=  dbClass.getAllData();
             DbAdapter dbAdapter = new DbAdapter(objDbModelClassArrayList);
@@ -42,5 +46,8 @@ public class SearchResult extends AppCompatActivity {
         catch (Exception e){
         Toast.makeText(SearchResult.this, "Show data: "+e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+        SearchActivity.progressDialog.dismiss();
+
     }
+
 }

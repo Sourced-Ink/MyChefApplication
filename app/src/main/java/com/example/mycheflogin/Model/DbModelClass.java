@@ -1,15 +1,14 @@
 package com.example.mycheflogin.Model;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 
 public class DbModelClass {
 
     String imageDes;
-//    Bitmap ourImage;
+    Bitmap ourImage;
 
-    public DbModelClass(String imageDes/*, Bitmap ourImage*/) {
+    public DbModelClass(String imageDes,Bitmap ourImage) {
         this.imageDes = imageDes;
-//        this.ourImage = ourImage;
+        this.ourImage = ourImage;
     }
 
     public String getImageDes() {
@@ -20,11 +19,11 @@ public class DbModelClass {
         this.imageDes = imageDes;
     }
 
-//    public Bitmap getOurImage() {
-//        return ourImage;
-//    }
-//
-//    public void setOurImage(Bitmap ourImage) {
-//        this.ourImage = ourImage;
-//    }
+    public Bitmap getOurImage() {
+        return ourImage;
+    }
+
+    public void setOurImage(Bitmap ourImage) {
+        this.ourImage = ourImage;
+    }
 }

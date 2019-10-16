@@ -13,7 +13,6 @@ import java.util.ArrayList;
 
 public class MyDbClass extends SQLiteAssetHelper {
 
-    SearchActivity searchActivity=new SearchActivity();
     private static final String DATABASE_NAME = "MyChefDb.db";
     private static final int DATABASE_VERSION = 1;
 
@@ -21,37 +20,35 @@ public class MyDbClass extends SQLiteAssetHelper {
 
     public MyDbClass(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        this.context=context;
+        this.context = context;
     }
 
-
-    public ArrayList getAllData( ) {
-        try
-        {
-            SQLiteDatabase db=this.getReadableDatabase();
+    public ArrayList<DbModelClass> getAllData() {
+        try {
+            SQLiteDatabase db = this.getReadableDatabase();
             ArrayList<DbModelClass> objModelClassArrayList = new ArrayList<>();
-            if (db != null)
-            {
-                Cursor objCursor = db.rawQuery("select * from Recipes where recipeCuisine = 'chinese'",null);
-                if (objCursor.getCount() != 0)
-                {
+            if (db != null) {
+
+                Cursor objCursor = db.rawQuery("select * from Recipes where recipeCuisine ='" + SearchActivity.getQueryStuff() + "'", null);
+
+                if (objCursor.getCount() != 0) {
+
                     while (objCursor.moveToNext()) {
                         String imageDes = objCursor.getString(0);
-//                        byte[] imageByte = objCursor.getBlob(1);
-//                        Bitmap ourImage = BitmapFactory.decodeByteArray(imageByte, 0, imageByte.length);
+                        byte[] imageByte = objCursor.getBlob(1);
+
+                        Bitmap ourImage = BitmapFactory.decodeByteArray(imageByte, 0, imageByte.length);
+
                         objModelClassArrayList.add(
-                                new DbModelClass(
-                                        imageDes/*, ourImage*/
-                                )
+                                new DbModelClass(imageDes, ourImage)
                         );
                     }
-                        return objModelClassArrayList;
+                    return objModelClassArrayList;
+
+                } else {
+                    Toast.makeText(context, "No data retrieved...", Toast.LENGTH_SHORT).show();
+                    return null;
                 }
-                else
-                    {
-                Toast.makeText(context, "No data retrieved...", Toast.LENGTH_SHORT).show();
-                return null;
-            }
             } else {
                 Toast.makeText(context, "Database is null...", Toast.LENGTH_SHORT).show();
                 return null;
@@ -62,4 +59,19 @@ public class MyDbClass extends SQLiteAssetHelper {
         }
 
     }
+
+//    public String saveName() {
+//        SQLiteDatabase db;
+//        try {
+//            db = this.getWritableDatabase();
+//        } catch (Exception e) {
+//            if (db != null) {
+//                Cursor objCursor = db.rawQuery("insert into  * from Recipes where recipeCuisine ='" + SearchActivity.getQueryStuff() + "'", null);
+//                if (objCursor.getCount() != 0) {
+//
+//                }
+//
+//            }
+//        }
+//    }
 }
