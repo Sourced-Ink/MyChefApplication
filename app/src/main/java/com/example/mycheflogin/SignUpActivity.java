@@ -54,10 +54,6 @@ public class SignUpActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-//                                firebaseAuth.getCurrentUser().sendEmailVerification();
-//                                Toast.makeText(SignUpActivity.this, "Sign up was successful", Toast.LENGTH_SHORT).show();
-//                                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
-//                                startActivity(intent);
                                 sendEmailVerificationk();
                             }
                             else{
@@ -79,11 +75,11 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void setupUIViews(){
-        username = (EditText) findViewById(R.id.etUserName);
-        userpassword = (EditText) findViewById(R.id.etUserPassword);
-        useremail = (EditText) findViewById(R.id.etUserEmail);
-        signupBTN = (Button) findViewById(R.id.btnSignup);
-        userlogin = (TextView) findViewById(R.id.tvUserLogin);
+        username = findViewById(R.id.etUserName);
+        userpassword = findViewById(R.id.etUserPassword);
+        useremail = findViewById(R.id.etUserEmail);
+        signupBTN = findViewById(R.id.btnSignup);
+        userlogin = findViewById(R.id.tvUserLogin);
     }
 
     //function for checking if the user has filled in all the fields
