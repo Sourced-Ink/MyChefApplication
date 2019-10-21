@@ -33,7 +33,7 @@
                 android:gravity="center"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-            android:text="@string/image_description"
+                android:text="@string/image_description"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 

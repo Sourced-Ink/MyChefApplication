@@ -61,6 +61,7 @@
         </activity>
         <activity android:name=".CuisineActivity" />
         <activity android:name=".SearchResult" />
+        <activity android:name=".RecipeStepsActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

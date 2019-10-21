@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="#C8FFFFFF"
-            android:hint="select cuisine"
+            android:hint="Select Cuisine"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/colorPrimaryDark"
             android:textColorHint="#999898"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="#C8FFFFFF"
-            android:hint="select ingredient"
+            android:hint="Select Ingredients"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#FFFFFF"
             android:textColorHint="#999898"
@@ -77,7 +77,7 @@
             android:textAllCaps="false"
             android:background="#ABFFFFFF"
 
-            android:text="show recipe" />
+            android:text="Show Recipes" />
 
     </LinearLayout>
 

@@ -3,7 +3,9 @@ package com.example.mycheflogin.Model;
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.Context;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -17,6 +19,7 @@ import java.util.ArrayList;
 public class DbAdapter extends RecyclerView.Adapter<DbAdapter.DbViewHolder> {
 
     ArrayList<DbModelClass> objModelClassArrayList;
+
 
     public DbAdapter(ArrayList<DbModelClass> objModelClassArrayList){
         this.objModelClassArrayList=objModelClassArrayList;
