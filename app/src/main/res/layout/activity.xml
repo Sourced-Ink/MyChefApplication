@@ -26,7 +26,7 @@
             android:textAlignment="center"
             android:layout_margin="20dp"
 
-            android:text="Search for a recipie"
+            android:text="Search for a recipe"
             android:textStyle="italic"
 
             android:textColor="@color/colorAccent"

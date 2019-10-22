@@ -8,13 +8,21 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.example.mycheflogin.RecyclerPackage.MyDbClass;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity {
 
     private Button  category, cuisine;
     private BottomNavigationView menuhome, menutophome;
+    private static TextView name;
+
+    MyDbClass dbClass;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +34,7 @@ public class HomeActivity extends AppCompatActivity {
         cuisine =(Button) findViewById(R.id.CuisineBTN);
         menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
         menutophome = (BottomNavigationView) findViewById(R.id.topNav);
+        name=findViewById(R.id.textView2);
 
 
         menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -126,6 +135,12 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intentC);
             }
         });
+
+        dbClass=new MyDbClass(this);
+
+        name.setText(dbClass.getDisplayNameFromDb());
+
+
 
 
     }

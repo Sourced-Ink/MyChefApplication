@@ -46,6 +46,7 @@ public class SearchResult extends AppCompatActivity {
             recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
                 @Override
                 public void onItemClick(View view, int position) {
+
                     Intent intentHome = new Intent(SearchResult.this, RecipeStepsActivity.class);
                     startActivity(intentHome);
                 }
@@ -65,8 +66,5 @@ public class SearchResult extends AppCompatActivity {
 
     }
 
-    public void recipeSteps(View view) {
-        Intent intentHome = new Intent(SearchResult.this, RecipeStepsActivity.class);
-        startActivity(intentHome);
-    }
+
 }

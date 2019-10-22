@@ -6,4 +6,10 @@
     tools:ignore="ExtraText">
     android:layout_width="match_parent"
     tools:context=".RecipeStepsActivity">
+
+    <TextView
+        android:id="@+id/tvrecipesteps"
+        android:layout_width="364dp"
+        android:layout_height="match_parent"
+        android:text="TextView" />
 </LinearLayout>
