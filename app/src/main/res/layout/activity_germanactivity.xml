@@ -27,7 +27,7 @@
             android:layout_height="68dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
-            android:background=""
+
             android:textStyle="bold"
             android:text="German Cuisine"
             app:fontFamily="cursive" />
