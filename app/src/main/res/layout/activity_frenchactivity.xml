@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/menu_Pers"
+        android:layout_below="@+id/topNav"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="50sp"
+            android:textColor="#FF0000"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:text="French Cuisine"
+            app:fontFamily="cursive" />
+
+        <Button
+            android:id="@+id/onionbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#C6FFFFFF"
+            android:textAllCaps="false"
+            android:text="Onion soup" />
+
+        <Button
+            android:id="@+id/cassbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#C6FFFFFF"
+            android:textAllCaps="false"
+
+            android:text="Cassoulet" />
+
+        <Button
+            android:id="@+id/souffletbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#C6FFFFFF"
+            android:textAllCaps="false"
+
+            android:text="Soufflet" />
+
+        <Button
+            android:id="@+id/ratbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#C6FFFFFF"
+            android:textAllCaps="false"
+            android:text="Ratatouille " />
+
+        <Button
+            android:id="@+id/flamichebutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#C6FFFFFF"
+            android:textAllCaps="false"
+
+            android:text="Flamiche" />
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        app:itemIconSize="30dp"
+        app:itemIconTint="#5F5F5F"
+        app:menu="@menu/top_nav"
+        tools:ignore="MissingConstraints" >
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+
+            app:srcCompat="@mipmap/ic_logo"
+            tools:ignore="MissingConstraints,VectorDrawableCompat" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_Pers"
+        android:layout_width="match_parent"
+
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+
+        app:menu="@menu/bottommenu" />
+
+
+
+</RelativeLayout>
+
