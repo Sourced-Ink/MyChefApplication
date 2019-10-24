@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText user_name, user_password;
     private TextView forgottenpassword, signup;
-    private Button login, byPass;
+    private Button login;
     private int wrongDetails = 10;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         user_name = findViewById(R.id.userName);
-        user_password =  findViewById(R.id.userPassword);
+        user_password = findViewById(R.id.userPassword);
         forgottenpassword = findViewById(R.id.tvForgotPass);
         signup = findViewById(R.id.tvSignUp);
         login = findViewById(R.id.userLogInbtn);
@@ -47,18 +48,18 @@ public class MainActivity extends AppCompatActivity {
         //need to be directed to the next page.
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
+
         if (user != null){
             finish();
             startActivity(new Intent(MainActivity.this, HomeActivity.class));
         }
 
+
         //assigning the login button
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//               checkPassword(user_name.getText().toString(), user_password.getText().toString());
-                Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(intentHome);
+                checkPassword(user_name.getText().toString(), user_password.getText().toString());
             }
         });
 
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    //Checking if the user has already an account and if the details match to the ones in the myDbClass
+    //Checking if the user has already an account and if the details match to the ones in the database
     private void checkPassword(String uName, String uPassword){
 
         //these are called clues to let the user know whats going on
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     progressDialog.dismiss();
-                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     checkEmailVerification();
                 }else{
                     Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
@@ -109,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
     //checking if the user has already verified their email or not
     private void checkEmailVerification(){
         //getting the firebase user getInstace only used when user is already registered
-        FirebaseUser firebaseUser = firebaseAuth.getInstance().getCurrentUser();
+        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         //emailflag will check if user has verified their email
         Boolean emailflag = firebaseUser.isEmailVerified();

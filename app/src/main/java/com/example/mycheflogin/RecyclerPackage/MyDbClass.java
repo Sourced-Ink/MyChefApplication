@@ -17,6 +17,7 @@ public class MyDbClass extends SQLiteAssetHelper {
 
     private static final String DATABASE_NAME = "MyChefDb.db";
     private static final int DATABASE_VERSION = 1;
+    String displayName;
 
     Context context;
 
@@ -63,20 +64,19 @@ public class MyDbClass extends SQLiteAssetHelper {
 
     }
 
-    public void insertNameToDb(String name) {
+    public void insertNameToDb(String displayName) {
          SQLiteDatabase db= getWritableDatabase();
         ContentValues contentValues=new ContentValues();
 
         try {
         } catch (Exception e) {
-            contentValues.put("userName", name);
+            contentValues.put("userName", displayName);
             db.insert("userName",null, contentValues);
         }
 
     }
 
     public String getDisplayNameFromDb(){
-        String displayName="";
         try {
             SQLiteDatabase db = this.getReadableDatabase();
             if (db != null) {
@@ -105,7 +105,7 @@ public class MyDbClass extends SQLiteAssetHelper {
     }
 
     public String getRecipeSteps(){
-        String displayName="";
+//        String displayName="";
         try {
             SQLiteDatabase db = this.getReadableDatabase();
             if (db != null) {

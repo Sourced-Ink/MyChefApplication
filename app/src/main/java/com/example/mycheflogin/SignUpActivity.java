@@ -1,8 +1,7 @@
 package com.example.mycheflogin;
 
-import android.content.ContentValues;
+import android.app.ProgressDialog;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,7 +13,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.mycheflogin.Model.DbAdapter;
 import com.example.mycheflogin.RecyclerPackage.MyDbClass;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -29,16 +27,19 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.example.mycheflogin.SearchActivity.progressDialog;
+
 public class SignUpActivity extends AppCompatActivity {
 
     private static EditText username;
-    private  EditText userpassword, useremail;
+    private EditText userpassword, useremail;
     private Button signupBTN;
     private TextView userlogin;
     private FirebaseAuth firebaseAuth;
+    private ProgressDialog progressDialog;
+
 
     MyDbClass myDbClass;
-
 
 
     @Override
@@ -48,30 +49,31 @@ public class SignUpActivity extends AppCompatActivity {
 
         setupUIViews();
 
+        progressDialog = new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
 
-        //button for when the user has filled in all the details
-
         myDbClass=new MyDbClass(this);
+        //button for when the user has filled in all the details
         signupBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (validateUserDetails()){
+                    progressDialog.setMessage("Please wait.....Signing Up");
+                    progressDialog.show();
 
                     //converting into a string and removing all wide spaces the user entered thus we using trim()
                     String user_email = useremail.getText().toString().trim();
                     String user_password = userpassword.getText().toString().trim();
                     final String  user_name=username.getText().toString().trim();
 
+
                     firebaseAuth.createUserWithEmailAndPassword(user_email, user_password).addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                firebaseAuth.getCurrentUser().sendEmailVerification();
+//                                progressDialog.setMessage("Please wait.....Signing Up");
+//                                progressDialog.show();
                                 myDbClass.insertNameToDb(user_name);
-                                Toast.makeText(SignUpActivity.this, "Sign up was successful", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
-                                startActivity(intent);
                                 sendEmailVerificationk();
                             }
                             else{
@@ -97,7 +99,7 @@ public class SignUpActivity extends AppCompatActivity {
         userpassword = findViewById(R.id.etUserPassword);
         useremail = findViewById(R.id.etUserEmail);
         signupBTN = findViewById(R.id.btnSignup);
-        userlogin = (Button) findViewById(R.id.userLogInbtn);
+        userlogin = findViewById(R.id.tvUserLogin);
     }
 
     //function for checking if the user has filled in all the fields
@@ -122,7 +124,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public static String getName() {
-    return username.getText().toString();
+        return username.getText().toString();
 
     }
 
