@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               checkPassword(user_name.getText().toString(), user_password.getText().toString());
+//               checkPassword(user_name.getText().toString(), user_password.getText().toString());
                 Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intentHome);
             }
