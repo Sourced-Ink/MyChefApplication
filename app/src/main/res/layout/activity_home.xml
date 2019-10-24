@@ -114,7 +114,7 @@
             android:layout_gravity="center"
 
             app:srcCompat="@mipmap/ic_logo"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,VectorDrawableCompat" />
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 

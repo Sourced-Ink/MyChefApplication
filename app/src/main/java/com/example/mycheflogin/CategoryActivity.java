@@ -78,18 +78,18 @@ public class CategoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_category);
 
         choose_meat = findViewById(R.id.btnChooseMeat);
-        choose_diary = (Button) findViewById(R.id.btnChooseDairy);
-        choose_veg = (Button) findViewById(R.id.btnChooseVeg);
-        choose_seafood = (Button) findViewById(R.id.btnChooseSeafood);
-        choose_fruits = (Button) findViewById(R.id.btnChooseFruits);
-        choose_spice = (Button) findViewById(R.id.btnChooseSpices);
-        choose_sauce = (Button) findViewById(R.id.btnChooseSauces3);
-        choose_desert = (Button) findViewById(R.id.btnChooseDesert);
-        choose_baking = (Button) findViewById(R.id.btnChooseBaking);
-        choose_fish = (Button) findViewById(R.id.btnChooseFish);
-        show_recipe = (Button) findViewById(R.id.btnShowRecipeCat);
-        menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
-        menutophome = (BottomNavigationView) findViewById(R.id.topNav);
+        choose_diary = findViewById(R.id.btnChooseDairy);
+        choose_veg = findViewById(R.id.btnChooseVeg);
+        choose_seafood = findViewById(R.id.btnChooseSeafood);
+        choose_fruits = findViewById(R.id.btnChooseFruits);
+        choose_spice = findViewById(R.id.btnChooseSpices);
+        choose_sauce = findViewById(R.id.btnChooseSauces3);
+        choose_desert = findViewById(R.id.btnChooseDesert);
+        choose_baking = findViewById(R.id.btnChooseBaking);
+        choose_fish = findViewById(R.id.btnChooseFish);
+        show_recipe = findViewById(R.id.btnShowRecipeCat);
+        menuhome = findViewById(R.id.menu_Pers);
+        menutophome = findViewById(R.id.topNav);
 
 
 

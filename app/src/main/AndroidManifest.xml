@@ -12,7 +12,37 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".scampiactivity"></activity>
+        <activity android:name=".potpastaactivity" />
+        <activity android:name=".chickpeaactivity" />
+        <activity android:name=".medchickenactivity" />
+        <activity android:name=".bakedfishactivity" />
+        <activity android:name=".medactivity" />
+        <activity android:name=".skilletactivity" />
+        <activity android:name=".manactivity" />
+        <activity android:name=".alfredoactivity" />
+        <activity android:name=".polentaactivity" />
+        <activity android:name=".bakeactivity" />
+        <activity android:name=".italianactivity" />
+        <activity android:name=".dalactivity" />
+        <activity android:name=".chilliactivity" />
+        <activity android:name=".fishactivity" />
+        <activity android:name=".curryactivity" />
+        <activity android:name=".butteractivity" />
+        <activity android:name=".indianactivity" />
+        <activity android:name=".porkactivity" />
+        <activity android:name=".greenactivity" />
+        <activity android:name=".dumpactivity" />
+        <activity android:name=".potactivity" />
+        <activity android:name=".pancakesactivity" />
+        <activity android:name=".germanactivity" />
+        <activity android:name=".roastactivity" />
+        <activity android:name=".goatactivity" />
+        <activity android:name=".jerkactivity" />
+        <activity android:name=".pepperpotactivity" />
+        <activity android:name=".garlicactivity" />
+        <activity android:name=".carribeanactivity" />
+        <activity android:name=".SearchActivity" />
         <activity android:name=".ShowRecipesActivity" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".FavouritesActivity" />
@@ -30,6 +60,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CuisineActivity" />
+        <activity android:name=".SearchResult" />
 
         <meta-data
             android:name="preloaded_fonts"

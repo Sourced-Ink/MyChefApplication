@@ -1,5 +1,6 @@
 package com.example.mycheflogin;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,6 +31,7 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText username, userpassword, useremail;
     private Button signupBTN;   private TextView userlogin;
     private FirebaseAuth firebaseAuth;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +40,15 @@ public class SignUpActivity extends AppCompatActivity {
 
         setupUIViews();
 
+        progressDialog = new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
 
         //button for when the user has filled in all the details
         signupBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressDialog.setMessage("Please wait.....Signing Up");
+                progressDialog.show();
                 if (validateUserDetails()){
 
                     //converting into a string and removing all wide spaces the user entered thus we using trim()
@@ -54,6 +59,8 @@ public class SignUpActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                progressDialog.setMessage("Please wait.....Signing Up");
+                                progressDialog.show();
                                 sendEmailVerificationk();
                             }
                             else{
