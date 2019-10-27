@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:ignore="ExtraText">
     android:layout_width="match_parent"
     tools:context=".RecipeStepsActivity">
 
+    <ScrollView
+        android:layout_width="378dp"
+        android:layout_height="625dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
     <TextView
-        android:id="@+id/tvrecipesteps"
-        android:layout_width="364dp"
-        android:layout_height="match_parent"
-        android:text="TextView" />
+        android:id="@+id/recipeSteps"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="#D3FFFFFF"
+        android:textColor="#FF0000"
+        android:textSize="25sp" />
+    </ScrollView>
+
+
 </LinearLayout>

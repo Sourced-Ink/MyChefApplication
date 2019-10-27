@@ -138,11 +138,6 @@ public class HomeActivity extends AppCompatActivity {
 
         dbClass=new MyDbClass(this);
 
-        name.setText(dbClass.getDisplayNameFromDb());
-
-
-
-
     }
 
 

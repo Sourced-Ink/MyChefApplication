@@ -21,6 +21,7 @@
             android:layout_height="50dp"
             android:layout_gravity="bottom"
             android:gravity="right"
+            android:id="@+id/linear_layout"
 
             android:orientation="horizontal">
 

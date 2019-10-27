@@ -17,6 +17,7 @@ public class MyDbClass extends SQLiteAssetHelper {
 
     private static final String DATABASE_NAME = "MyChefDb.db";
     private static final int DATABASE_VERSION = 1;
+    private String displayName;
 
     Context context;
 
@@ -63,72 +64,17 @@ public class MyDbClass extends SQLiteAssetHelper {
 
     }
 
-    public void insertNameToDb(String name) {
-         SQLiteDatabase db= getWritableDatabase();
+    public void insertNameToDb(String displayName) {
+         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues contentValues=new ContentValues();
 
         try {
         } catch (Exception e) {
-            contentValues.put("userName", name);
+            contentValues.put("userName", displayName);
             db.insert("userName",null, contentValues);
         }
 
     }
 
-    public String getDisplayNameFromDb(){
-        String displayName="";
-        try {
-            SQLiteDatabase db = this.getReadableDatabase();
-            if (db != null) {
-                Cursor objCursor = db.rawQuery("select * from User", null);
 
-                if (objCursor.getCount() != 0) {
-
-                    while (objCursor.moveToNext()) {
-                         displayName = objCursor.getString(0);
-                    }
-                    return displayName;
-
-                } else {
-                    Toast.makeText(context, "No data retrieved...", Toast.LENGTH_SHORT).show();
-                    return null;
-                }
-            } else {
-                Toast.makeText(context, "Database is null...", Toast.LENGTH_SHORT).show();
-                return null;
-            }
-        } catch (Exception e) {
-            Toast.makeText(context, "getAllData..." + e.getMessage(), Toast.LENGTH_SHORT).show();
-            return null;
-        }
-
-    }
-
-    public String getRecipeSteps(){
-        String displayName="";
-        try {
-            SQLiteDatabase db = this.getReadableDatabase();
-            if (db != null) {
-                Cursor objCursor = db.rawQuery("select * from User", null);
-
-                if (objCursor.getCount() != 0) {
-
-                    while (objCursor.moveToNext()) {
-                        displayName = objCursor.getString(0);
-                    }
-                    return displayName;
-
-                } else {
-                    Toast.makeText(context, "No data retrieved...", Toast.LENGTH_SHORT).show();
-                    return null;
-                }
-            } else {
-                Toast.makeText(context, "Database is null...", Toast.LENGTH_SHORT).show();
-                return null;
-            }
-        } catch (Exception e) {
-            Toast.makeText(context, "getAllData..." + e.getMessage(), Toast.LENGTH_SHORT).show();
-            return null;
-        }
-    }
 }
