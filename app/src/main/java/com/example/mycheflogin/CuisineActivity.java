@@ -50,8 +50,8 @@ public class CuisineActivity extends AppCompatActivity {
             @Override
             public void onClick(View view10)
             {
-                openchinise();
-            }
+                Intent intent = new Intent(CuisineActivity.this,chineseactivity.class);
+                startActivity(intent);            }
         });
         frenchbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -178,11 +178,11 @@ public class CuisineActivity extends AppCompatActivity {
         startActivity(intent10);
     }
     //chinise
-    public void openchinise()
-    {
-        Intent intent10 = new Intent(this,chineseactivity.class);
-        startActivity(intent10);
-    }
+//    public void openchinise()
+//    {
+////        Intent intent10 = new Intent(this,chineseactivity.class);
+////        startActivity(intent10);
+//    }
     //german
     public void opengerman()
     {
