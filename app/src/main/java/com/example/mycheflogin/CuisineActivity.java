@@ -64,28 +64,32 @@ public class CuisineActivity extends AppCompatActivity {
             @Override
             public void onClick(View view10)
             {
-                openitlaina();
+                Intent intent = new Intent(CuisineActivity.this,italianactivity.class);
+                startActivity(intent);
             }
         });
         germanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view10)
             {
-                opengerman();
+                Intent intent = new Intent(CuisineActivity.this,germanactivity.class);
+                startActivity(intent);
             }
         });
         idianButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view10)
             {
-                openIndian();
+                Intent intent = new Intent(CuisineActivity.this,indianactivity.class);
+                startActivity(intent);
             }
         });
         medButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view10)
             {
-                openMed();
+                Intent intent = new Intent(CuisineActivity.this,medactivity.class);
+                startActivity(intent);
             }
         });
 
