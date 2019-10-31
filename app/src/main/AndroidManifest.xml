@@ -14,7 +14,9 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".onionactivity"></activity>
         <activity android:name=".frenchactivity" />
+        <activity android:name=".chineseactivity"/>
         <activity android:name=".scampiactivity" />
+
         <activity android:name=".potpastaactivity" />
         <activity android:name=".chickpeaactivity" />
         <activity android:name=".medchickenactivity" />
