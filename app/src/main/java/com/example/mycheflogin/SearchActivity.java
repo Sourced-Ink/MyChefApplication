@@ -43,11 +43,12 @@ public class SearchActivity extends AppCompatActivity {
         ArrayAdapter<String> adapterIngre = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ingredients);
         multiAutoCompleteTextViewIngre.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
         multiAutoCompleteTextViewIngre.setAdapter(adapterIngre);
-        multiAutoCompleteTextViewIngre.setThreshold(1);
+        multiAutoCompleteTextViewIngre.setThreshold(0);
 
         String[] cuisines = getResources().getStringArray(R.array.cuisines_array);
         autoCompleteTextViewCuis = findViewById(R.id.multiAuto2);
         ArrayAdapter<String> adapterCuis = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, cuisines);
+        autoCompleteTextViewCuis.setThreshold(0);
         autoCompleteTextViewCuis.setAdapter(adapterCuis);
 
         showrecipesearch.setOnClickListener(new View.OnClickListener(){
