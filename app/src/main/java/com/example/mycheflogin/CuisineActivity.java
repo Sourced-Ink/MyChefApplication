@@ -20,7 +20,7 @@ public class CuisineActivity extends AppCompatActivity {
     private BottomNavigationView menuhome, menutophome;
     private ImageButton carribeanbuttton;
     private ImageButton chinesebutton;
-    private ImageButton frenchbutton;
+    private ImageButton frenchbutton,ItalainaButton, idianButton, medButton, germanButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +31,61 @@ public class CuisineActivity extends AppCompatActivity {
         menutophome = (BottomNavigationView) findViewById(R.id.topNav);
 
         carribeanbuttton = (ImageButton) findViewById(R.id.carribeanbutton);
+        chinesebutton = (ImageButton) findViewById(R.id.chinesebutton);
+        frenchbutton = (ImageButton) findViewById(R.id.frenchbutton);
+        ItalainaButton = (ImageButton) findViewById(R.id.italianButton);
+
+        medButton = (ImageButton) findViewById(R.id.medButton);
+        germanButton = (ImageButton) findViewById(R.id.germanButton);
+        idianButton = (ImageButton) findViewById(R.id.indianButton) ;
+
         carribeanbuttton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view10)
             {
                 opencarribeanbutton();
+            }
+        });
+        chinesebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view10)
+            {
+                openchinise();
+            }
+        });
+        frenchbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view10)
+            {
+                opench();
+            }
+        });
+        ItalainaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view10)
+            {
+                openitlaina();
+            }
+        });
+        germanButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view10)
+            {
+                opengerman();
+            }
+        });
+        idianButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view10)
+            {
+                openIndian();
+            }
+        });
+        medButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view10)
+            {
+                openMed();
             }
         });
 
@@ -115,9 +165,46 @@ public class CuisineActivity extends AppCompatActivity {
 
     }
 
+    // caribian
     public void opencarribeanbutton()
     {
         Intent intent10 = new Intent(this,carribeanactivity.class);
+        startActivity(intent10);
+    }
+    //french
+    public void opench()
+    {
+        Intent intent10 = new Intent(this,frenchactivity.class);
+        startActivity(intent10);
+    }
+    //chinise
+    public void openchinise()
+    {
+        Intent intent10 = new Intent(this,chineseactivity.class);
+        startActivity(intent10);
+    }
+    //german
+    public void opengerman()
+    {
+        Intent intent10 = new Intent(this,germanactivity.class);
+        startActivity(intent10);
+    }
+    //indian
+    public void openIndian()
+    {
+        Intent intent10 = new Intent(this,indianactivity.class);
+        startActivity(intent10);
+    }
+    //italian
+    public void openitlaina()
+    {
+        Intent intent10 = new Intent(this,italianactivity.class);
+        startActivity(intent10);
+    }
+    // medatarianin
+    public void openMed()
+    {
+        Intent intent10 = new Intent(this,medactivity.class);
         startActivity(intent10);
     }
 
