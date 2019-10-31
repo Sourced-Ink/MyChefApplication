@@ -11,40 +11,72 @@ import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class indianactivity extends AppCompatActivity {
-    private Button butterbutton;
-    private Button chillibutton;
-    private Button currybutton;
-    private Button dalbutton;
-    private Button fishbutton;
+public class frenchactivity extends AppCompatActivity {
+    private Button onionbutton;
+    private Button cassbutton;
+    private Button souffletbutton;
+    private Button ratbutton;
+    private Button flamichebutton;
     private BottomNavigationView menuhome, menutophome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_carribeanactivity);
+        setContentView(R.layout.activity_frenchactivity);
 
-        butterbutton = (Button) findViewById(R.id.butterbutton);
-        butterbutton.setOnClickListener(new View.OnClickListener()
+        onionbutton = (Button) findViewById(R.id.onionbutton);
+        onionbutton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                openbutteractivity();
+                openonionactivity();
             }
         });
 
-        chillibutton = (Button) findViewById(R.id.chillibutton);
-        chillibutton.setOnClickListener(new View.OnClickListener()
+        cassbutton = (Button) findViewById(R.id.cassbutton);
+        cassbutton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view6)
             {
-                openchilliactivity();
+                opencassactivity();
             }
         });
+
+        souffletbutton = (Button) findViewById(R.id.souffletbutton);
+        souffletbutton  .setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view7)
+            {
+                opensouffletactivity();
+            }
+        });
+
+        ratbutton = (Button) findViewById(R.id.ratbutton);
+        ratbutton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view8)
+            {
+                openratactivity();
+            }
+        });
+
+        flamichebutton = (Button) findViewById(R.id.flamichebutton);
+        flamichebutton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view9)
+            {
+                openflamicheactivity();
+            }
+        });
+
+        menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
+        menutophome = (BottomNavigationView) findViewById(R.id.topNav);
 
         menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -54,7 +86,7 @@ public class indianactivity extends AppCompatActivity {
                         menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                             @Override
                             public boolean onMenuItemClick(MenuItem menuItem) {
-                                Intent intent = new Intent(indianactivity.this, HelpActivity.class);
+                                Intent intent = new Intent(frenchactivity.this, HelpActivity.class);
                                 startActivity(intent);
                                 return true;
                             }
@@ -64,7 +96,7 @@ public class indianactivity extends AppCompatActivity {
                         menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                             @Override
                             public boolean onMenuItemClick(MenuItem menuItem) {
-                                Intent intent = new Intent(indianactivity.this, SearchActivity.class);
+                                Intent intent = new Intent(frenchactivity.this, SearchActivity.class);
                                 startActivity(intent);
                                 return true;
                             }
@@ -85,7 +117,7 @@ public class indianactivity extends AppCompatActivity {
                                 item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                                     @Override
                                     public boolean onMenuItemClick(MenuItem menuItem) {
-                                        Intent intent = new Intent(indianactivity.this, HomeActivity.class);
+                                        Intent intent = new Intent(frenchactivity.this, HomeActivity.class);
                                         startActivity(intent);
                                         return true;
                                     }
@@ -96,7 +128,7 @@ public class indianactivity extends AppCompatActivity {
                                 item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                                     @Override
                                     public boolean onMenuItemClick(MenuItem menuItem) {
-                                        Intent intent = new Intent(indianactivity.this, PersonalActivity.class);
+                                        Intent intent = new Intent(frenchactivity.this, PersonalActivity.class);
                                         startActivity(intent);
                                         return true;
                                     }
@@ -107,7 +139,7 @@ public class indianactivity extends AppCompatActivity {
                                 item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                                     @Override
                                     public boolean onMenuItemClick(MenuItem menuItem) {
-                                        Intent intent = new Intent(indianactivity.this, FavouritesActivity.class);
+                                        Intent intent = new Intent(frenchactivity.this, FavouritesActivity.class);
                                         startActivity(intent);
                                         return true;
                                     }
@@ -129,74 +161,38 @@ public class indianactivity extends AppCompatActivity {
                     }
                 }
         );
-
-
-        currybutton = (Button) findViewById(R.id.currybutton);
-        currybutton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view7)
-            {
-                opencurryactivity();
-            }
-        });
-
-        dalbutton = (Button) findViewById(R.id.dalbutton);
-        dalbutton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view8)
-            {
-                opendalactivity();
-            }
-        });
-
-        fishbutton = (Button) findViewById(R.id.fishbutton);
-        fishbutton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view9)
-            {
-                openfishactivity();
-            }
-        });
-
-        menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
-        menutophome = (BottomNavigationView) findViewById(R.id.topNav);
     }
 
-
-
-    public void openbutteractivity()
+    public void openonionactivity()
     {
-        Intent intent5 = new Intent(this,butteractivity.class);
+        Intent intent5 = new Intent(this,onionactivity.class);
         startActivity(intent5);
 
     }
-    public void openchilliactivity()
+    public void opencassactivity()
     {
-        Intent intent6 = new Intent(this,chilliactivity.class);
+        Intent intent6 = new Intent(this,cassactivity.class);
         startActivity(intent6);
 
     }
 
-    public void opencurryactivity()
+    public void opensouffletactivity()
     {
-        Intent intent7 = new Intent(this,curryactivity.class);
+        Intent intent7 = new Intent(this,souffletactivity.class);
         startActivity(intent7);
 
     }
 
-    public void opendalactivity()
+    public void openratactivity()
     {
-        Intent intent8 = new Intent(this,dalactivity.class);
+        Intent intent8 = new Intent(this,ratactivity.class);
         startActivity(intent8);
 
     }
 
-    public void openfishactivity()
+    public void openflamicheactivity()
     {
-        Intent intent9 = new Intent(this,fishactivity.class);
+        Intent intent9 = new Intent(this,flamicheactivity.class);
         startActivity(intent9);
 
     }

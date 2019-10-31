@@ -1,50 +1,83 @@
 package com.example.mycheflogin;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class indianactivity extends AppCompatActivity {
-    private Button butterbutton;
-    private Button chillibutton;
-    private Button currybutton;
-    private Button dalbutton;
-    private Button fishbutton;
+public class chineseactivity extends AppCompatActivity
+{
+    private Button friedricebutton;
+    private Button oystersaucebutton;
+    private Button peppersteakbutton;
+    private Button beefstirbutton;
+    private Button kungpaobutton;
     private BottomNavigationView menuhome, menutophome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_carribeanactivity);
+        setContentView(R.layout.activity_chineseactivity);
 
-        butterbutton = (Button) findViewById(R.id.butterbutton);
-        butterbutton.setOnClickListener(new View.OnClickListener()
+        friedricebutton = (Button) findViewById(R.id.friedricebutton);
+        friedricebutton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                openbutteractivity();
+                openfriedriceactivity();
             }
         });
 
-        chillibutton = (Button) findViewById(R.id.chillibutton);
-        chillibutton.setOnClickListener(new View.OnClickListener()
+        oystersaucebutton = (Button) findViewById(R.id.oystersaucebutton);
+        oystersaucebutton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view6)
             {
-                openchilliactivity();
+                openoystersauceactivity();
             }
         });
+
+        peppersteakbutton = (Button) findViewById(R.id.peppersteakbutton);
+        peppersteakbutton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view7)
+            {
+                openpeppersteakactivity();
+            }
+        });
+
+        beefstirbutton = (Button) findViewById(R.id.beefstirbutton);
+        beefstirbutton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view8)
+            {
+                openbeefstiractivity();
+            }
+        });
+
+        kungpaobutton = (Button) findViewById(R.id.kungpaobutton);
+        kungpaobutton   .setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view9)
+            {
+                openkungpaoactivity();
+            }
+        });
+
+        menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
+        menutophome = (BottomNavigationView) findViewById(R.id.topNav);
 
         menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -54,7 +87,7 @@ public class indianactivity extends AppCompatActivity {
                         menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                             @Override
                             public boolean onMenuItemClick(MenuItem menuItem) {
-                                Intent intent = new Intent(indianactivity.this, HelpActivity.class);
+                                Intent intent = new Intent( chineseactivity.this, HelpActivity.class);
                                 startActivity(intent);
                                 return true;
                             }
@@ -64,7 +97,7 @@ public class indianactivity extends AppCompatActivity {
                         menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                             @Override
                             public boolean onMenuItemClick(MenuItem menuItem) {
-                                Intent intent = new Intent(indianactivity.this, SearchActivity.class);
+                                Intent intent = new Intent( chineseactivity.this, SearchActivity.class);
                                 startActivity(intent);
                                 return true;
                             }
@@ -85,7 +118,7 @@ public class indianactivity extends AppCompatActivity {
                                 item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                                     @Override
                                     public boolean onMenuItemClick(MenuItem menuItem) {
-                                        Intent intent = new Intent(indianactivity.this, HomeActivity.class);
+                                        Intent intent = new Intent( chineseactivity.this, HomeActivity.class);
                                         startActivity(intent);
                                         return true;
                                     }
@@ -96,7 +129,7 @@ public class indianactivity extends AppCompatActivity {
                                 item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                                     @Override
                                     public boolean onMenuItemClick(MenuItem menuItem) {
-                                        Intent intent = new Intent(indianactivity.this, PersonalActivity.class);
+                                        Intent intent = new Intent( chineseactivity.this, PersonalActivity.class);
                                         startActivity(intent);
                                         return true;
                                     }
@@ -107,7 +140,7 @@ public class indianactivity extends AppCompatActivity {
                                 item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                                     @Override
                                     public boolean onMenuItemClick(MenuItem menuItem) {
-                                        Intent intent = new Intent(indianactivity.this, FavouritesActivity.class);
+                                        Intent intent = new Intent( chineseactivity.this, FavouritesActivity.class);
                                         startActivity(intent);
                                         return true;
                                     }
@@ -129,74 +162,38 @@ public class indianactivity extends AppCompatActivity {
                     }
                 }
         );
-
-
-        currybutton = (Button) findViewById(R.id.currybutton);
-        currybutton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view7)
-            {
-                opencurryactivity();
-            }
-        });
-
-        dalbutton = (Button) findViewById(R.id.dalbutton);
-        dalbutton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view8)
-            {
-                opendalactivity();
-            }
-        });
-
-        fishbutton = (Button) findViewById(R.id.fishbutton);
-        fishbutton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view9)
-            {
-                openfishactivity();
-            }
-        });
-
-        menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
-        menutophome = (BottomNavigationView) findViewById(R.id.topNav);
     }
 
-
-
-    public void openbutteractivity()
+    public void openkungpaoactivity()
     {
-        Intent intent5 = new Intent(this,butteractivity.class);
+        Intent intent5 = new Intent(this,kungpaoactivity.class);
         startActivity(intent5);
 
     }
-    public void openchilliactivity()
+    public void openbeefstiractivity()
     {
-        Intent intent6 = new Intent(this,chilliactivity.class);
+        Intent intent6 = new Intent(this,beefstiractivity.class);
         startActivity(intent6);
 
     }
 
-    public void opencurryactivity()
+    public void openpeppersteakactivity()
     {
-        Intent intent7 = new Intent(this,curryactivity.class);
+        Intent intent7 = new Intent(this,peppersteakactivity.class);
         startActivity(intent7);
 
     }
 
-    public void opendalactivity()
+    public void openoystersauceactivity()
     {
-        Intent intent8 = new Intent(this,dalactivity.class);
+        Intent intent8 = new Intent(this,oystersauceactivity.class);
         startActivity(intent8);
 
     }
 
-    public void openfishactivity()
+    public void openfriedriceactivity()
     {
-        Intent intent9 = new Intent(this,fishactivity.class);
+        Intent intent9 = new Intent(this,friedriceactivity.class);
         startActivity(intent9);
 
     }

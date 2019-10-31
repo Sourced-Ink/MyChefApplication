@@ -5,9 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/german_backing"
+    android:background="@drawable/crossant"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#75FFFFFF"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,17 +28,15 @@
             android:textAlignment="center"
             android:gravity="center"
             android:textSize="50sp"
-            android:textColor="#FD0000"
+            android:textColor="#FF0000"
             android:layout_height="68dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
-
-            android:textStyle="bold"
-            android:text="German Cuisine"
+            android:text="French Cuisine"
             app:fontFamily="cursive" />
 
         <Button
-            android:id="@+id/pancakesbutton"
+            android:id="@+id/onionbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -42,10 +45,10 @@
             android:layout_marginRight="60dp"
             android:background="#C6FFFFFF"
             android:textAllCaps="false"
-            android:text="Pancakes" />
+            android:text="Onion soup" />
 
         <Button
-            android:id="@+id/potbutton"
+            android:id="@+id/cassbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -55,10 +58,10 @@
             android:background="#C6FFFFFF"
             android:textAllCaps="false"
 
-            android:text="Potato Casserole" />
+            android:text="Cassoulet" />
 
         <Button
-            android:id="@+id/dumpbutton"
+            android:id="@+id/souffletbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -68,22 +71,10 @@
             android:background="#C6FFFFFF"
             android:textAllCaps="false"
 
-            android:text="Dumplings" />
-
-        <Button
-            android:id="@+id/greenbutton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"
-            android:background="#C6FFFFFF"
-            android:textAllCaps="false"
-            android:text="Green Beans" />
+            android:text="Soufflet" />
 
         <Button
-            android:id="@+id/porkbutton"
+            android:id="@+id/ratbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -92,7 +83,20 @@
             android:layout_marginRight="60dp"
             android:background="#C6FFFFFF"
             android:textAllCaps="false"
-            android:text="Pork Shnitzel" />
+            android:text="Ratatouille " />
+
+        <Button
+            android:id="@+id/flamichebutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#C6FFFFFF"
+            android:textAllCaps="false"
+
+            android:text="Flamiche" />
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
