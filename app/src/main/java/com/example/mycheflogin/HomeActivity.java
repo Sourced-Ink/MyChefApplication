@@ -21,8 +21,6 @@ public class HomeActivity extends AppCompatActivity {
 
     MyDbClass dbClass;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +32,7 @@ public class HomeActivity extends AppCompatActivity {
         cuisine =(Button) findViewById(R.id.CuisineBTN);
         menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
         menutophome = (BottomNavigationView) findViewById(R.id.topNav);
-        name=findViewById(R.id.textView2);
+//        name=findViewById(R.id.textView2);
 
 
         menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
