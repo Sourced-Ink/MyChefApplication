@@ -32,7 +32,7 @@ public class MyDbClass extends SQLiteAssetHelper {
             ArrayList<DbModelClass> objModelClassArrayList = new ArrayList<>();
             if (db != null) {
 
-                Cursor objCursor = db.rawQuery("select * from Recipes where recipeCuisine ='" + SearchActivity.getQueryStuff() + "'", null);
+                Cursor objCursor = db.rawQuery("select * from Recipes where recipeCuisine= '" + SearchActivity.getQueryStuff() + "' AND recipeIngredients = '"+SearchActivity.getQueryIngredient()+"' ", null);
 
                 if (objCursor.getCount() != 0) {
 

@@ -1,24 +1,13 @@
 package com.example.mycheflogin.Model;
 
-import android.app.Activity;
-import android.content.ClipData;
-import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
-import android.view.GestureDetector;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.mycheflogin.R;
-import com.example.mycheflogin.RecipeStepsActivity;
 
 import java.util.ArrayList;
 
@@ -26,7 +15,6 @@ public class DbAdapter extends RecyclerView.Adapter<DbAdapter.DbViewHolder> {
 
      ArrayList<DbModelClass> objModelClassArrayList;
      private OnClicking myOnClick;
-//     private static String recipeSteps;
 
     public DbAdapter(ArrayList<DbModelClass> objModelClassArrayList, OnClicking onClicking){
         this.objModelClassArrayList=objModelClassArrayList;

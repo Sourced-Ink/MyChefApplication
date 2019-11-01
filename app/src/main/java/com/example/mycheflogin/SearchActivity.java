@@ -18,7 +18,7 @@ import com.example.mycheflogin.RecyclerPackage.MyDbClass;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class SearchActivity extends AppCompatActivity {
-    private MultiAutoCompleteTextView multiAutoCompleteTextViewIngre;
+    private static AutoCompleteTextView multiAutoCompleteTextViewIngre;
     private static AutoCompleteTextView autoCompleteTextViewCuis;
     private static Button showrecipesearch;
     public static ProgressDialog progressDialog;
@@ -41,13 +41,14 @@ public class SearchActivity extends AppCompatActivity {
         String[] ingredients = getResources().getStringArray(R.array.ingredients_array);
         multiAutoCompleteTextViewIngre = findViewById(R.id.multiAuto);
         ArrayAdapter<String> adapterIngre = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ingredients);
-        multiAutoCompleteTextViewIngre.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
+//        multiAutoCompleteTextViewIngre.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
         multiAutoCompleteTextViewIngre.setAdapter(adapterIngre);
-        multiAutoCompleteTextViewIngre.setThreshold(1);
+        multiAutoCompleteTextViewIngre.setThreshold(0);
 
         String[] cuisines = getResources().getStringArray(R.array.cuisines_array);
         autoCompleteTextViewCuis = findViewById(R.id.multiAuto2);
         ArrayAdapter<String> adapterCuis = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, cuisines);
+        autoCompleteTextViewCuis.setThreshold(0);
         autoCompleteTextViewCuis.setAdapter(adapterCuis);
 
         showrecipesearch.setOnClickListener(new View.OnClickListener(){
@@ -147,8 +148,13 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     public static String getQueryStuff(){
-        String mystring = autoCompleteTextViewCuis.getText().toString();
+        String mystring = autoCompleteTextViewCuis.getText().toString().trim();
         return mystring;
+    }
+
+    public static String getQueryIngredient(){
+        String s=multiAutoCompleteTextViewIngre.getText().toString().trim();
+        return s;
     }
 
 
