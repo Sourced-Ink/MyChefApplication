@@ -15,11 +15,16 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class CategoryActivity extends AppCompatActivity {
     private BottomNavigationView menuhome, menutophome;
-    private Button choose_meat, choose_diary, choose_veg, choose_seafood, choose_fruits, choose_spice, choose_sauce, choose_desert, choose_baking, choose_fish,show_recipe;
-    private TextView items_in_meat;
+    private Button choose_meat, choose_diary, choose_veg, choose_seafood, choose_fruits, choose_spice, choose_sauce, choose_desert, choose_baking, choose_fish,show_recipe, viewSelected;
+    private TextView items_in_meat, showIngrediants;
+
+//    ArrayList<String> selection = new ArrayList<>();
+
+    HashSet<String> selection = new HashSet<>();
 
     //for meats
     String[] listMeatItems;
@@ -71,6 +76,14 @@ public class CategoryActivity extends AppCompatActivity {
     boolean[] checkedFishItems;
     ArrayList<Integer> userSelectedFish = new ArrayList<>();
 
+    public void ShowSelected(){
+        String finalSelection = "";
+        for (String selections: selection) {
+            finalSelection = finalSelection + selections;
+        }
+        showIngrediants.setText(finalSelection);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,19 +91,22 @@ public class CategoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_category);
 
         choose_meat = findViewById(R.id.btnChooseMeat);
-        choose_diary = (Button) findViewById(R.id.btnChooseDairy);
-        choose_veg = (Button) findViewById(R.id.btnChooseVeg);
-        choose_seafood = (Button) findViewById(R.id.btnChooseSeafood);
-        choose_fruits = (Button) findViewById(R.id.btnChooseFruits);
-        choose_spice = (Button) findViewById(R.id.btnChooseSpices);
-        choose_sauce = (Button) findViewById(R.id.btnChooseSauces3);
-        choose_desert = (Button) findViewById(R.id.btnChooseDesert);
-        choose_baking = (Button) findViewById(R.id.btnChooseBaking);
-        choose_fish = (Button) findViewById(R.id.btnChooseFish);
-        show_recipe = (Button) findViewById(R.id.btnShowRecipeCat);
-        menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
-        menutophome = (BottomNavigationView) findViewById(R.id.topNav);
+        choose_diary = findViewById(R.id.btnChooseDairy);
+        choose_veg = findViewById(R.id.btnChooseVeg);
+        choose_seafood = findViewById(R.id.btnChooseSeafood);
+        choose_fruits = findViewById(R.id.btnChooseFruits);
+        choose_spice = findViewById(R.id.btnChooseSpices);
+        choose_sauce = findViewById(R.id.btnChooseSauces3);
+        choose_desert = findViewById(R.id.btnChooseDesert);
+        choose_baking = findViewById(R.id.btnChooseBaking);
+        choose_fish = findViewById(R.id.btnChooseFish);
+        show_recipe = findViewById(R.id.btnShowRecipeCat);
+        showIngrediants = findViewById(R.id.tvShowingIndgrediants);
+        viewSelected = findViewById(R.id.btnViewSelected);
+        menuhome = findViewById(R.id.menu_Pers);
+        menutophome = findViewById(R.id.topNav);
 
+        //showIngrediants.setEnabled(false);
 
 
         //Passing the values of the array and checking how many checkboxes needed thus passing the listMeatItems.length
@@ -169,10 +185,12 @@ public class CategoryActivity extends AppCompatActivity {
                             //Basically we saying if the index inside the arraylist is not the last item
                             if (i != userSelectedMeats.size() - 1){
                                 item = item + ", ";
+                                selection.add(item);
                             }
                         }
 
-                        //items_in_meat.setText(item);
+//                       showIngrediants.setText(item);
+//                        ShowSelected();
                     }
                 });
 
@@ -195,7 +213,7 @@ public class CategoryActivity extends AppCompatActivity {
                         for (int i = 0; i < checkedMeatItems.length; i++){
                             checkedMeatItems[i] = false;
                             userSelectedMeats.clear();
-                            //items_in_meat.setText("");
+                            showIngrediants.setText("");
                         }
                     }
                 });
@@ -232,18 +250,21 @@ public class CategoryActivity extends AppCompatActivity {
                 mBuilder.setPositiveButton(getString(R.string.ok_lable), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int which) {
-                        StringBuilder item = new StringBuilder();
+                        String item = "";
                         for (int i = 0; i < userSelectedDiary.size(); i++){
                             //we first loop through the array list then add the original array with all diarys and pass in the arraylist with what the user has selected
-                            item.append(listDiaryItems[userSelectedDiary.get(i)]);
+                            item = item + listDiaryItems[userSelectedDiary.get(i)];
 
                             //Basically we saying if the index inside the arraylist is not the last item
                             if (i != userSelectedDiary.size() - 1){
-                                item.append(", ");
+                                item = item + ", ";
+                                selection.add(item);
                             }
                         }
 
-                        //items_in_meat.setText(item);
+//                        showIngrediants.setText(item);
+//                        showIngrediants.setText(item);
+//                        ShowSelected();
                     }
                 });
 
@@ -266,7 +287,7 @@ public class CategoryActivity extends AppCompatActivity {
                         for (int i = 0; i < checkedDiaryItems.length; i++){
                             checkedDiaryItems[i] = false;
                             userSelectedDiary.clear();
-                            //items_in_meat.setText("");
+                            showIngrediants.setText("");
                         }
                     }
                 });
@@ -311,11 +332,14 @@ public class CategoryActivity extends AppCompatActivity {
 
                             //Basically we saying if the index inside the arraylist is not the last item
                             if (i != userSelectedVeg.size() - 1){
+
                                 item = item + ", ";
+                                selection.add(item);
                             }
                         }
-
+//                        showIngrediants.setText(item);
                         //items_in_meat.setText(item);
+//                        ShowSelected();
                     }
                 });
 
@@ -338,7 +362,7 @@ public class CategoryActivity extends AppCompatActivity {
                         for (int i = 0; i < checkedVegItems.length; i++){
                             checkedVegItems[i] = false;
                             userSelectedVeg.clear();
-                            //items_in_meat.setText("");
+                            showIngrediants.setText("");
                         }
                     }
                 });
@@ -384,10 +408,12 @@ public class CategoryActivity extends AppCompatActivity {
                             //Basically we saying if the index inside the arraylist is not the last item
                             if (i != userSelectedSeafood.size() - 1){
                                 item = item + ", ";
+                                selection.add(item);
                             }
                         }
 
-                        //items_in_meat.setText(item);
+//                        showIngrediants.setText(item);
+//                        ShowSelected();
                     }
                 });
 
@@ -410,7 +436,7 @@ public class CategoryActivity extends AppCompatActivity {
                         for (int i = 0; i < checkedSeafoodItems.length; i++){
                             checkedSeafoodItems[i] = false;
                             userSelectedSeafood.clear();
-                            //items_in_meat.setText("");
+                            showIngrediants.setText("");
                         }
                     }
                 });
@@ -455,10 +481,13 @@ public class CategoryActivity extends AppCompatActivity {
 
                             //Basically we saying if the index inside the arraylist is not the last item
                             if (i != userSelectedSpice.size() - 1){
+                                //selection.add(item);
                                 item = item + ", ";
+                                selection.add(item);
                             }
                         }
-
+//                        showIngrediants.setText(item);
+//                        ShowSelected();
                         //items_in_meat.setText(item);
                     }
                 });
@@ -482,7 +511,7 @@ public class CategoryActivity extends AppCompatActivity {
                         for (int i = 0; i < checkedSpiceItems.length; i++){
                             checkedSpiceItems[i] = false;
                             userSelectedSpice.clear();
-                            //items_in_meat.setText("");
+                            showIngrediants.setText("");
                         }
                     }
                 });
@@ -529,10 +558,12 @@ public class CategoryActivity extends AppCompatActivity {
                             //Basically we saying if the index inside the arraylist is not the last item
                             if (i != userSelectedSauce.size() - 1){
                                 item = item + ", ";
+                                selection.add(item);
                             }
                         }
-
-                        //items_in_meat.setText(item);
+//                        showIngrediants.setText(item);
+//                        items_in_meat.setText(item);
+//                        ShowSelected();
                     }
                 });
 
@@ -555,7 +586,7 @@ public class CategoryActivity extends AppCompatActivity {
                         for (int i = 0; i < checkedSauceItems.length; i++){
                             checkedSauceItems[i] = false;
                             userSelectedSauce.clear();
-                            //items_in_meat.setText("");
+                            showIngrediants.setText("");
                         }
                     }
                 });
@@ -600,11 +631,14 @@ public class CategoryActivity extends AppCompatActivity {
 
                             //Basically we saying if the index inside the arraylist is not the last item
                             if (i != userSelectedFruit.size() - 1){
+                                //selection.add(item);
                                 item = item + ", ";
+                                selection.add(item);
                             }
                         }
-
+//                        showIngrediants.setText(item);
                         //items_in_meat.setText(item);
+//                        ShowSelected();
                     }
                 });
 
@@ -627,7 +661,7 @@ public class CategoryActivity extends AppCompatActivity {
                         for (int i = 0; i < checkedFruitItems.length; i++){
                             checkedFruitItems[i] = false;
                             userSelectedFruit.clear();
-                            //items_in_meat.setText("");
+                            showIngrediants.setText("");
                         }
                     }
                 });
@@ -672,10 +706,13 @@ public class CategoryActivity extends AppCompatActivity {
 
                             //Basically we saying if the index inside the arraylist is not the last item
                             if (i != userSelectedDesert.size() - 1){
+//                                selection.add(item);
                                 item = item + ", ";
+                                selection.add(item);
                             }
                         }
-
+//                        showIngrediants.setText(item);
+//                        ShowSelected();
                         //items_in_meat.setText(item);
                     }
                 });
@@ -699,7 +736,7 @@ public class CategoryActivity extends AppCompatActivity {
                         for (int i = 0; i < checkedDesertItems.length; i++){
                             checkedDesertItems[i] = false;
                             userSelectedDesert.clear();
-                            //items_in_meat.setText("");
+                            showIngrediants.setText("");
                         }
                     }
                 });
@@ -744,11 +781,15 @@ public class CategoryActivity extends AppCompatActivity {
 
                             //Basically we saying if the index inside the arraylist is not the last item
                             if (i != userSelectedBaking.size() - 1){
+//                                selection.add(item);
                                 item = item + ", ";
+                                selection.add(item);
                             }
                         }
 
                         //items_in_meat.setText(item);
+//                        ShowSelected();
+//                        showIngrediants.setText(item);
                     }
                 });
 
@@ -771,7 +812,7 @@ public class CategoryActivity extends AppCompatActivity {
                         for (int i = 0; i < checkedBakingItems.length; i++){
                             checkedBakingItems[i] = false;
                             userSelectedBaking.clear();
-                            //items_in_meat.setText("");
+                            showIngrediants.setText("");
                         }
                     }
                 });
@@ -817,10 +858,13 @@ public class CategoryActivity extends AppCompatActivity {
                             //Basically we saying if the index inside the arraylist is not the last item
                             if (i != userSelectedFish.size() - 1){
                                 item = item + ", ";
+                                selection.add(item);
                             }
                         }
 
                         //items_in_meat.setText(item);
+//                        ShowSelected();
+//                        showIngrediants.setText(item);
                     }
                 });
 
@@ -843,7 +887,7 @@ public class CategoryActivity extends AppCompatActivity {
                         for (int i = 0; i < checkedFishItems.length; i++){
                             checkedFishItems[i] = false;
                             userSelectedFish.clear();
-                            //items_in_meat.setText("");
+                            showIngrediants.setText("");
                         }
                     }
                 });
@@ -858,8 +902,16 @@ public class CategoryActivity extends AppCompatActivity {
         show_recipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(CategoryActivity.this, ShowRecipesActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        viewSelected.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ShowSelected();
             }
         });
 

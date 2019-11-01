@@ -34,10 +34,10 @@ public class PersonalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal);
 
-        changepassword = (TextView) findViewById(R.id.tvChangePassword);
-        diet = (TextView) findViewById(R.id.tvDiet);
-        logout = (TextView) findViewById(R.id.tvLogOut);
-        menuP = (BottomNavigationView) findViewById(R.id.menu_Pers);
+        changepassword =  findViewById(R.id.tvChangePassword);
+        diet =  findViewById(R.id.tvDiet);
+        logout =  findViewById(R.id.tvLogOut);
+        menuP = findViewById(R.id.menu_Pers);
         firebaseAuth = FirebaseAuth.getInstance();
 
         listDietItems = getResources().getStringArray(R.array.type_of_diet);
@@ -51,17 +51,10 @@ public class PersonalActivity extends AppCompatActivity {
             }
         });
 
+        //user logout
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                SharedPreferences mypreference = getSharedPreferences("My", MODE_PRIVATE);
-//                SharedPreferences.Editor editor = mypreference.edit();
-//                editor.clear();
-//                editor.apply();
-//                Log.d("Tag", "Now log out and start the activity login");
-//                Intent intent = new Intent(PersonalActivity.this, MainActivity.class);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                startActivity(intent);
 
                  firebaseAuth.signOut();
                  finish();
@@ -195,5 +188,7 @@ public class PersonalActivity extends AppCompatActivity {
                     }
                 }
         );
+
+
     }
 }

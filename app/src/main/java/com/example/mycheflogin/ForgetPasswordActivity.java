@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class ForgetPasswordActivity extends AppCompatActivity {
 
-    private EditText etuseremail;
+    private EditText etuseremail, username;
     private Button cancelF, searchF;
     private FirebaseAuth firebaseAuth;
 
@@ -26,9 +26,10 @@ public class ForgetPasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_password);
 
-        etuseremail = (EditText) findViewById(R.id.etusernameemailF);
-        cancelF = (Button) findViewById(R.id.cancelBTNF);
-        searchF = (Button) findViewById(R.id.searchBTNF);
+        etuseremail = findViewById(R.id.etusernameemailF);
+        username = findViewById(R.id.etusernameemailF);
+        cancelF = findViewById(R.id.cancelBTNF);
+        searchF = findViewById(R.id.searchBTNF);
         firebaseAuth = FirebaseAuth.getInstance();
 
         searchF.setOnClickListener(new View.OnClickListener() {

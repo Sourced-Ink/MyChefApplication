@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="Mediterranean Cuisine"
+            android:textAlignment="center"
+            android:textColor="#FF0000"
+            android:textSize="50sp"
+            app:fontFamily="cursive" />
+
+        <Button
+            android:id="@+id/bakedfishbutton"
+            android:layout_width="162dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+
+            android:text="Baked fish" />
+
+        <Button
+            android:id="@+id/medchickenbutton"
+            android:layout_width="162dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+
+            android:text="Chicken" />
+
+        <Button
+            android:id="@+id/chickpeabutton"
+            android:layout_width="165dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+
+            android:text="Chickpea salad" />
+
+        <Button
+            android:id="@+id/onepotbutton"
+            android:layout_width="180dp"
+            android:layout_height="59dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="One pot pasta " />
+
+        <Button
+            android:id="@+id/scampibutton"
+            android:layout_width="175dp"
+            android:layout_height="63dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+
+            android:text="Scampi" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
