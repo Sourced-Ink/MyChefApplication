@@ -38,9 +38,7 @@ public class SignUpActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
 
-
     MyDbClass myDbClass;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +115,24 @@ public class SignUpActivity extends AppCompatActivity {
         if (userpassword.length() < 8){
             userpassword.setError("Please enter 8 characters");
         }
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        Map<String, Object> ob = new HashMap<>();
+        ob.put("name", name);
+        db.collection("Users")
+                .add(ob)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Log.d("d", "DocumentSnapshot added with ID: " + documentReference.getId());
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w("f", "Error adding document", e);
+                    }
+                });
 
         return result;
     }

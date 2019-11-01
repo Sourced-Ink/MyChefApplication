@@ -23,7 +23,7 @@
             android:layout_height="60dp"
             android:layout_gravity="center"
             app:srcCompat="@mipmap/ic_logo"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,VectorDrawableCompat" />
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
@@ -113,7 +113,7 @@
                 android:textSize="25sp" />
 
             <ImageButton
-                android:id="@+id/imageView9"
+                android:id="@+id/germanButton"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:scaleType="centerCrop"
@@ -133,7 +133,7 @@
                 android:textSize="25sp" />
 
             <ImageButton
-                android:id="@+id/imageView10"
+                android:id="@+id/indianButton"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:scaleType="centerCrop"
@@ -153,7 +153,7 @@
                 android:textSize="25sp" />
 
             <ImageButton
-                android:id="@+id/imageView11"
+                android:id="@+id/italianButton"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:scaleType="centerCrop"
@@ -173,7 +173,7 @@
                 android:textSize="25sp" />
 
             <ImageButton
-                android:id="@+id/imageView12"
+                android:id="@+id/medButton"
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:scaleType="centerCrop"

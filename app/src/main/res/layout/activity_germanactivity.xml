@@ -5,11 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/german_backing"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/menu_Pers"
+        android:layout_below="@+id/topNav"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         android:orientation="vertical">
 
         <TextView
@@ -18,57 +23,113 @@
             android:textAlignment="center"
             android:gravity="center"
             android:textSize="50sp"
-            android:textColor="#FF0000"
+            android:textColor="#FD0000"
             android:layout_height="68dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
+
+            android:textStyle="bold"
             android:text="German Cuisine"
             app:fontFamily="cursive" />
 
         <Button
             android:id="@+id/pancakesbutton"
-            android:layout_width="162dp"
-            android:layout_height="72dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="20dp"
-
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#C6FFFFFF"
+            android:textAllCaps="false"
             android:text="Pancakes" />
 
         <Button
             android:id="@+id/potbutton"
-            android:layout_width="162dp"
-            android:layout_height="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#C6FFFFFF"
+            android:textAllCaps="false"
 
             android:text="Potato Casserole" />
 
         <Button
             android:id="@+id/dumpbutton"
-            android:layout_width="165dp"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#C6FFFFFF"
+            android:textAllCaps="false"
 
             android:text="Dumplings" />
 
         <Button
             android:id="@+id/greenbutton"
-            android:layout_width="180dp"
-            android:layout_height="59dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#C6FFFFFF"
+            android:textAllCaps="false"
             android:text="Green Beans" />
 
         <Button
             android:id="@+id/porkbutton"
-            android:layout_width="175dp"
-            android:layout_height="63dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="10dp"
-
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#C6FFFFFF"
+            android:textAllCaps="false"
             android:text="Pork Shnitzel" />
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        app:itemIconSize="30dp"
+        app:itemIconTint="#5F5F5F"
+        app:menu="@menu/top_nav"
+        tools:ignore="MissingConstraints" >
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+
+            app:srcCompat="@mipmap/ic_logo"
+            tools:ignore="MissingConstraints,VectorDrawableCompat" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_Pers"
+        android:layout_width="match_parent"
+
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+
+        app:menu="@menu/bottommenu" />
 
 
 
