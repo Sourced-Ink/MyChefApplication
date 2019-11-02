@@ -32,7 +32,8 @@ public class germanactivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                openpancakesactivity();
+                Intent intent5 = new Intent(germanactivity.this ,pancakesactivity.class);
+                startActivity(intent5);
             }
         });
 
