@@ -34,7 +34,7 @@
             android:textSize="40sp" />
 
         <AutoCompleteTextView
-            android:id="@+id/multiAuto2"
+            android:id="@+id/autoTVCuisine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -46,8 +46,8 @@
             android:textSize="30sp"
             tools:ignore="HardcodedText" />
 
-        <AutoCompleteTextView
-            android:id="@+id/multiAuto"
+        <MultiAutoCompleteTextView
+            android:id="@+id/multiAutoIngre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

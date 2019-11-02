@@ -17,8 +17,11 @@ import android.widget.MultiAutoCompleteTextView;
 import com.example.mycheflogin.RecyclerPackage.MyDbClass;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class SearchActivity extends AppCompatActivity {
-    private static AutoCompleteTextView multiAutoCompleteTextViewIngre;
+    private static MultiAutoCompleteTextView multiAutoCompleteTextViewIngre;
     private static AutoCompleteTextView autoCompleteTextViewCuis;
     private static Button showrecipesearch;
     public static ProgressDialog progressDialog;
@@ -34,19 +37,19 @@ public class SearchActivity extends AppCompatActivity {
         menutophome = (BottomNavigationView) findViewById(R.id.topNav);
 
         showrecipesearch = findViewById(R.id.btnShowRecipeSearch);
-        multiAutoCompleteTextViewIngre = findViewById(R.id.multiAuto);
-        autoCompleteTextViewCuis = findViewById(R.id.multiAuto2);
+//        multiAutoCompleteTextViewIngre = findViewById(R.id.multiAutoIngre);
+//        autoCompleteTextViewCuis = findViewById(R.id.autoTVCuisine);
         progressDialog=new ProgressDialog(this);
 
         String[] ingredients = getResources().getStringArray(R.array.ingredients_array);
-        multiAutoCompleteTextViewIngre = findViewById(R.id.multiAuto);
+        multiAutoCompleteTextViewIngre = findViewById(R.id.multiAutoIngre);
         ArrayAdapter<String> adapterIngre = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ingredients);
-//        multiAutoCompleteTextViewIngre.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
+        multiAutoCompleteTextViewIngre.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
         multiAutoCompleteTextViewIngre.setAdapter(adapterIngre);
         multiAutoCompleteTextViewIngre.setThreshold(0);
 
         String[] cuisines = getResources().getStringArray(R.array.cuisines_array);
-        autoCompleteTextViewCuis = findViewById(R.id.multiAuto2);
+        autoCompleteTextViewCuis = findViewById(R.id.autoTVCuisine);
         ArrayAdapter<String> adapterCuis = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, cuisines);
         autoCompleteTextViewCuis.setThreshold(0);
         autoCompleteTextViewCuis.setAdapter(adapterCuis);
@@ -147,14 +150,20 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
-    public static String getQueryStuff(){
+    public static String getQueryCuisine(){
         String mystring = autoCompleteTextViewCuis.getText().toString().trim();
         return mystring;
     }
 
-    public static String getQueryIngredient(){
+    public static ArrayList getQueryIngredients(){
+        ArrayList<String> ingredients=new ArrayList<>();
         String s=multiAutoCompleteTextViewIngre.getText().toString().trim();
-        return s;
+
+        for (String x:s.split(", ")) {
+            ingredients.add(x);
+            System.out.println(x);
+        }
+        return ingredients;
     }
 
 
