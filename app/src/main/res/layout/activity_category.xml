@@ -190,23 +190,6 @@
 
                 />
 
-            <Button
-                android:id="@+id/btnViewSelected"
-                android:layout_width="300dp"
-
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="80dp"
-                android:background="#D7FFFFFF"
-                android:text="View Selected Ingrediants"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="#3CDB45"
-                android:textSize="25sp"
-
-                />
-
             <TextView
                 android:id="@+id/tvShowingIndgrediants"
                 android:layout_width="350dp"
