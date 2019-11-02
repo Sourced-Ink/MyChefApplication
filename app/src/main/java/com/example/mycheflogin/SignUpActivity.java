@@ -157,7 +157,7 @@ public class SignUpActivity extends AppCompatActivity {
                         finish();
                         startActivity(new Intent(SignUpActivity.this, MainActivity.class));
                     }else{
-                        Toast.makeText(SignUpActivity.this, "Verification email has not being sent!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignUpActivity.this, "Verification email has not sent!", Toast.LENGTH_SHORT).show();
                     }
 
                 }

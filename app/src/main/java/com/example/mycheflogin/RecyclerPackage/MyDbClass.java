@@ -32,14 +32,23 @@ public class MyDbClass extends SQLiteAssetHelper {
             ArrayList<DbModelClass> objModelClassArrayList = new ArrayList<>();
             if (db != null) {
 
-                Cursor objCursor = db.rawQuery("select * from Recipes where recipeCuisine ='" + SearchActivity.getQueryStuff() + "'", null);
+//                Cursor objCursor = db.rawQuery("select * from recipe_has_ingredient where recipeCuisine= '" + SearchActivity.getQueryCuisine()
+//                        + "' AND recipeIngredients = '"+SearchActivity.getQueryIngredients()+"' ", null);
+
+//                Cursor objCursor=db.rawQuery("select distinct  a.recipeName, a.recipePicture, a.recipeSteps from (select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_available FROM recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=r.recipeName where i.ingredient_ingredientName IN ('Cheese','Tomato','Chicken','Pizza Dough') group by r.recipeName, r.recipePicture, r.recipeSteps) as a JOIN(select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_required from recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=recipeName group by r.recipeName, r.recipePicture, r.recipeSteps)as p on p.ing_required=a.ing_available ", null);
+
+                Cursor objCursor=db.rawQuery("select distinct  a.recipeName, a.recipePicture, a.recipeSteps from (select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_available FROM recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=r.recipeName where i.ingredient_ingredientName"
+                        +" IN ('Cheese','Tomato','Chicken','Pizza Dough')"
+                        +" group by r.recipeName, r.recipePicture, r.recipeSteps) as a JOIN(select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_required from recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=recipeName group by r.recipeName, r.recipePicture, r.recipeSteps)as p on p.ing_required=a.ing_available ", null);
+
+
 
                 if (objCursor.getCount() != 0) {
 
                     while (objCursor.moveToNext()) {
                         String imageDes = objCursor.getString(0);
                         byte[] imageByte = objCursor.getBlob(1);
-                        String recipeSteps=objCursor.getString(4);
+                        String recipeSteps=objCursor.getString(2);
 
                         Bitmap ourImage = BitmapFactory.decodeByteArray(imageByte, 0, imageByte.length);
 

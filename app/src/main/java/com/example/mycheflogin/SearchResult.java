@@ -43,6 +43,9 @@ public class SearchResult extends AppCompatActivity implements DbAdapter.OnClick
     public void populateRecyclerView(View view){
         try {
             objDbModelClassArrayList=  dbClass.getAllData();
+            if(objDbModelClassArrayList==null){
+
+            }
             DbAdapter dbAdapter = new DbAdapter(objDbModelClassArrayList, this);
             recyclerView.hasFixedSize();
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
