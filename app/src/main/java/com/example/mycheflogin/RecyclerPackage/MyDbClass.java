@@ -42,6 +42,7 @@ public class MyDbClass extends SQLiteAssetHelper {
                         +" group by r.recipeName, r.recipePicture, r.recipeSteps) as a JOIN(select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_required from recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=recipeName group by r.recipeName, r.recipePicture, r.recipeSteps)as p on p.ing_required=a.ing_available ", null);
 
 
+
                 if (objCursor.getCount() != 0) {
 
                     while (objCursor.moveToNext()) {
