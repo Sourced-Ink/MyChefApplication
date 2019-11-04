@@ -29,8 +29,8 @@ public class MyDbClass extends SQLiteAssetHelper {
         try {
             SQLiteDatabase db = this.getReadableDatabase();
             ArrayList<DbModelClass> objModelClassArrayList = new ArrayList<>();
-            if (db != null) {
 
+            if (db != null) {
 
                 String myString=new String();
                 for(int x=0; x<SearchActivity.getQueryIngredients().size();x++){
@@ -42,13 +42,24 @@ public class MyDbClass extends SQLiteAssetHelper {
 
                 System.out.println(myString);
 
-                Cursor objCursor=db.rawQuery("select distinct  a.recipeName, a.recipePicture, a.recipeSteps from (select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_available FROM recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=r.recipeName where i.ingredient_ingredientName"
+                Cursor objCursor;
 
-                        +" IN ("+myString+")"
+                if(SearchActivity.getQueryCuisine().isEmpty()){
+                    objCursor=db.rawQuery("select distinct  a.recipeName, a.recipePicture, a.recipeSteps from (select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_available FROM recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=r.recipeName where i.ingredient_ingredientName"
 
-                        +" group by r.recipeName, r.recipePicture, r.recipeSteps) as a JOIN(select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_required from recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=recipeName group by r.recipeName, r.recipePicture, r.recipeSteps)as p on p.ing_required=a.ing_available ", null);
+                            +" IN ("+myString+")"
 
+                            +"group by r.recipeName, r.recipePicture, r.recipeSteps) as a JOIN(select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_required from recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=recipeName group by r.recipeName, r.recipePicture, r.recipeSteps)as p on p.ing_required=a.ing_available ", null);
 
+                }else {
+
+                    objCursor = db.rawQuery("select distinct  a.recipeName, a.recipePicture, a.recipeSteps from (select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_available FROM recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=r.recipeName where i.ingredient_ingredientName"
+
+                            + " IN (" + myString + ")"
+
+                            + "and recipeCuisine='" + SearchActivity.getQueryCuisine() + "' group by r.recipeName, r.recipePicture, r.recipeSteps) as a JOIN(select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_required from recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=recipeName group by r.recipeName, r.recipePicture, r.recipeSteps)as p on p.ing_required=a.ing_available ", null);
+
+                }
                 if (objCursor.getCount() != 0) {
 
                     while (objCursor.moveToNext()) {
