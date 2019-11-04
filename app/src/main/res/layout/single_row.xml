@@ -13,8 +13,9 @@
             android:id="@+id/sr_image"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="@color/colorPrimaryDark">
-        </ImageButton>
+            android:clickable="true"
+            tools:src="@drawable/italian1"
+            android:background="@color/colorPrimaryDark"/>
 
         <LinearLayout
             android:layout_width="match_parent"

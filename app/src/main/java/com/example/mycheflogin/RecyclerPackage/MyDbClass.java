@@ -17,7 +17,6 @@ public class MyDbClass extends SQLiteAssetHelper {
 
     private static final String DATABASE_NAME = "MyChefDb.db";
     private static final int DATABASE_VERSION = 1;
-    private String displayName;
 
     Context context;
 
@@ -32,15 +31,22 @@ public class MyDbClass extends SQLiteAssetHelper {
             ArrayList<DbModelClass> objModelClassArrayList = new ArrayList<>();
             if (db != null) {
 
-//                Cursor objCursor = db.rawQuery("select * from recipe_has_ingredient where recipeCuisine= '" + SearchActivity.getQueryCuisine()
-//                        + "' AND recipeIngredients = '"+SearchActivity.getQueryIngredients()+"' ", null);
 
-//                Cursor objCursor=db.rawQuery("select distinct  a.recipeName, a.recipePicture, a.recipeSteps from (select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_available FROM recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=r.recipeName where i.ingredient_ingredientName IN ('Cheese','Tomato','Chicken','Pizza Dough') group by r.recipeName, r.recipePicture, r.recipeSteps) as a JOIN(select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_required from recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=recipeName group by r.recipeName, r.recipePicture, r.recipeSteps)as p on p.ing_required=a.ing_available ", null);
+                String myString=new String();
+                for(int x=0; x<SearchActivity.getQueryIngredients().size();x++){
+                    myString=myString+"'"+SearchActivity.getQueryIngredients().get(x).toString()+"'";
+                    if(x<SearchActivity.getQueryIngredients().size()-1){
+                        myString=myString+",";
+                    }
+                }
+
+                System.out.println(myString);
 
                 Cursor objCursor=db.rawQuery("select distinct  a.recipeName, a.recipePicture, a.recipeSteps from (select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_available FROM recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=r.recipeName where i.ingredient_ingredientName"
-                        +" IN ('Cheese','Tomato','Chicken','Pizza Dough')"
-                        +" group by r.recipeName, r.recipePicture, r.recipeSteps) as a JOIN(select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_required from recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=recipeName group by r.recipeName, r.recipePicture, r.recipeSteps)as p on p.ing_required=a.ing_available ", null);
 
+                        +" IN ("+myString+")"
+
+                        +" group by r.recipeName, r.recipePicture, r.recipeSteps) as a JOIN(select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_required from recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=recipeName group by r.recipeName, r.recipePicture, r.recipeSteps)as p on p.ing_required=a.ing_available ", null);
 
 
                 if (objCursor.getCount() != 0) {
@@ -56,6 +62,7 @@ public class MyDbClass extends SQLiteAssetHelper {
                                 new DbModelClass(imageDes, ourImage, recipeSteps)
                         );
                     }
+
                     return objModelClassArrayList;
 
                 } else {
@@ -73,17 +80,6 @@ public class MyDbClass extends SQLiteAssetHelper {
 
     }
 
-    public void insertNameToDb(String displayName) {
-         SQLiteDatabase db=this.getWritableDatabase();
-        ContentValues contentValues=new ContentValues();
-
-        try {
-        } catch (Exception e) {
-            contentValues.put("userName", displayName);
-            db.insert("userName",null, contentValues);
-        }
-
-    }
 
 
 }

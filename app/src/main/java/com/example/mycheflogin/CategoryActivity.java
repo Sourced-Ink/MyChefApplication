@@ -929,7 +929,7 @@ public class CategoryActivity extends AppCompatActivity {
                                     public boolean onMenuItemClick(MenuItem menuItem) {
                                         Intent intent = new Intent(CategoryActivity.this, HomeActivity.class);
 
-                                        return false;
+                                        return true;
                                     }
                                 });
                                 break;
@@ -955,17 +955,6 @@ public class CategoryActivity extends AppCompatActivity {
                                     }
                                 });
                                 break;
-
-//                            case R.id.helpItem:
-//                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-//                                    @Override
-//                                    public boolean onMenuItemClick(MenuItem menuItem) {
-//                                        Intent intent = new Intent(HomeActivity.this, HelpActivity.class);
-//                                        startActivity(intent);
-//                                        return true;
-//                                    }
-//                                });
-//                                break;
                         }
                         return true;
                     }

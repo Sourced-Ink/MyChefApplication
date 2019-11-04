@@ -21,6 +21,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class SearchActivity extends AppCompatActivity {
+
     private static MultiAutoCompleteTextView multiAutoCompleteTextViewIngre;
     private static AutoCompleteTextView autoCompleteTextViewCuis;
     private static Button showrecipesearch;
@@ -46,12 +47,12 @@ public class SearchActivity extends AppCompatActivity {
         ArrayAdapter<String> adapterIngre = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ingredients);
         multiAutoCompleteTextViewIngre.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
         multiAutoCompleteTextViewIngre.setAdapter(adapterIngre);
-        multiAutoCompleteTextViewIngre.setThreshold(0);
+        multiAutoCompleteTextViewIngre.setThreshold(1);
 
         String[] cuisines = getResources().getStringArray(R.array.cuisines_array);
         autoCompleteTextViewCuis = findViewById(R.id.autoTVCuisine);
         ArrayAdapter<String> adapterCuis = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, cuisines);
-        autoCompleteTextViewCuis.setThreshold(0);
+        autoCompleteTextViewCuis.setThreshold(1);
         autoCompleteTextViewCuis.setAdapter(adapterCuis);
 
         showrecipesearch.setOnClickListener(new View.OnClickListener(){
@@ -157,7 +158,12 @@ public class SearchActivity extends AppCompatActivity {
 
     public static ArrayList getQueryIngredients(){
         ArrayList<String> ingredients=new ArrayList<>();
-        String s=multiAutoCompleteTextViewIngre.getText().toString().trim();
+        String s=multiAutoCompleteTextViewIngre.getText().toString();
+
+        do{
+//            Toast.makeText(SearchActivity.this, "Please enter at least one field", Toast.LENGTH_SHORT).show();
+
+        }while(s.isEmpty());
 
         for (String x:s.split(", ")) {
             ingredients.add(x);

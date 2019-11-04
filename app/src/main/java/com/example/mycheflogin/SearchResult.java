@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,17 +28,21 @@ public class SearchResult extends AppCompatActivity implements DbAdapter.OnClick
     ArrayList<DbModelClass> objDbModelClassArrayList;
     RecyclerView recyclerView;
     View viewV;
+    TextView test;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         recyclerView=findViewById(R.id.dataLV);
+        test=findViewById(R.id.test);
 
         dbClass=new MyDbClass(this);
         objDbModelClassArrayList=new ArrayList<>();
 
         populateRecyclerView(viewV);
+
+        test.setText(SearchActivity.getQueryIngredients().toString());
     }
 
     public void populateRecyclerView(View view){
@@ -54,6 +59,7 @@ public class SearchResult extends AppCompatActivity implements DbAdapter.OnClick
         catch (Exception e){
             Toast.makeText(SearchResult.this, "Show data: "+e.getMessage(), Toast.LENGTH_SHORT).show();
             }
+
         SearchActivity.progressDialog.dismiss();
 
     }
