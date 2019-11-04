@@ -52,6 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
 
+
                 android:background="#C1FFFFFF"
                 android:textColor="#686767"
                 android:textSize="20sp" />

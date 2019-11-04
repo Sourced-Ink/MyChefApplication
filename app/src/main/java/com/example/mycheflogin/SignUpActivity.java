@@ -71,7 +71,7 @@ public class SignUpActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
 //                                progressDialog.setMessage("Please wait.....Signing Up");
 //                                progressDialog.show();
-                                myDbClass.insertNameToDb(user_name);
+//                                myDbClass.insertNameToDb(user_name);
                                 sendEmailVerificationk();
                             }
                             else{
@@ -139,10 +139,6 @@ public class SignUpActivity extends AppCompatActivity {
         return result;
     }
 
-    public static String getName() {
-        return username.getText().toString();
-
-    }
 
     private void sendEmailVerificationk(){
         //getting the firebase user we dont use getInstance cause its a new user
