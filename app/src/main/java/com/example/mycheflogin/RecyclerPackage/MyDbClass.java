@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.widget.Toast;
+
+import com.example.mycheflogin.CategoryActivity;
 import com.example.mycheflogin.Model.DbModelClass;
 import com.example.mycheflogin.SearchActivity;
 import com.example.mycheflogin.SignUpActivity;
@@ -38,6 +40,13 @@ public class MyDbClass extends SQLiteAssetHelper {
                     myString=myString+"'"+SearchActivity.getQueryIngredients().get(x).toString()+"'";
                     if(x<SearchActivity.getQueryIngredients().size()-1){
                         myString=myString+",";
+                    }
+                }
+
+                for(int x = 0; x < CategoryActivity.ShowSelected().size(); x++){
+                    myString = myString + "'" + CategoryActivity.ShowSelected().add(x) + "'";
+                    if(x < CategoryActivity.ShowSelected().size()-1){
+                        myString = myString + ",";
                     }
                 }
 

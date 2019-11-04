@@ -24,7 +24,7 @@ public class CategoryActivity extends AppCompatActivity {
 
 //    ArrayList<String> selection = new ArrayList<>();
 
-    HashSet selection = new HashSet<>();
+    static HashSet selection = new HashSet<>();
 
     //for meats
     String[] listMeatItems;
@@ -76,7 +76,7 @@ public class CategoryActivity extends AppCompatActivity {
     boolean[] checkedFishItems;
     ArrayList<Integer> userSelectedFish = new ArrayList<>();
 
-//    public void ShowSelected(){
+//    public staic  void ShowSelected(){
 //        String finalSelection = "";
 //        for (Object selections: selection) {
 //            finalSelection = finalSelection + selections;
@@ -85,6 +85,9 @@ public class CategoryActivity extends AppCompatActivity {
 //        selection.clear();
 //    }
 
+    public static HashSet ShowSelected(){
+        return selection;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -879,7 +882,7 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(CategoryActivity.this, ShowRecipesActivity.class);
+                Intent intent = new Intent(CategoryActivity.this, SearchResult.class);
                 startActivity(intent);
 
             }
