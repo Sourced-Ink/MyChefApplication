@@ -474,7 +474,6 @@ public class CategoryActivity extends AppCompatActivity {
 
                             //Basically we saying if the index inside the arraylist is not the last item
                             if (i != userSelectedSpice.size() - 1){
-                                //selection.add(item);
                                 item = item + ", ";
                                 selection.add(item);
                             }
