@@ -20,7 +20,7 @@ public class CuisineActivity extends AppCompatActivity {
     private BottomNavigationView menuhome, menutophome;
     private ImageButton carribeanbuttton;
     private ImageButton chinesebutton;
-    private ImageButton frenchbutton,ItalainaButton, idianButton, medButton, germanButton;
+    private ImageButton frenchbutton,ItalainaButton, indianButton, medButton, germanButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class CuisineActivity extends AppCompatActivity {
 
         medButton = (ImageButton) findViewById(R.id.medButton);
         germanButton = (ImageButton) findViewById(R.id.germanButton);
-        idianButton = (ImageButton) findViewById(R.id.indianButton) ;
+        indianButton = (ImageButton) findViewById(R.id.indianButton) ;
 
         carribeanbuttton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +76,7 @@ public class CuisineActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        idianButton.setOnClickListener(new View.OnClickListener() {
+        indianButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view10)
             {

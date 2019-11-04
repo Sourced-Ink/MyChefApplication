@@ -23,7 +23,7 @@ public class medactivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_carribeanactivity);
+        setContentView(R.layout.activity_medactivity);
 
         bakedfishbutton = (Button) findViewById(R.id.bakedfishbutton);
         bakedfishbutton.setOnClickListener(new View.OnClickListener()

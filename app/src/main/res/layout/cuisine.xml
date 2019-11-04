@@ -168,7 +168,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="20dp"
                 android:background="#D3FFFFFF"
-                android:text="  Italy"
+                android:text="  Italian"
                 android:textColor="#FF0000"
                 android:textSize="25sp" />
 
