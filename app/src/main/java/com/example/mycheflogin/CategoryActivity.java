@@ -904,8 +904,8 @@ public class CategoryActivity extends AppCompatActivity {
                                     @Override
                                     public boolean onMenuItemClick(MenuItem menuItem) {
                                         Intent intent = new Intent(CategoryActivity.this, HomeActivity.class);
-
-                                        return false;
+                                        startActivity(intent);
+                                        return true;
                                     }
                                 });
                                 break;
