@@ -69,7 +69,7 @@ public class SignUpActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                myDbClass.insertNameToDb(user_name);
+                                //myDbClass.insertNameToDb(user_name);
                                 sendEmailVerificationk();
                             }
                             else{
