@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,11 +21,11 @@ import java.util.HashSet;
 public class CategoryActivity extends AppCompatActivity {
     private BottomNavigationView menuhome, menutophome;
     private Button choose_meat, choose_diary, choose_veg, choose_seafood, choose_fruits, choose_spice, choose_sauce, choose_desert, choose_baking, choose_fish,show_recipe;
-    private TextView showIngrediants;
+    private TextView showIngrediants;           private ProgressDialog progressDialog;
 
 //    ArrayList<String> selection = new ArrayList<>();
 
-    HashSet selection = new HashSet<>();
+    static HashSet selection = new HashSet<>();
 
     //for meats
     String[] listMeatItems;
@@ -76,7 +77,7 @@ public class CategoryActivity extends AppCompatActivity {
     boolean[] checkedFishItems;
     ArrayList<Integer> userSelectedFish = new ArrayList<>();
 
-//    public void ShowSelected(){
+//    public staic  void ShowSelected(){
 //        String finalSelection = "";
 //        for (Object selections: selection) {
 //            finalSelection = finalSelection + selections;
@@ -85,6 +86,9 @@ public class CategoryActivity extends AppCompatActivity {
 //        selection.clear();
 //    }
 
+    public static HashSet ShowSelected(){
+        return selection;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +109,7 @@ public class CategoryActivity extends AppCompatActivity {
         showIngrediants = findViewById(R.id.tvShowingIndgrediants);
         menuhome = findViewById(R.id.menu_Pers);
         menutophome = findViewById(R.id.topNav);
+        progressDialog = new ProgressDialog(this);
 
 
 
@@ -878,8 +883,10 @@ public class CategoryActivity extends AppCompatActivity {
         show_recipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressDialog.setMessage("Please Wait....Searching for Recipes");
+                progressDialog.show();
 
-                Intent intent = new Intent(CategoryActivity.this, ShowRecipesActivity.class);
+                Intent intent = new Intent(CategoryActivity.this, SearchResult.class);
                 startActivity(intent);
 
             }

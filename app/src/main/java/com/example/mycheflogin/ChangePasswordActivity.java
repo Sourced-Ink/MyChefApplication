@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.errorprone.annotations.Var;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
@@ -29,6 +31,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
     private Button passwordChange;
     //private FirebaseAuth firebaseAuth;
     private FirebaseAuth auth;
+    private BottomNavigationView menuhome, menutophome;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +43,83 @@ public class ChangePasswordActivity extends AppCompatActivity {
         oldPass = findViewById(R.id.etOldPassword);
         newPass = findViewById(R.id.etNewPassword);
         confirmedPass = findViewById(R.id.etConfrimNewPassword);
+        menuhome = findViewById(R.id.menu_Pers);
+        menutophome = findViewById(R.id.topNav);
+
+
+        menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.helpItem:
+                        menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(MenuItem menuItem) {
+                                Intent intent = new Intent(ChangePasswordActivity.this, HelpActivity.class);
+                                startActivity(intent);
+                                return true;
+                            }
+                        });
+                        break;
+                    case R.id.searchtop:
+                        menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(MenuItem menuItem) {
+                                Intent intent = new Intent(ChangePasswordActivity.this, SearchActivity.class);
+                                startActivity(intent);
+                                return true;
+                            }
+                        });
+                        break;
+                }
+
+                return true;
+            }
+        });
+
+        menuhome.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()){
+                            case R.id.homeItem:
+                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                                    @Override
+                                    public boolean onMenuItemClick(MenuItem menuItem) {
+                                        Intent intent = new Intent(ChangePasswordActivity.this, HomeActivity.class);
+                                        startActivity(intent);
+                                        return true;
+                                    }
+                                });
+                                break;
+
+                            case R.id.accountItem:
+                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                                    @Override
+                                    public boolean onMenuItemClick(MenuItem menuItem) {
+                                        Intent intent = new Intent(ChangePasswordActivity.this, PersonalActivity.class);
+                                        startActivity(intent);
+                                        return true;
+                                    }
+                                });
+                                break;
+
+                            case R.id.recipeItem:
+                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                                    @Override
+                                    public boolean onMenuItemClick(MenuItem menuItem) {
+                                        Intent intent = new Intent(ChangePasswordActivity.this, FavouritesActivity.class);
+                                        startActivity(intent);
+                                        return true;
+                                    }
+                                });
+                                break;
+                        }
+                        return true;
+                    }
+                }
+        );
+
 
         auth = FirebaseAuth.getInstance();
         passwordChange.setOnClickListener(new View.OnClickListener() {

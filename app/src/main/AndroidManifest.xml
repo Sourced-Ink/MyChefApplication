@@ -12,19 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".onionactivity"></activity>
-        <activity android:name=".frenchactivity" />
-        <activity android:name=".friedriceactivity"/>
+            <activity android:name=".MainActivity"></activity>
 
+            <activity android:name=".onionactivity" />
+            <activity android:name=".frenchactivity" />
         <activity android:name=".chineseactivity"/>
         <activity android:name=".scampiactivity" />
-        <activity android:name=".cassactivity"/>
-        <activity android:name=".souffletactivity"/>
-        <activity android:name=".ratactivity"/>
-        <activity android:name=".oystersauceactivity"/>
-        <activity android:name=".peppersteakactivity"/>
-        <activity android:name=".beefstiractivity"/>
-        <activity android:name=".potpastaactivity" />
+            <activity android:name=".cassactivity"/>
+            <activity android:name=".souffletactivity"/>
+            <activity android:name=".ratactivity"/>
+            <activity android:name=".oystersauceactivity"/>
+            <activity android:name=".peppersteakactivity"/>
+            <activity android:name=".beefstiractivity"/>
+            <activity android:name=".friedriceactivity"/>
+
+            <activity android:name=".potpastaactivity" />
         <activity android:name=".chickpeaactivity" />
         <activity android:name=".medchickenactivity" />
         <activity android:name=".bakedfishactivity" />
@@ -63,7 +65,7 @@
         <activity android:name=".ForgetPasswordActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity">
+            <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
