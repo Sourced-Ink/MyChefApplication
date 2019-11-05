@@ -235,6 +235,66 @@
         <item>Cooking spray</item>
         <item>Vegetable oil</item>
         <item>Hoisin sauce</item>
+        <item>Thousand island</item>
+        <item>Sriracha</item>
+        <item>French dressing</item>
+        <item>Teriyaki</item>
+        <item>Mustard</item>
+        <item>Lamb stock</item>
+        <item>Pork stock</item>
+        <item>Italian dressing</item>
+        <item>Salad dressing</item>
+        <item>Greek dressing</item>
+        <item>Sweet chili sauce</item>
+        <item>Sunflower oil</item>
+        <item>Cooking spray</item>
+        <item>Vegetable oil</item>
+        <item>Mushrooms</item>
+        <item>Cheese</item>
+        <item>Tomato</item>
+        <item>Pizza Dough</item>
+        <item>Chicken</item>
+        <item>White Fish</item>
+        <item>Potatoes</item>
+        <item>Mushrooms</item>
+        <item>Steak</item>
+        <item>Turkey</item>
+        <item>Milk</item>
+        <item>Butter</item>
+        <item>Onion</item>
+        <item>Garlic Cloves</item>
+        <item>Chicken Broth</item>
+        <item>Eggs</item>
+        <item>Zucchini</item>
+        <item>Sausage</item>
+        <item>Mozzarella</item>
+        <item>Extra-Virgin Olive Oil</item>
+        <item>Fontina</item>
+        <item>Basil</item>
+        <item>Mozzarella Cheese</item>
+        <item>Spaghetti</item>
+        <item>Ground beef</item>
+        <item>Parsley</item>
+        <item>Parmesan Cheese</item>
+        <item>Bread</item>
+        <item>Marinara Sauce</item>
+        <item>Lamb Ragu</item>
+        <item>Tomato Paste</item>
+        <item>Ground Lamb</item>
+        <item>Red Wine</item>
+        <item>Thyme</item>
+        <item>Rosemary</item>
+        <item>Celery</item>
+        <item>Ricotta</item>
+        <item>Capers</item>
+        <item>Anchovy Fillets</item>
+        <item>Olives</item>
+
+
+
+
+
+
     </string-array>
 
     <string-array name="type_of_fruits">
