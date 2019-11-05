@@ -212,7 +212,7 @@
 
 
 
- />
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/topNav"
@@ -234,7 +234,7 @@
             android:layout_gravity="center"
 
             app:srcCompat="@mipmap/ic_logo"
-            tools:ignore="MissingConstraints"
+            tools:ignore="MissingConstraints,VectorDrawableCompat"
             android:contentDescription="TODO" />
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
