@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".onionactivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".onionactivity" />
         <activity android:name=".frenchactivity" />
         <activity android:name=".friedriceactivity"/>
         <activity android:name=".chineseactivity"/>
@@ -62,7 +63,7 @@
         <activity android:name=".ForgetPasswordActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
