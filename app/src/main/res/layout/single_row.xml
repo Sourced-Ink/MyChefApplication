@@ -39,17 +39,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="20dp"
-                android:scaleType="fitCenter"
-                android:layout_gravity="bottom"
-                android:background="#00FFFFFF"
-                app:srcCompat="@drawable/ic_favorite_white_heart_24dp"
-                tools:ignore="ContentDescription,VectorDrawableCompat"
-                android:layout_marginEnd="20dp" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
