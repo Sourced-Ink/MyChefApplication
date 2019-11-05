@@ -16,7 +16,7 @@ public class HelpActivity extends AppCompatActivity {
 
         StringBuilder stringBuilder = new StringBuilder();
         String message = " WHAT IS MYCHEF? " + "\n\n" +
-                " Do you have only few ingredients at home and don't know what to make?" + "\n\n" +
+                " Do youK have only few ingredients at home and don't know what to make?" + "\n\n" +
                 " MyChef is a recipe search application that finds recipes you can make with ingredients you currently have at home. MyChef has over hundreds of recipes, so no matter what ingredients you have, MyChef has you covered." + "\n\n" +
                 " For best results, make sure to tell the MyChef application about every ingredient you have at home. The more ingredients you add to MyChef, the better the recipes." + "\n\n" +
                 " MyChef is also a good way of serving money. Taking full advantages of the ingredients you have, and naturally making you buy less groceries." + "\n\n" +
