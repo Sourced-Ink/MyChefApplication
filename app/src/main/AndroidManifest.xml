@@ -15,7 +15,6 @@
         <activity android:name=".onionactivity"></activity>
         <activity android:name=".frenchactivity" />
         <activity android:name=".friedriceactivity"/>
-
         <activity android:name=".chineseactivity"/>
         <activity android:name=".scampiactivity" />
         <activity android:name=".cassactivity"/>
