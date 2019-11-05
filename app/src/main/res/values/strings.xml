@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyChefLog</string>
+    <string name="app_name">MyChef</string>
     <string name="welcome">Hello</string>
     <string name="choose_category">Choose a Category</string>
     <string name="search">send</string>
@@ -8,7 +8,7 @@
     <string name="change_your_password">Change your password</string>
     <string name="old_password">Old Password</string>
     <string name="new_password">New Password</string>
-    <string name="confrim_new_password">Confrim New Password</string>
+    <string name="confrim_new_password">Confirm New Password</string>
     <string name="change_password">Change Password</string>
     <string name="enter_your_username_or_email_address">Enter your username or email address</string>
     <string name="username_or_email_address">Username or email address</string>
@@ -17,7 +17,7 @@
     <string name="password">Password</string>
     <string name="login">log in</string>
     <string name="sign_up">sign up</string>
-    <string name="forgotten_password">Forgotten Password?</string>
+    <string name="forgotten_password">Forgot Password?</string>
     <string name="diet_preference">Diet Preference</string>
     <string name="log_out">Log out</string>
     <string name="already_signed_in_login">Cancel</string>
@@ -26,21 +26,21 @@
     <string name="chiko">Chiko</string>
     <string name="Meat_Title">Meats</string>
     <string name="meat_title">Meat</string>
-    <string name="ok_lable">OK</string>
+    <string name="ok_lable">ok</string>
     <string name="dismiss_title">Dismiss</string>
     <string name="clearall_title">Clear All</string>
     <string name="vegetables">Vegetables</string>
     <string name="seafood">Seafood</string>
-    <string name="desert_snacks"><![CDATA[Desert & Snacks]]></string>
+    <string name="desert_snacks"><![CDATA[Dessert & Snacks]]></string>
     <string name="sauces">Sauces</string>
     <string name="dairy">Dairy</string>
     <string name="spices">Spices</string>
     <string name="fruits">Fruits</string>
-    <string name="diary_lable">Diary</string>
+    <string name="diary_lable">Dairy</string>
     <string name="baking_and_grains">Baking and Grains</string>
     <string name="fish">Fish</string>
     <string name="home">Home</string>
-    <string name="my_recipe_box">My Recipe Box</string>
+    <string name="my_recipe_box">My Recipe Book</string>
     <string name="account">Account</string>
     <string name="help">Help</string>
     <string name="show_recipes">Show Recipes</string>
@@ -60,6 +60,7 @@
     <string name="show_values">show values</string>
     <string name="textview">TextView</string>
     <string name="image_description">Image Description</string>
+    <string name="loading_complete">Loading Complete</string>
 
 
     <string-array name="type_of_meats">

@@ -60,7 +60,7 @@ public class SearchResult extends AppCompatActivity implements DbAdapter.OnClick
             Toast.makeText(SearchResult.this, "Show data: "+e.getMessage(), Toast.LENGTH_SHORT).show();
             }
 
-//        SearchActivity.progressDialog.dismiss();
+        SearchActivity.progressDialog.dismiss();
 
     }
 

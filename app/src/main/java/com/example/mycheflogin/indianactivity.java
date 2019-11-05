@@ -24,7 +24,7 @@ public class indianactivity extends AppCompatActivity {
     {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_carribeanactivity);
+        setContentView(R.layout.activity_indianactivity);
 
         butterbutton = (Button) findViewById(R.id.butterbutton);
         butterbutton.setOnClickListener(new View.OnClickListener()
@@ -45,6 +45,9 @@ public class indianactivity extends AppCompatActivity {
                 openchilliactivity();
             }
         });
+
+        menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
+        menutophome = (BottomNavigationView) findViewById(R.id.topNav);
 
         menutophome.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

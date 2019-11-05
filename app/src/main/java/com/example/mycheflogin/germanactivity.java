@@ -24,7 +24,7 @@ public class germanactivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_carribeanactivity);
+        setContentView(R.layout.activity_germanactivity);
 
         pancakesbutton = (Button) findViewById(R.id.pancakesbutton);
         pancakesbutton.setOnClickListener(new View.OnClickListener()
