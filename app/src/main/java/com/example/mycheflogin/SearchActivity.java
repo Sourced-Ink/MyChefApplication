@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.*;
 import android.widget.MultiAutoCompleteTextView;
 
+import com.example.mycheflogin.Model.DbModelClass;
 import com.example.mycheflogin.RecyclerPackage.MyDbClass;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -28,11 +29,16 @@ public class SearchActivity extends AppCompatActivity {
     public static ProgressDialog progressDialog;
     private BottomNavigationView menuhome, menutophome;
 
+    MyDbClass dbClass;
+    ArrayList<DbModelClass> objDbModelClassArrayList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity);
+
+        objDbModelClassArrayList=new ArrayList<>();
 
         menuhome = (BottomNavigationView) findViewById(R.id.menu_Pers);
         menutophome = (BottomNavigationView) findViewById(R.id.topNav);
@@ -58,8 +64,10 @@ public class SearchActivity extends AppCompatActivity {
         showrecipesearch.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+
                 progressDialog.setMessage("Searching for Recipes, Please Wait!");
                 progressDialog.show();
+
                 Intent intentHome = new Intent(SearchActivity.this, SearchResult.class);
                 startActivity(intentHome);
             }
