@@ -60,6 +60,7 @@
     <string name="show_values">show values</string>
     <string name="textview">TextView</string>
     <string name="image_description">Image Description</string>
+    <string name="loading_complete">Loading Complete</string>
 
 
     <string-array name="type_of_meats">
