@@ -2,12 +2,16 @@ package com.example.mycheflogin.RecyclerPackage;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.widget.Toast;
+
+import com.example.mycheflogin.MainActivity;
 import com.example.mycheflogin.Model.DbModelClass;
+import com.example.mycheflogin.PersonalActivity;
 import com.example.mycheflogin.SearchActivity;
 import com.example.mycheflogin.SignUpActivity;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
@@ -52,8 +56,11 @@ public class MyDbClass extends SQLiteAssetHelper {
 
                             +"group by r.recipeName, r.recipePicture, r.recipeSteps) as a JOIN(select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_required from recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=recipeName group by r.recipeName, r.recipePicture, r.recipeSteps)as p on p.ing_required=a.ing_available ", null);
 
-                }else {
+                }else if(SearchActivity.getQueryIngredients().isEmpty()) {
 
+                    objCursor=db.rawQuery("select * from recipe where recipeCuisine = '"+SearchActivity.getQueryCuisine()+" '", null);
+
+                }else{
                     objCursor = db.rawQuery("select distinct  a.recipeName, a.recipePicture, a.recipeSteps from (select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_available FROM recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=r.recipeName where i.ingredient_ingredientName"
 
                             + " IN (" + myString + ")"
@@ -79,7 +86,8 @@ public class MyDbClass extends SQLiteAssetHelper {
                     return objModelClassArrayList;
 
                 } else {
-                    Toast.makeText(context, "No data retrieved...", Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(context, "No results found...", Toast.LENGTH_SHORT).show();
                     return null;
                 }
             } else {

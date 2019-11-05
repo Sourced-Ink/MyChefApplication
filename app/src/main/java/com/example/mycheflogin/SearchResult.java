@@ -42,23 +42,29 @@ public class SearchResult extends AppCompatActivity implements DbAdapter.OnClick
 
         populateRecyclerView(viewV);
 
-        test.setText(SearchActivity.getQueryIngredients().toString());
     }
+
 
     public void populateRecyclerView(View view){
         try {
-            objDbModelClassArrayList=  dbClass.getAllData();
-            if(objDbModelClassArrayList==null){
+            if (dbClass.getAllData()!=null) {
+                objDbModelClassArrayList = dbClass.getAllData();
+                DbAdapter dbAdapter = new DbAdapter(objDbModelClassArrayList, this);
+                recyclerView.hasFixedSize();
+                recyclerView.setLayoutManager(new LinearLayoutManager(this));
+                recyclerView.setAdapter(dbAdapter);
 
+//            } else {
+                SearchActivity.progressDialog.dismiss();
+
+//                Intent intent = new Intent(SearchResult.this, FavouritesActivity.class);
+//                startActivity(intent);
             }
-            DbAdapter dbAdapter = new DbAdapter(objDbModelClassArrayList, this);
-            recyclerView.hasFixedSize();
-            recyclerView.setLayoutManager(new LinearLayoutManager(this));
-            recyclerView.setAdapter(dbAdapter);
-            }
-        catch (Exception e){
-            Toast.makeText(SearchResult.this, "Show data: "+e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
+
+        }        catch(Exception e){
+
+            Toast.makeText(SearchResult.this, "Show data: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
 
         SearchActivity.progressDialog.dismiss();
 
