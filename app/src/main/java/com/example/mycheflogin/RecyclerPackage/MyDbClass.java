@@ -33,6 +33,7 @@ public class MyDbClass extends SQLiteAssetHelper {
             if (db != null) {
 
                 String myString=new String();
+
                 for(int x=0; x<SearchActivity.getQueryIngredients().size();x++){
                     myString=myString+"'"+SearchActivity.getQueryIngredients().get(x).toString()+"'";
                     if(x<SearchActivity.getQueryIngredients().size()-1){
@@ -60,6 +61,7 @@ public class MyDbClass extends SQLiteAssetHelper {
                             + "and recipeCuisine='" + SearchActivity.getQueryCuisine() + "' group by r.recipeName, r.recipePicture, r.recipeSteps) as a JOIN(select r.recipeName, r.recipePicture, r.recipeSteps, count(*) as ing_required from recipe r inner join recipe_has_ingredient i on i.recipe_recipeName=recipeName group by r.recipeName, r.recipePicture, r.recipeSteps)as p on p.ing_required=a.ing_available ", null);
 
                 }
+
                 if (objCursor.getCount() != 0) {
 
                     while (objCursor.moveToNext()) {

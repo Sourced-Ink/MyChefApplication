@@ -29,6 +29,12 @@ public class PersonalActivity extends AppCompatActivity {
     boolean[] checkedDietItems;
     ArrayList<Integer> userSelectedDiet = new ArrayList<>();
 
+
+    public void butttonLogginOut (){
+
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,11 +62,26 @@ public class PersonalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                 firebaseAuth.signOut();
-                 finish();
-                 Intent intent = new Intent(PersonalActivity.this, MainActivity.class);
-                 startActivity(intent);
+                AlertDialog.Builder userLogout = new AlertDialog.Builder(PersonalActivity.this);
+                userLogout.setMessage("Are you sure you want to continue ? ").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        firebaseAuth.signOut();
+                        finish();
+                        Intent intent = new Intent(PersonalActivity.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
 
+                AlertDialog alertDialog =  userLogout.create();
+                alertDialog.setTitle("Logout Alert");
+                alertDialog.show();
             }
         });
 

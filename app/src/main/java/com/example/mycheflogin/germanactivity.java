@@ -32,8 +32,9 @@ public class germanactivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent intent5 = new Intent(germanactivity.this ,pancakesactivity.class);
-                startActivity(intent5);
+//                Intent intent5 = new Intent(germanactivity.this ,pancakesactivity.class);
+//                startActivity(intent5);
+                openpancakesactivity();
             }
         });
 
@@ -147,17 +148,6 @@ public class germanactivity extends AppCompatActivity {
                                     }
                                 });
                                 break;
-
-//                            case R.id.helpItem:
-//                                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-//                                    @Override
-//                                    public boolean onMenuItemClick(MenuItem menuItem) {
-//                                        Intent intent = new Intent(HomeActivity.this, HelpActivity.class);
-//                                        startActivity(intent);
-//                                        return true;
-//                                    }
-//                                });
-//                                break;
                         }
                         return true;
                     }

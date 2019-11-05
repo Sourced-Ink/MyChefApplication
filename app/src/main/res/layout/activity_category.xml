@@ -188,7 +188,22 @@
                 android:textAllCaps="false"
                 android:textColor="#3CDB45"
 
+                />
 
+            <TextView
+                android:id="@+id/tvShowingIndgrediants"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="120dp"
+                android:background="#D7FFFFFF"
+                android:text=""
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#FF1B0E"
+                android:textSize="15sp"
                 />
 
         </LinearLayout>
@@ -198,12 +213,6 @@
 
 
 
-
-
-
-
-
- />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/topNav"
@@ -225,7 +234,8 @@
             android:layout_gravity="center"
 
             app:srcCompat="@mipmap/ic_logo"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,VectorDrawableCompat"
+            android:contentDescription="TODO" />
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 

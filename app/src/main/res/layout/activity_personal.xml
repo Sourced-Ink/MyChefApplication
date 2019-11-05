@@ -34,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="540dp"
         android:orientation="vertical"
+        android:layout_margin="20dp"
         app:layout_constraintBottom_toTopOf="@id/menu_Pers"
         app:layout_constraintTop_toBottomOf="@id/topNav">
 
@@ -43,7 +44,7 @@
             android:layout_height="99dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
